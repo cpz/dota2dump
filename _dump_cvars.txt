@@ -5023,6 +5023,12 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
+| - CVar Name: cl_decal_clear_all_entities
+|- 
+| - CVar Description: Clears decals from all entities
+| - 
+
+| - 
 | - CVar Name: cl_ent_remove
 |- 
 | - CVar Description: Removes the given entity(s)
@@ -5729,6 +5735,12 @@ Format: find_ent <substring>
 | - CVar Name: vis_debug_dumpvisibleclusters
 |- 
 | - CVar Description: Show the list of visible clusters
+| - 
+
+| - 
+| - CVar Name: spawn_group_unload
+|- 
+| - CVar Description: Unload named spawn group.
 | - 
 
 | - 
@@ -7684,6 +7696,12 @@ Format: find_ent <substring>
 | - 
 
 | - 
+| - CVar Name: commandtool_exec
+|- 
+| - CVar Description: Runs a command from the command tool
+| - 
+
+| - 
 | - CVar Name: nav_gen_max_edge_len
 |- 
 | - CVar Description: 
@@ -8166,6 +8184,12 @@ Format: find_ent <substring>
 | - 
 
 | - 
+| - CVar Name: cl_decal_shoot
+|- 
+| - CVar Description: Shoots a client-side decal
+| - 
+
+| - 
 | - CVar Name: @panorama_min_comp_layer_cache_cost
 |- 
 | - CVar Description: 
@@ -8554,6 +8578,12 @@ Format: find_ent <substring>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: cl_decal_clear_world
+|- 
+| - CVar Description: Clears world decals
 | - 
 
 | - 
@@ -11034,6 +11064,12 @@ Format: find_ent <substring>
 | - 
 
 | - 
+| - CVar Name: snd_sos_sv_soundevent_unpause_last
+|- 
+| - CVar Description: Test
+| - 
+
+| - 
 | - CVar Name: ent_rbox
 |- 
 | - CVar Description: Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays.
@@ -11831,6 +11867,12 @@ criteria values are optional.
 | - 
 
 | - 
+| - CVar Name: r_entpos
+|- 
+| - CVar Description: Moves the camera position + orientation to the named entity
+| - 
+
+| - 
 | - CVar Name: nav_gen_clip_polys_to_clearance
 |- 
 | - CVar Description: 
@@ -12021,6 +12063,12 @@ criteria values are optional.
 | - CVar Default Value: 
 | - 
 | - CVar Current Value: 
+| - 
+
+| - 
+| - CVar Name: cl_decal_debug
+|- 
+| - CVar Description: Toggles client decal debug visualization
 | - 
 
 | - 
@@ -16798,6 +16846,12 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
+| - CVar Name: r_cleardecals
+|- 
+| - CVar Description: Clears all decals
+| - 
+
+| - 
 | - CVar Name: -lookspin
 |- 
 | - CVar Description: 
@@ -16915,6 +16969,12 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: gameui_allowescape
 |- 
 | - CVar Description: Escape key allowed to hide game UI
+| - 
+
+| - 
+| - CVar Name: entitysummary
+|- 
+| - CVar Description: Summarizes (by class) all extant entities. Optional 2nd arg is a substring of a classname that the list will be filtered by.
 | - 
 
 | - 
@@ -18778,6 +18838,12 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: snd_sos_sv_soundevent_stop_last
+|- 
+| - CVar Description: Test
+| - 
+
+| - 
 | - CVar Name: cl_debugoverlay_toggle
 |- 
 | - CVar Description: Toggles visibility of the debug overlay system.
@@ -20000,6 +20066,12 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: r_cubemap_takesnapshot
+|- 
+| - CVar Description: Take a cube map snapshot at the current camera location
+| - 
+
+| - 
 | - CVar Name: nav_gen_markup_split_tol_base
 |- 
 | - CVar Description: 
@@ -21103,6 +21175,12 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: entityreport
+|- 
+| - CVar Description: Reports all extant entities. Optional 2nd arg is a substring of a classname that the list will be filtered by.
+| - 
+
+| - 
 | - CVar Name: @panorama_experimental_fast_box_shadow
 |- 
 | - CVar Description: 
@@ -21882,6 +21960,12 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: snd_sos_sv_soundevent_start
+|- 
+| - CVar Description: Test
+| - 
+
+| - 
 | - CVar Name: nav_gen_opt_to_quads_weld_limit_start
 |- 
 | - CVar Description: 
@@ -22081,6 +22165,18 @@ Format: find_ent_index <index>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: snd_sos_cl_soundevent_pause_last
+|- 
+| - CVar Description: Test
+| - 
+
+| - 
+| - CVar Name: snd_sos_cl_soundevent_start
+|- 
+| - CVar Description: Test
 | - 
 
 | - 
@@ -24836,6 +24932,12 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: snd_sos_sv_test_gender
+|- 
+| - CVar Description: Test
+| - 
+
+| - 
 | - CVar Name: @panorama_joystick_axis_repeat_interval_end
 |- 
 | - CVar Description: 
@@ -25128,6 +25230,12 @@ Format: find_ent_index <index>
 | - CVar Name: cvarlist
 |- 
 | - CVar Description: Show the list of convars/concommands.
+| - 
+
+| - 
+| - CVar Name: snd_sos_sv_soundevent_pause_last
+|- 
+| - CVar Description: Test
 | - 
 
 | - 
@@ -25619,6 +25727,12 @@ Format: find_ent <substring>
 | - CVar Name: jpeg_screenshot
 |- 
 | - CVar Description: Take a jpeg screenshot: jpeg_screenshot [filename] [quality 1-100].
+| - 
+
+| - 
+| - CVar Name: cl_commandtool_exec
+|- 
+| - CVar Description: Runs a command from the command tool
 | - 
 
 | - 
@@ -26751,6 +26865,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: cl_groups
+|- 
+| - CVar Description: Show status of all spawn groups.
+| - 
+
+| - 
 | - CVar Name: phys_batch_ray_test
 |- 
 | - CVar Description: 
@@ -27030,6 +27150,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: spawn_group_list
+|- 
+| - CVar Description: List all spawn groups
 | - 
 
 | - 
@@ -28609,6 +28735,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: cl_entityreport
+|- 
+| - CVar Description: Reports all extant entities. Optional 2nd arg is a substring of a classname that the list will be filtered by.
+| - 
+
+| - 
 | - CVar Name: @panorama_experimental_overdraw_prevention
 |- 
 | - CVar Description: 
@@ -28998,6 +29130,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: cl_entitysummary
+|- 
+| - CVar Description: Summarizes (by class) all extant entities. Optional 2nd arg is a substring of a classname that the list will be filtered by.
+| - 
+
+| - 
 | - CVar Name: phonemefilter
 |- 
 | - CVar Description: Time duration of box filter to pass over phonemes.
@@ -29381,6 +29519,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: r_incrementlodscale
+|- 
+| - CVar Description: Modifies the LOD scale
 | - 
 
 | - 
@@ -33884,6 +34028,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: groups
+|- 
+| - CVar Description: Show status of all spawn groups.
+| - 
+
+| - 
 | - CVar Name: vm_camera_interp_speed
 |- 
 | - CVar Description: 
@@ -34193,6 +34343,12 @@ Arguments: <weapon_name>
 | - CVar Name: vprof_reset_peaks
 |- 
 | - CVar Description: Reset just the peak time in VProf profiler
+| - 
+
+| - 
+| - CVar Name: spawn_group_load
+|- 
+| - CVar Description: Load named spawn group.
 | - 
 
 | - 
@@ -35099,6 +35255,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: snd_sos_cl_soundevent_stop_last
+|- 
+| - CVar Description: Test
 | - 
 
 | - 
@@ -36051,6 +36213,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: r_camerapos
+|- 
+| - CVar Description: Prints out the current camera position + orientation to the console
+| - 
+
+| - 
 | - CVar Name: joy_xcontroller_cfg_loaded
 |- 
 | - CVar Description: If 0, the 360controller.cfg file will be executed on startup & option changes.
@@ -36519,6 +36687,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: core.stop_all_soundevents
 | - 
 | - CVar Current Value: core.stop_all_soundevents
+| - 
+
+| - 
+| - CVar Name: r_setpos
+|- 
+| - CVar Description: Moves the camera position + orientation to the specified position
 | - 
 
 | - 
@@ -37381,6 +37555,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: spawn_group_activate
+|- 
+| - CVar Description: Activate specified spawngroup.
+| - 
+
+| - 
 | - CVar Name: nav_gen_opt_to_quads_se_limit_start
 |- 
 | - CVar Description: 
@@ -37817,6 +37997,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: r_printdecalinfo
+|- 
+| - CVar Description: Prints info about decals currently in the scene
 | - 
 
 | - 
@@ -40416,6 +40602,12 @@ Arguments: <weapon_name>
 | - CVar Name: vprof_reset
 |- 
 | - CVar Description: Reset the stats in VProf profiler
+| - 
+
+| - 
+| - CVar Name: snd_sos_cl_soundevent_unpause_last
+|- 
+| - CVar Description: Test
 | - 
 
 | - 

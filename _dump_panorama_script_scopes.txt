@@ -1,37 +1,37 @@
 Scope Name: GameEvents; Scope Size: 6;
 | - 
 | - Function: 
-| - INTEGER Subscribe ( CSTRING pEventName, JS_VALUE funcVal, )
+| - integer Subscribe ( cstring pEventName, v8_value funcVal )
 | - Description:
 | - Subscribe to a game event
 | - 
 | - 
 | - Function: 
-| - VOID Unsubscribe ( INTEGER nCallbackHandle, )
+| - void Unsubscribe ( integer nCallbackHandle )
 | - Description:
 | - Unsubscribe from a game event
 | - 
 | - 
 | - Function: 
-| - VOID SendCustomGameEventToServer ( CSTRING pEventName, JS_OBJECT jsObject, )
+| - void SendCustomGameEventToServer ( cstring pEventName, v8_object jsObject )
 | - Description:
 | - Send a custom game event to the server
 | - 
 | - 
 | - Function: 
-| - VOID SendCustomGameEventToAllClients ( CSTRING pEventName, JS_OBJECT jsObject, )
+| - void SendCustomGameEventToAllClients ( cstring pEventName, v8_object jsObject )
 | - Description:
 | - Send a custom game event to the server, which will send it to all clients
 | - 
 | - 
 | - Function: 
-| - VOID SendCustomGameEventToClient ( CSTRING pEventName, INTEGER playerIndex, JS_OBJECT jsObject, )
+| - void SendCustomGameEventToClient ( cstring pEventName, integer playerIndex, v8_object jsObject )
 | - Description:
 | - Send a custom game event to the server, which will then send it to one client
 | - 
 | - 
 | - Function: 
-| - VOID SendEventClientSide ( CSTRING pEventName, JS_OBJECT jsObject, )
+| - void SendEventClientSide ( cstring pEventName, v8_object jsObject )
 | - Description:
 | - Send a client-side event using gameeventmanager (only useful for a few specific events)
 | - 
@@ -39,25 +39,25 @@ Scope Name: GameEvents; Scope Size: 6;
 Scope Name: CustomNetTables; Scope Size: 4;
 | - 
 | - Function: 
-| - JS_OBJECT GetTableValue ( CSTRING pTableName, CSTRING pKeyName, )
+| - v8_object GetTableValue ( cstring pTableName, cstring pKeyName )
 | - Description:
 | - Get a key from a custom net table
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetAllTableValues ( CSTRING pTableName, )
+| - v8_array GetAllTableValues ( cstring pTableName )
 | - Description:
 | - Get all values from a custom net table
 | - 
 | - 
 | - Function: 
-| - VOID SubscribeNetTableListener ( JS_RAW_ARGS args, )
+| - void SubscribeNetTableListener ( v8_callback_info args )
 | - Description:
 | - Register a callback when a particular custom net table changes
 | - 
 | - 
 | - Function: 
-| - VOID UnsubscribeNetTableListener ( INTEGER nCallbackHandle, )
+| - void UnsubscribeNetTableListener ( integer nCallbackHandle )
 | - Description:
 | - Unsubscribe from a game event
 | - 
@@ -65,85 +65,85 @@ Scope Name: CustomNetTables; Scope Size: 4;
 Scope Name: SteamUGC; Scope Size: 14;
 | - 
 | - Function: 
-| - INTEGER SubscribeItem ( CSTRING pPublishedFileID, JS_VALUE funcVal, )
+| - integer SubscribeItem ( cstring pPublishedFileID, v8_value funcVal )
 | - Description:
 | - Subscribe to a piece of UGC
 | - 
 | - 
 | - Function: 
-| - INTEGER UnsubscribeItem ( CSTRING pPublishedFileID, JS_VALUE funcVal, )
+| - integer UnsubscribeItem ( cstring pPublishedFileID, v8_value funcVal )
 | - Description:
 | - Unsubscribe from a piece of UGC
 | - 
 | - 
 | - Function: 
-| - JS_OBJECT GetSubscriptionInfo ( CSTRING pPublishedFileID, )
+| - v8_object GetSubscriptionInfo ( cstring pPublishedFileID )
 | - Description:
 | - Get a key from a custom net table
 | - 
 | - 
 | - Function: 
-| - INTEGER SetUserItemVote ( CSTRING pPublishedFileID, BOOLEAN bVoteUp, JS_VALUE funcVal, )
+| - integer SetUserItemVote ( cstring pPublishedFileID, boolean bVoteUp, v8_value funcVal )
 | - Description:
 | - Vote on a piece of UGC
 | - 
 | - 
 | - Function: 
-| - INTEGER GetUserItemVote ( CSTRING pPublishedFileID, JS_VALUE funcVal, )
+| - integer GetUserItemVote ( cstring pPublishedFileID, v8_value funcVal )
 | - Description:
 | - Get the user's vote on a piece of UGC
 | - 
 | - 
 | - Function: 
-| - INTEGER AddToFavorites ( CSTRING pPublishedFileID, JS_VALUE funcVal, )
+| - integer AddToFavorites ( cstring pPublishedFileID, v8_value funcVal )
 | - Description:
 | - Add an item to the user's favorites list
 | - 
 | - 
 | - Function: 
-| - INTEGER RemoveFromFavorites ( CSTRING pPublishedFileID, JS_VALUE funcVal, )
+| - integer RemoveFromFavorites ( cstring pPublishedFileID, v8_value funcVal )
 | - Description:
 | - Remove an item from the user's favorites list
 | - 
 | - 
 | - Function: 
-| - INTEGER CreateQueryAllUGCRequest ( INTEGER eQueryType, INTEGER eMatchingeMatchingUGCTypeFileType, UNSIGNED unPage, )
+| - integer CreateQueryAllUGCRequest ( integer eQueryType, integer eMatchingeMatchingUGCTypeFileType, uint unPage )
 | - Description:
 | - Create a request to query Steam for all UGC
 | - 
 | - 
 | - Function: 
-| - INTEGER CreateQueryUGCDetailsRequest ( JS_ARRAY jsArray, )
+| - integer CreateQueryUGCDetailsRequest ( v8_array jsArray )
 | - Description:
 | - Create a request to query Steam for specific UGC
 | - 
 | - 
 | - Function: 
-| - BOOLEAN AddRequiredTagToQuery ( INTEGER handle, CSTRING pchTag, )
+| - boolean AddRequiredTagToQuery ( integer handle, cstring pchTag )
 | - Description:
 | - Adds a required tag to the query
 | - 
 | - 
 | - Function: 
-| - BOOLEAN AddExcludedTagToQuery ( INTEGER handle, CSTRING pchTag, )
+| - boolean AddExcludedTagToQuery ( integer handle, cstring pchTag )
 | - Description:
 | - Adds an excluded tag to the query
 | - 
 | - 
 | - Function: 
-| - BOOLEAN ConfigureQuery ( INTEGER handle, JS_OBJECT jsObject, )
+| - boolean ConfigureQuery ( integer handle, v8_object jsObject )
 | - Description:
 | - Adds a required tag to the query
 | - 
 | - 
 | - Function: 
-| - INTEGER SendUGCQuery ( INTEGER handle, JS_VALUE funcVal, )
+| - integer SendUGCQuery ( integer handle, v8_value funcVal )
 | - Description:
 | - Sends the prepared query
 | - 
 | - 
 | - Function: 
-| - INTEGER RegisterDownloadItemResultCallback ( CSTRING pPublishedFileID, JS_VALUE funcVal, )
+| - integer RegisterDownloadItemResultCallback ( cstring pPublishedFileID, v8_value funcVal )
 | - Description:
 | - Register a callback to be called when the item is downloaded
 | - 
@@ -151,13 +151,13 @@ Scope Name: SteamUGC; Scope Size: 14;
 Scope Name: SteamFriends; Scope Size: 2;
 | - 
 | - Function: 
-| - CSTRING RequestPersonaName ( CSTRING pchSteamID, JS_VALUE funcVal, )
+| - cstring RequestPersonaName ( cstring pchSteamID, v8_value funcVal )
 | - Description:
 | - Requests the user's persona name
 | - 
 | - 
 | - Function: 
-| - VOID SetLargeAvatarImage ( JS_RAW_ARGS args, )
+| - void SetLargeAvatarImage ( v8_callback_info args )
 | - Description:
 | - Sets the avatar image on the image panel
 | - 
@@ -165,13 +165,13 @@ Scope Name: SteamFriends; Scope Size: 2;
 Scope Name: SteamUtils; Scope Size: 2;
 | - 
 | - Function: 
-| - _UNK17 GetConnectedUniverse ( )
+| - typeunknown GetConnectedUniverse ( )
 | - Description:
 | - Returns the connected universe
 | - 
 | - 
 | - Function: 
-| - UNSIGNED GetAppID ( )
+| - uint GetAppID ( )
 | - Description:
 | - Returns the appid of the current app
 | - 
@@ -179,13 +179,13 @@ Scope Name: SteamUtils; Scope Size: 2;
 Scope Name: VRUtils; Scope Size: 2;
 | - 
 | - Function: 
-| - JS_OBJECT GetVRAppPropertyData ( UNSIGNED nAppID, )
+| - v8_object GetVRAppPropertyData ( uint nAppID )
 | - Description:
 | - Get application properties for a VR app with the specified appID
 | - 
 | - 
 | - Function: 
-| - VOID LaunchSteamApp ( UNSIGNED nAppID, CSTRING pszLaunchSource, )
+| - void LaunchSteamApp ( uint nAppID, cstring pszLaunchSource )
 | - Description:
 | - Launches a Steam application using OpenVR.
 | - 
@@ -193,85 +193,85 @@ Scope Name: VRUtils; Scope Size: 2;
 Scope Name: Buffs; Scope Size: 14;
 | - 
 | - Function: 
-| - CSTRING GetName ( INTEGER nEntity, INTEGER nBuff, )
+| - cstring GetName ( integer nEntity, integer nBuff )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetClass ( INTEGER nEntity, INTEGER nBuff, )
+| - cstring GetClass ( integer nEntity, integer nBuff )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetTexture ( INTEGER nEntity, INTEGER nBuff, )
+| - cstring GetTexture ( integer nEntity, integer nBuff )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetDuration ( INTEGER nEntity, INTEGER nBuff, )
+| - float GetDuration ( integer nEntity, integer nBuff )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetDieTime ( INTEGER nEntity, INTEGER nBuff, )
+| - float GetDieTime ( integer nEntity, integer nBuff )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetRemainingTime ( INTEGER nEntity, INTEGER nBuff, )
+| - float GetRemainingTime ( integer nEntity, integer nBuff )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetElapsedTime ( INTEGER nEntity, INTEGER nBuff, )
+| - float GetElapsedTime ( integer nEntity, integer nBuff )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetCreationTime ( INTEGER nEntity, INTEGER nBuff, )
+| - float GetCreationTime ( integer nEntity, integer nBuff )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetStackCount ( INTEGER nEntity, INTEGER nBuff, )
+| - integer GetStackCount ( integer nEntity, integer nBuff )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsDebuff ( INTEGER nEntity, INTEGER nBuff, )
+| - boolean IsDebuff ( integer nEntity, integer nBuff )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsHidden ( INTEGER nEntity, INTEGER nBuff, )
+| - boolean IsHidden ( integer nEntity, integer nBuff )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetCaster ( INTEGER nEntity, INTEGER nBuff, )
+| - integer GetCaster ( integer nEntity, integer nBuff )
 | - Description:
 | - Get the owner of the ability responsible for the modifier.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetParent ( INTEGER nEntity, INTEGER nBuff, )
+| - integer GetParent ( integer nEntity, integer nBuff )
 | - Description:
 | - Get the unit the modifier is parented to.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAbility ( INTEGER nEntity, INTEGER nBuff, )
+| - integer GetAbility ( integer nEntity, integer nBuff )
 | - Description:
 | - Get the ability that generated the modifier.
 | - 
@@ -279,259 +279,259 @@ Scope Name: Buffs; Scope Size: 14;
 Scope Name: Players; Scope Size: 43;
 | - 
 | - Function: 
-| - INTEGER GetMaxPlayers ( )
+| - integer GetMaxPlayers ( )
 | - Description:
 | - Get the maximum number of players in the game.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetMaxTeamPlayers ( )
+| - integer GetMaxTeamPlayers ( )
 | - Description:
 | - Get the maximum number of players on teams.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetLocalPlayer ( )
+| - integer GetLocalPlayer ( )
 | - Description:
 | - Get the local player ID.
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsValidPlayerID ( INTEGER iPlayerID, )
+| - boolean IsValidPlayerID ( integer iPlayerID )
 | - Description:
 | - Is the nth player a valid player?
 | - 
 | - 
 | - Function: 
-| - CSTRING GetPlayerName ( INTEGER iPlayerID, )
+| - cstring GetPlayerName ( integer iPlayerID )
 | - Description:
 | - Return the name of a player.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetPlayerHeroEntityIndex ( INTEGER iPlayerID, )
+| - integer GetPlayerHeroEntityIndex ( integer iPlayerID )
 | - Description:
 | - Get the entity index of the hero controlled by this player.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetSelectedEntities ( INTEGER iPlayerID, )
+| - v8_array GetSelectedEntities ( integer iPlayerID )
 | - Description:
 | - Get the entities this player has selected.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetQueryUnit ( INTEGER iPlayerID, )
+| - integer GetQueryUnit ( integer iPlayerID )
 | - Description:
 | - Get the entities this player is querying.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetLocalPlayerPortraitUnit ( )
+| - integer GetLocalPlayerPortraitUnit ( )
 | - Description:
 | - Get local player current portrait unit. (ie. Player's hero or primary selected unit.)
 | - 
 | - 
 | - Function: 
-| - BOOLEAN CanPlayerBuyback ( INTEGER iPlayerID, )
+| - boolean CanPlayerBuyback ( integer iPlayerID )
 | - Description:
 | - Can the player buy back?
 | - 
 | - 
 | - Function: 
-| - BOOLEAN HasCustomGameTicketForPlayerID ( INTEGER iPlayerID, )
+| - boolean HasCustomGameTicketForPlayerID ( integer iPlayerID )
 | - Description:
 | - Does this player have a custom game ticket?
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAssists ( INTEGER iPlayerID, )
+| - integer GetAssists ( integer iPlayerID )
 | - Description:
 | - The number of assists credited to a player.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetClaimedDenies ( INTEGER iPlayerID, )
+| - integer GetClaimedDenies ( integer iPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetClaimedMisses ( INTEGER iPlayerID, )
+| - integer GetClaimedMisses ( integer iPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetDeaths ( INTEGER iPlayerID, )
+| - integer GetDeaths ( integer iPlayerID )
 | - Description:
 | - The number of deaths a player has suffered.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetDenies ( INTEGER iPlayerID, )
+| - integer GetDenies ( integer iPlayerID )
 | - Description:
 | - The number of denies credited to a player.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetGold ( INTEGER iPlayerID, )
+| - integer GetGold ( integer iPlayerID )
 | - Description:
 | - The amount of gold a player has.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetKills ( INTEGER iPlayerID, )
+| - integer GetKills ( integer iPlayerID )
 | - Description:
 | - The number of kills credited to a player.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetLastBuybackTime ( INTEGER iPlayerID, )
+| - integer GetLastBuybackTime ( integer iPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetLastHitMultikill ( INTEGER iPlayerID, )
+| - integer GetLastHitMultikill ( integer iPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetLastHits ( INTEGER iPlayerID, )
+| - integer GetLastHits ( integer iPlayerID )
 | - Description:
 | - The number of last hits credited to a player.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetLastHitStreak ( INTEGER iPlayerID, )
+| - integer GetLastHitStreak ( integer iPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetLevel ( INTEGER iPlayerID, )
+| - integer GetLevel ( integer iPlayerID )
 | - Description:
 | - The current level of a player.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetMisses ( INTEGER iPlayerID, )
+| - integer GetMisses ( integer iPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetNearbyCreepDeaths ( INTEGER iPlayerID, )
+| - integer GetNearbyCreepDeaths ( integer iPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetReliableGold ( INTEGER iPlayerID, )
+| - integer GetReliableGold ( integer iPlayerID )
 | - Description:
 | - Total reliable gold for this player.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetRespawnSeconds ( INTEGER iPlayerID, )
+| - integer GetRespawnSeconds ( integer iPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetStreak ( INTEGER iPlayerID, )
+| - integer GetStreak ( integer iPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetTotalEarnedGold ( INTEGER iPlayerID, )
+| - integer GetTotalEarnedGold ( integer iPlayerID )
 | - Description:
 | - Total gold earned in this game by this player.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetTotalEarnedXP ( INTEGER iPlayerID, )
+| - integer GetTotalEarnedXP ( integer iPlayerID )
 | - Description:
 | - Total xp earned in this game by this player.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetUnreliableGold ( INTEGER iPlayerID, )
+| - integer GetUnreliableGold ( integer iPlayerID )
 | - Description:
 | - Total unreliable gold for this player.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetTeam ( INTEGER iPlayerID, )
+| - integer GetTeam ( integer iPlayerID )
 | - Description:
 | - Get the team this player is on.
 | - 
 | - 
 | - Function: 
-| - FLOAT GetGoldPerMin ( INTEGER iPlayerID, )
+| - float GetGoldPerMin ( integer iPlayerID )
 | - Description:
 | - Average gold earned per minute for this player.
 | - 
 | - 
 | - Function: 
-| - FLOAT GetXPPerMin ( INTEGER iPlayerID, )
+| - float GetXPPerMin ( integer iPlayerID )
 | - Description:
 | - Average xp earned per minute for this player.
 | - 
 | - 
 | - Function: 
-| - CSTRING GetPlayerSelectedHero ( INTEGER iPlayerID, )
+| - cstring GetPlayerSelectedHero ( integer iPlayerID )
 | - Description:
 | - Return the name of the hero a player is controlling.
 | - 
 | - 
 | - Function: 
-| - UNSIGNED GetPlayerColor ( INTEGER iPlayerID, )
+| - uint GetPlayerColor ( integer iPlayerID )
 | - Description:
 | - Get the player color.
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSpectator ( INTEGER iPlayerID, )
+| - boolean IsSpectator ( integer iPlayerID )
 | - Description:
 | - Is this player a spectator.
 | - 
 | - 
 | - Function: 
-| - VOID PlayerPortraitClicked ( INTEGER nClickedPlayerID, BOOLEAN bHoldingCtrl, BOOLEAN bHoldingAlt, )
+| - void PlayerPortraitClicked ( integer nClickedPlayerID, boolean bHoldingCtrl, boolean bHoldingAlt )
 | - Description:
 | - .
 | - 
 | - 
 | - Function: 
-| - VOID BuffClicked ( INTEGER nEntity, INTEGER nBuffSerial, BOOLEAN bAlert, )
+| - void BuffClicked ( integer nEntity, integer nBuffSerial, boolean bAlert )
 | - Description:
 | - .
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsLocalPlayerLiveSpectating ( )
+| - boolean IsLocalPlayerLiveSpectating ( )
 | - Description:
 | - Is the local player live spectating?
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsLocalPlayerInPerspectiveCamera ( )
+| - boolean IsLocalPlayerInPerspectiveCamera ( )
 | - Description:
 | - If local player is in perspective camera, returns true. Else, false
 | - 
 | - 
 | - Function: 
-| - INTEGER GetPerspectivePlayerEntityIndex ( )
+| - integer GetPerspectivePlayerEntityIndex ( )
 | - Description:
 | - If player is in perspective mode, returns the followed players entity index.  Else, -1.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetPerspectivePlayerId ( )
+| - integer GetPerspectivePlayerId ( )
 | - Description:
 | - If player is in perspective mode, returns the followed players id.  Else, -1.
 | - 
@@ -539,973 +539,973 @@ Scope Name: Players; Scope Size: 43;
 Scope Name: Entities; Scope Size: 162;
 | - 
 | - Function: 
-| - JS_ARRAY GetAbsOrigin ( INTEGER nEntityIndex, )
+| - v8_array GetAbsOrigin ( integer nEntityIndex )
 | - Description:
 | - Get the world origin of the entity.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetAbsAngles ( INTEGER nEntityIndex, )
+| - v8_array GetAbsAngles ( integer nEntityIndex )
 | - Description:
 | - Get the world angles of the entity.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetForward ( INTEGER nEntityIndex, )
+| - v8_array GetForward ( integer nEntityIndex )
 | - Description:
 | - Get the forward vector of the entity.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetRight ( INTEGER nEntityIndex, )
+| - v8_array GetRight ( integer nEntityIndex )
 | - Description:
 | - Get the right vector of the entity.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetUp ( INTEGER nEntityIndex, )
+| - v8_array GetUp ( integer nEntityIndex )
 | - Description:
 | - Get the up vector of the entity.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetAllBuildingEntities ( )
+| - v8_array GetAllBuildingEntities ( )
 | - Description:
 | - Get all the building entities.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetAllHeroEntities ( )
+| - v8_array GetAllHeroEntities ( )
 | - Description:
 | - Get all the hero entities.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetAllEntitiesByName ( CSTRING pszName, )
+| - v8_array GetAllEntitiesByName ( cstring pszName )
 | - Description:
 | - Get all the entities with a given name.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetAllEntitiesByClassname ( CSTRING pszName, )
+| - v8_array GetAllEntitiesByClassname ( cstring pszName )
 | - Description:
 | - Get all the entities with a given classname.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetAllCreatureEntities ( )
+| - v8_array GetAllCreatureEntities ( )
 | - Description:
 | - Get all the creature entities.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetAllEntities ( )
+| - v8_array GetAllEntities ( )
 | - Description:
 | - Get all the entities.
 | - 
 | - 
 | - Function: 
-| - BOOLEAN CanBeDominated ( INTEGER nEntityIndex, )
+| - boolean CanBeDominated ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN HasAttackCapability ( INTEGER nEntityIndex, )
+| - boolean HasAttackCapability ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN HasCastableAbilities ( INTEGER nEntityIndex, )
+| - boolean HasCastableAbilities ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN HasFlyingVision ( INTEGER nEntityIndex, )
+| - boolean HasFlyingVision ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN HasFlyMovementCapability ( INTEGER nEntityIndex, )
+| - boolean HasFlyMovementCapability ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN HasGroundMovementCapability ( INTEGER nEntityIndex, )
+| - boolean HasGroundMovementCapability ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN HasMovementCapability ( INTEGER nEntityIndex, )
+| - boolean HasMovementCapability ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN HasScepter ( INTEGER nEntityIndex, )
+| - boolean HasScepter ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN HasUpgradeableAbilities ( INTEGER nEntityIndex, )
+| - boolean HasUpgradeableAbilities ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN HasUpgradeableAbilitiesThatArentMaxed ( INTEGER nEntityIndex, )
+| - boolean HasUpgradeableAbilitiesThatArentMaxed ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsAlive ( INTEGER nEntityIndex, )
+| - boolean IsAlive ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsAncient ( INTEGER nEntityIndex, )
+| - boolean IsAncient ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsAttackImmune ( INTEGER nEntityIndex, )
+| - boolean IsAttackImmune ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsBarracks ( INTEGER nEntityIndex, )
+| - boolean IsBarracks ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsBlind ( INTEGER nEntityIndex, )
+| - boolean IsBlind ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsBoss ( INTEGER nEntityIndex, )
+| - boolean IsBoss ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsRoshan ( INTEGER nEntityIndex, )
+| - boolean IsRoshan ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsBuilding ( INTEGER nEntityIndex, )
+| - boolean IsBuilding ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsCommandRestricted ( INTEGER nEntityIndex, )
+| - boolean IsCommandRestricted ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsConsideredHero ( INTEGER nEntityIndex, )
+| - boolean IsConsideredHero ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsControllableByAnyPlayer ( INTEGER nEntityIndex, )
+| - boolean IsControllableByAnyPlayer ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsCourier ( INTEGER nEntityIndex, )
+| - boolean IsCourier ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsCreature ( INTEGER nEntityIndex, )
+| - boolean IsCreature ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsCreep ( INTEGER nEntityIndex, )
+| - boolean IsCreep ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsCreepHero ( INTEGER nEntityIndex, )
+| - boolean IsCreepHero ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsDeniable ( INTEGER nEntityIndex, )
+| - boolean IsDeniable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsDominated ( INTEGER nEntityIndex, )
+| - boolean IsDominated ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsEnemy ( INTEGER nEntityIndex, )
+| - boolean IsEnemy ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsEvadeDisabled ( INTEGER nEntityIndex, )
+| - boolean IsEvadeDisabled ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsFort ( INTEGER nEntityIndex, )
+| - boolean IsFort ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsFrozen ( INTEGER nEntityIndex, )
+| - boolean IsFrozen ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsGeneratedByEconItem ( INTEGER nEntityIndex, )
+| - boolean IsGeneratedByEconItem ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsHallofFame ( INTEGER nEntityIndex, )
+| - boolean IsHallofFame ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsDisarmed ( INTEGER nEntityIndex, )
+| - boolean IsDisarmed ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsHero ( INTEGER nEntityIndex, )
+| - boolean IsHero ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsHexed ( INTEGER nEntityIndex, )
+| - boolean IsHexed ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsIllusion ( INTEGER nEntityIndex, )
+| - boolean IsIllusion ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsInRangeOfFountain ( INTEGER nEntityIndex, )
+| - boolean IsInRangeOfFountain ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsInventoryEnabled ( INTEGER nEntityIndex, )
+| - boolean IsInventoryEnabled ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsInvisible ( INTEGER nEntityIndex, )
+| - boolean IsInvisible ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsInvulnerable ( INTEGER nEntityIndex, )
+| - boolean IsInvulnerable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsLaneCreep ( INTEGER nEntityIndex, )
+| - boolean IsLaneCreep ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsLowAttackPriority ( INTEGER nEntityIndex, )
+| - boolean IsLowAttackPriority ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsMagicImmune ( INTEGER nEntityIndex, )
+| - boolean IsMagicImmune ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsMuted ( INTEGER nEntityIndex, )
+| - boolean IsMuted ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsNeutralUnitType ( INTEGER nEntityIndex, )
+| - boolean IsNeutralUnitType ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsNightmared ( INTEGER nEntityIndex, )
+| - boolean IsNightmared ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsOther ( INTEGER nEntityIndex, )
+| - boolean IsOther ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsOutOfGame ( INTEGER nEntityIndex, )
+| - boolean IsOutOfGame ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsOwnedByAnyPlayer ( INTEGER nEntityIndex, )
+| - boolean IsOwnedByAnyPlayer ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsPhantom ( INTEGER nEntityIndex, )
+| - boolean IsPhantom ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsRangedAttacker ( INTEGER nEntityIndex, )
+| - boolean IsRangedAttacker ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsRealHero ( INTEGER nEntityIndex, )
+| - boolean IsRealHero ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsRooted ( INTEGER nEntityIndex, )
+| - boolean IsRooted ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSelectable ( INTEGER nEntityIndex, )
+| - boolean IsSelectable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsShop ( INTEGER nEntityIndex, )
+| - boolean IsShop ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSilenced ( INTEGER nEntityIndex, )
+| - boolean IsSilenced ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSpeciallyDeniable ( INTEGER nEntityIndex, )
+| - boolean IsSpeciallyDeniable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSpeciallyUndeniable ( INTEGER nEntityIndex, )
+| - boolean IsSpeciallyUndeniable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsStunned ( INTEGER nEntityIndex, )
+| - boolean IsStunned ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSummoned ( INTEGER nEntityIndex, )
+| - boolean IsSummoned ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsTower ( INTEGER nEntityIndex, )
+| - boolean IsTower ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsUnselectable ( INTEGER nEntityIndex, )
+| - boolean IsUnselectable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsWard ( INTEGER nEntityIndex, )
+| - boolean IsWard ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsZombie ( INTEGER nEntityIndex, )
+| - boolean IsZombie ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN NoHealthBar ( INTEGER nEntityIndex, )
+| - boolean NoHealthBar ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN NoTeamMoveTo ( INTEGER nEntityIndex, )
+| - boolean NoTeamMoveTo ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN NoTeamSelect ( INTEGER nEntityIndex, )
+| - boolean NoTeamSelect ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN NotOnMinimap ( INTEGER nEntityIndex, )
+| - boolean NotOnMinimap ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN NotOnMinimapForEnemies ( INTEGER nEntityIndex, )
+| - boolean NotOnMinimapForEnemies ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN NoUnitCollision ( INTEGER nEntityIndex, )
+| - boolean NoUnitCollision ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN PassivesDisabled ( INTEGER nEntityIndex, )
+| - boolean PassivesDisabled ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN ProvidesVision ( INTEGER nEntityIndex, )
+| - boolean ProvidesVision ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN UsesHeroAbilityNumbers ( INTEGER nEntityIndex, )
+| - boolean UsesHeroAbilityNumbers ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsMoving ( INTEGER nEntityIndex, )
+| - boolean IsMoving ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAbilityCount ( INTEGER nEntityIndex, )
+| - integer GetAbilityCount ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetCombatClassAttack ( INTEGER nEntityIndex, )
+| - integer GetCombatClassAttack ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetCombatClassDefend ( INTEGER nEntityIndex, )
+| - integer GetCombatClassDefend ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetCurrentVisionRange ( INTEGER nEntityIndex, )
+| - integer GetCurrentVisionRange ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetDamageBonus ( INTEGER nEntityIndex, )
+| - integer GetDamageBonus ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetDamageMax ( INTEGER nEntityIndex, )
+| - integer GetDamageMax ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetDamageMin ( INTEGER nEntityIndex, )
+| - integer GetDamageMin ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetDayTimeVisionRange ( INTEGER nEntityIndex, )
+| - integer GetDayTimeVisionRange ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetHealth ( INTEGER nEntityIndex, )
+| - integer GetHealth ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetHealthPercent ( INTEGER nEntityIndex, )
+| - integer GetHealthPercent ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetHealthThinkRegen ( INTEGER nEntityIndex, )
+| - integer GetHealthThinkRegen ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetLevel ( INTEGER nEntityIndex, )
+| - integer GetLevel ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetMaxHealth ( INTEGER nEntityIndex, )
+| - integer GetMaxHealth ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetNightTimeVisionRange ( INTEGER nEntityIndex, )
+| - integer GetNightTimeVisionRange ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetPlayerOwnerID ( INTEGER nEntityIndex, )
+| - integer GetPlayerOwnerID ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetStates ( INTEGER nEntityIndex, )
+| - integer GetStates ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetTotalPurchasedUpgradeGoldCost ( INTEGER nEntityIndex, )
+| - integer GetTotalPurchasedUpgradeGoldCost ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetTeamNumber ( INTEGER nEntityIndex, )
+| - integer GetTeamNumber ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetHealthBarOffset ( INTEGER nEntityIndex, )
+| - integer GetHealthBarOffset ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetAttackRange ( INTEGER nEntityIndex, )
+| - float GetAttackRange ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetAttackSpeed ( INTEGER nEntityIndex, )
+| - float GetAttackSpeed ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetAttacksPerSecond ( INTEGER nEntityIndex, )
+| - float GetAttacksPerSecond ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetBaseAttackTime ( INTEGER nEntityIndex, )
+| - float GetBaseAttackTime ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetBaseMagicalResistanceValue ( INTEGER nEntityIndex, )
+| - float GetBaseMagicalResistanceValue ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetBaseMoveSpeed ( INTEGER nEntityIndex, )
+| - float GetBaseMoveSpeed ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetBonusPhysicalArmor ( INTEGER nEntityIndex, )
+| - float GetBonusPhysicalArmor ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetCollisionPadding ( INTEGER nEntityIndex, )
+| - float GetCollisionPadding ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetEffectiveInvisibilityLevel ( INTEGER nEntityIndex, )
+| - float GetEffectiveInvisibilityLevel ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetHasteFactor ( INTEGER nEntityIndex, )
+| - float GetHasteFactor ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetHullRadius ( INTEGER nEntityIndex, )
+| - float GetHullRadius ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetIdealSpeed ( INTEGER nEntityIndex, )
+| - float GetIdealSpeed ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetIncreasedAttackSpeed ( INTEGER nEntityIndex, )
+| - float GetIncreasedAttackSpeed ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetMana ( INTEGER nEntityIndex, )
+| - float GetMana ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetManaThinkRegen ( INTEGER nEntityIndex, )
+| - float GetManaThinkRegen ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetMaxMana ( INTEGER nEntityIndex, )
+| - float GetMaxMana ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetMagicalArmorValue ( INTEGER nEntityIndex, )
+| - float GetMagicalArmorValue ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetPaddedCollisionRadius ( INTEGER nEntityIndex, )
+| - float GetPaddedCollisionRadius ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetPercentInvisible ( INTEGER nEntityIndex, )
+| - float GetPercentInvisible ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetPhysicalArmorValue ( INTEGER nEntityIndex, )
+| - float GetPhysicalArmorValue ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetProjectileCollisionSize ( INTEGER nEntityIndex, )
+| - float GetProjectileCollisionSize ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetRingRadius ( INTEGER nEntityIndex, )
+| - float GetRingRadius ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetSecondsPerAttack ( INTEGER nEntityIndex, )
+| - float GetSecondsPerAttack ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT ManaFraction ( INTEGER nEntityIndex, )
+| - float ManaFraction ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetClassNameAsCStr ( INTEGER nEntityIndex, )
+| - cstring GetClassNameAsCStr ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetDisplayedUnitName ( INTEGER nEntityIndex, )
+| - cstring GetDisplayedUnitName ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetSelectionGroup ( INTEGER nEntityIndex, )
+| - cstring GetSelectionGroup ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetSoundSet ( INTEGER nEntityIndex, )
+| - cstring GetSoundSet ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetUnitLabel ( INTEGER nEntityIndex, )
+| - cstring GetUnitLabel ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetUnitName ( INTEGER nEntityIndex, )
+| - cstring GetUnitName ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INT64 GetTotalDamageTaken ( INTEGER nEntityIndex, )
+| - integer64 GetTotalDamageTaken ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsControllableByPlayer ( INTEGER nEntityIndex, INTEGER nPlayerIndex, )
+| - boolean IsControllableByPlayer ( integer nEntityIndex, integer nPlayerIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetChosenTarget ( INTEGER nEntityIndex, )
+| - integer GetChosenTarget ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN HasItemInInventory ( INTEGER nEntityIndex, CSTRING pItemName, )
+| - boolean HasItemInInventory ( integer nEntityIndex, cstring pItemName )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetRangeToUnit ( INTEGER nEntityIndex, INTEGER nEntityIndex2, )
+| - float GetRangeToUnit ( integer nEntityIndex, integer nEntityIndex2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsEntityInRange ( INTEGER nEntityIndex, INTEGER nEntityIndex2, FLOAT flRange, )
+| - boolean IsEntityInRange ( integer nEntityIndex, integer nEntityIndex2, float flRange )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetMoveSpeedModifier ( INTEGER nEntityIndex, FLOAT flBaseSpeed, )
+| - float GetMoveSpeedModifier ( integer nEntityIndex, float flBaseSpeed )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN CanAcceptTargetToAttack ( INTEGER nEntityIndex, INTEGER nEntityIndex2, )
+| - boolean CanAcceptTargetToAttack ( integer nEntityIndex, integer nEntityIndex2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN InState ( INTEGER nEntityIndex, INTEGER nState, )
+| - boolean InState ( integer nEntityIndex, integer nState )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetArmorForDamageType ( INTEGER nEntityIndex, INTEGER iDamageType, )
+| - float GetArmorForDamageType ( integer nEntityIndex, integer iDamageType )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetArmorReductionForDamageType ( INTEGER nEntityIndex, INTEGER iDamageType, )
+| - float GetArmorReductionForDamageType ( integer nEntityIndex, integer iDamageType )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsInRangeOfShop ( INTEGER nEntityIndex, INTEGER iShopType, BOOLEAN bSpecific, )
+| - boolean IsInRangeOfShop ( integer nEntityIndex, integer iShopType, boolean bSpecific )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetNumItemsInStash ( INTEGER nEntityIndex, )
+| - integer GetNumItemsInStash ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetNumItemsInInventory ( INTEGER nEntityIndex, )
+| - integer GetNumItemsInInventory ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetItemInSlot ( INTEGER nEntityIndex, INTEGER nSlotIndex, )
+| - integer GetItemInSlot ( integer nEntityIndex, integer nSlotIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAbility ( INTEGER nEntityIndex, INTEGER nSlotIndex, )
+| - integer GetAbility ( integer nEntityIndex, integer nSlotIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAbilityByName ( INTEGER nEntityIndex, CSTRING pszAbilityName, )
+| - integer GetAbilityByName ( integer nEntityIndex, cstring pszAbilityName )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetNumBuffs ( INTEGER nEntityIndex, )
+| - integer GetNumBuffs ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetBuff ( INTEGER nEntityIndex, INTEGER nBufIndex, )
+| - integer GetBuff ( integer nEntityIndex, integer nBufIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetMinimapIcon ( INTEGER nEntityIndex, CSTRING pszMinimapIcon, )
+| - void SetMinimapIcon ( integer nEntityIndex, cstring pszMinimapIcon )
 | - Description:
 | - Set the minimap icon on this client.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAbilityPoints ( INTEGER nEntityIndex, )
+| - integer GetAbilityPoints ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetCurrentXP ( INTEGER nEntityIndex, )
+| - integer GetCurrentXP ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetNeededXPToLevel ( INTEGER nEntityIndex, )
+| - integer GetNeededXPToLevel ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetSelectionEntities ( INTEGER nEntityIndex, )
+| - v8_array GetSelectionEntities ( integer nEntityIndex )
 | - Description:
 | - Get the currently selected entities
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsValidEntity ( INTEGER nEntityIndex, )
+| - boolean IsValidEntity ( integer nEntityIndex )
 | - Description:
 | - Is this a valid entity index?
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsItemPhysical ( INTEGER nEntityIndex, )
+| - boolean IsItemPhysical ( integer nEntityIndex )
 | - Description:
 | - Is this entity an item container in the world?
 | - 
 | - 
 | - Function: 
-| - INTEGER GetContainedItem ( INTEGER nEntityIndex, )
+| - integer GetContainedItem ( integer nEntityIndex )
 | - Description:
 | - Get the item contained in this physical item container.
 | - 
@@ -1513,469 +1513,469 @@ Scope Name: Entities; Scope Size: 162;
 Scope Name: Abilities; Scope Size: 78;
 | - 
 | - Function: 
-| - CSTRING GetAbilityName ( INTEGER nEntityIndex, )
+| - cstring GetAbilityName ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetAbilityTextureName ( INTEGER nEntityIndex, )
+| - cstring GetAbilityTextureName ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetAssociatedPrimaryAbilities ( INTEGER nEntityIndex, )
+| - cstring GetAssociatedPrimaryAbilities ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetAssociatedSecondaryAbilities ( INTEGER nEntityIndex, )
+| - cstring GetAssociatedSecondaryAbilities ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetHotkeyOverride ( INTEGER nEntityIndex, )
+| - cstring GetHotkeyOverride ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetIntrinsicModifierName ( INTEGER nEntityIndex, )
+| - cstring GetIntrinsicModifierName ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetSharedCooldownName ( INTEGER nEntityIndex, )
+| - cstring GetSharedCooldownName ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER AbilityReady ( INTEGER nEntityIndex, )
+| - integer AbilityReady ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER CanAbilityBeUpgraded ( INTEGER nEntityIndex, )
+| - integer CanAbilityBeUpgraded ( integer nEntityIndex )
 | - Description:
 | - Returns an AbilityLearnResult_t
 | - 
 | - 
 | - Function: 
-| - INTEGER CanBeExecuted ( INTEGER nEntityIndex, )
+| - integer CanBeExecuted ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAbilityDamage ( INTEGER nEntityIndex, )
+| - integer GetAbilityDamage ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAbilityDamageType ( INTEGER nEntityIndex, )
+| - integer GetAbilityDamageType ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAbilityTargetFlags ( INTEGER nEntityIndex, )
+| - integer GetAbilityTargetFlags ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAbilityTargetTeam ( INTEGER nEntityIndex, )
+| - integer GetAbilityTargetTeam ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAbilityTargetType ( INTEGER nEntityIndex, )
+| - integer GetAbilityTargetType ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAbilityType ( INTEGER nEntityIndex, )
+| - integer GetAbilityType ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetBehavior ( INTEGER nEntityIndex, )
+| - integer GetBehavior ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetCastRange ( INTEGER nEntityIndex, )
+| - integer GetCastRange ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetChannelledManaCostPerSecond ( INTEGER nEntityIndex, )
+| - integer GetChannelledManaCostPerSecond ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetCurrentCharges ( INTEGER nEntityIndex, )
+| - integer GetCurrentCharges ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetCurrentAbilityCharges ( INTEGER nEntityIndex, )
+| - integer GetCurrentAbilityCharges ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetEffectiveLevel ( INTEGER nEntityIndex, )
+| - integer GetEffectiveLevel ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetHeroLevelRequiredToUpgrade ( INTEGER nEntityIndex, )
+| - integer GetHeroLevelRequiredToUpgrade ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetLevel ( INTEGER nEntityIndex, )
+| - integer GetLevel ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetManaCost ( INTEGER nEntityIndex, )
+| - integer GetManaCost ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetMaxLevel ( INTEGER nEntityIndex, )
+| - integer GetMaxLevel ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN AttemptToUpgrade ( INTEGER nEntityIndex, )
+| - boolean AttemptToUpgrade ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN CanLearn ( INTEGER nEntityIndex, )
+| - boolean CanLearn ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN GetAutoCastState ( INTEGER nEntityIndex, )
+| - boolean GetAutoCastState ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN GetToggleState ( INTEGER nEntityIndex, )
+| - boolean GetToggleState ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN HasScepterUpgradeTooltip ( INTEGER nEntityIndex, )
+| - boolean HasScepterUpgradeTooltip ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsActivated ( INTEGER nEntityIndex, )
+| - boolean IsActivated ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsActivatedChanging ( INTEGER nEntityIndex, )
+| - boolean IsActivatedChanging ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsAttributeBonus ( INTEGER nEntityIndex, )
+| - boolean IsAttributeBonus ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsAutocast ( INTEGER nEntityIndex, )
+| - boolean IsAutocast ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsCooldownReady ( INTEGER nEntityIndex, )
+| - boolean IsCooldownReady ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsDisplayedAbility ( INTEGER nEntityIndex, )
+| - boolean IsDisplayedAbility ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsHidden ( INTEGER nEntityIndex, )
+| - boolean IsHidden ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsHiddenWhenStolen ( INTEGER nEntityIndex, )
+| - boolean IsHiddenWhenStolen ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsInAbilityPhase ( INTEGER nEntityIndex, )
+| - boolean IsInAbilityPhase ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsItem ( INTEGER nEntityIndex, )
+| - boolean IsItem ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsMarkedAsDirty ( INTEGER nEntityIndex, )
+| - boolean IsMarkedAsDirty ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsMuted ( INTEGER nEntityIndex, )
+| - boolean IsMuted ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsOnCastbar ( INTEGER nEntityIndex, )
+| - boolean IsOnCastbar ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsOnLearnbar ( INTEGER nEntityIndex, )
+| - boolean IsOnLearnbar ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsOwnersGoldEnough ( INTEGER nEntityIndex, )
+| - boolean IsOwnersGoldEnough ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsOwnersGoldEnoughForUpgrade ( INTEGER nEntityIndex, )
+| - boolean IsOwnersGoldEnoughForUpgrade ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsOwnersManaEnough ( INTEGER nEntityIndex, )
+| - boolean IsOwnersManaEnough ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsPassive ( INTEGER nEntityIndex, )
+| - boolean IsPassive ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsRecipe ( INTEGER nEntityIndex, )
+| - boolean IsRecipe ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSharedWithTeammates ( INTEGER nEntityIndex, )
+| - boolean IsSharedWithTeammates ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsStealable ( INTEGER nEntityIndex, )
+| - boolean IsStealable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsStolen ( INTEGER nEntityIndex, )
+| - boolean IsStolen ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsToggle ( INTEGER nEntityIndex, )
+| - boolean IsToggle ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN UsesAbilityCharges ( INTEGER nEntityIndex, )
+| - boolean UsesAbilityCharges ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetAOERadius ( INTEGER nEntityIndex, )
+| - float GetAOERadius ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetBackswingTime ( INTEGER nEntityIndex, )
+| - float GetBackswingTime ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetCastPoint ( INTEGER nEntityIndex, )
+| - float GetCastPoint ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetChannelStartTime ( INTEGER nEntityIndex, )
+| - float GetChannelStartTime ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetChannelTime ( INTEGER nEntityIndex, )
+| - float GetChannelTime ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetCooldown ( INTEGER nEntityIndex, )
+| - float GetCooldown ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetCooldownLength ( INTEGER nEntityIndex, )
+| - float GetCooldownLength ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetCooldownTime ( INTEGER nEntityIndex, )
+| - float GetCooldownTime ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetCooldownTimeRemaining ( INTEGER nEntityIndex, )
+| - float GetCooldownTimeRemaining ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetDuration ( INTEGER nEntityIndex, )
+| - float GetDuration ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetUpgradeBlend ( INTEGER nEntityIndex, )
+| - float GetUpgradeBlend ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetAbilityChargeRestoreTimeRemaining ( INTEGER nEntityIndex, )
+| - float GetAbilityChargeRestoreTimeRemaining ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetLocalPlayerActiveAbility ( )
+| - integer GetLocalPlayerActiveAbility ( )
 | - Description:
 | - Get the local player's current active ability. (Pre-cast targetting state.)
 | - 
 | - 
 | - Function: 
-| - INTEGER GetCaster ( INTEGER nAbilityIndex, )
+| - integer GetCaster ( integer nAbilityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetCustomValueFor ( INTEGER nAbilityIndex, CSTRING pszAbilityVarName, )
+| - float GetCustomValueFor ( integer nAbilityIndex, cstring pszAbilityVarName )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT64 GetLevelSpecialValueFor ( INTEGER nAbilityIndex, CSTRING szName, INTEGER nLevel, )
+| - float64 GetLevelSpecialValueFor ( integer nAbilityIndex, cstring szName, integer nLevel )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT64 GetSpecialValueFor ( INTEGER nAbilityIndex, CSTRING szName, )
+| - float64 GetSpecialValueFor ( integer nAbilityIndex, cstring szName )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsCosmetic ( INTEGER nAbilityIndex, INTEGER nTargetEntityIndex, )
+| - boolean IsCosmetic ( integer nAbilityIndex, integer nTargetEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN ExecuteAbility ( INTEGER nAbilityEntIndex, INTEGER nCasterEntIndex, BOOLEAN bIsQuickCast, )
+| - boolean ExecuteAbility ( integer nAbilityEntIndex, integer nCasterEntIndex, boolean bIsQuickCast )
 | - Description:
 | - Attempt to execute the specified ability (Equivalent to clicking the ability in the HUD action bar)
 | - 
 | - 
 | - Function: 
-| - INTEGER GetMaxAbilityCharges ( INTEGER nAbilityEntIndex, )
+| - integer GetMaxAbilityCharges ( integer nAbilityEntIndex )
 | - Description:
 | - Get the max ability charge count.
 | - 
 | - 
 | - Function: 
-| - VOID CreateDoubleTapCastOrder ( INTEGER nAbilityEntIndex, INTEGER nCasterEntIndex, )
+| - void CreateDoubleTapCastOrder ( integer nAbilityEntIndex, integer nCasterEntIndex )
 | - Description:
 | - Attempt to double-tap (self-cast) the specified ability (Equivalent to double-clicking the ability in the HUD action bar)
 | - 
 | - 
 | - Function: 
-| - VOID PingAbility ( INTEGER nAbilityIndex, )
+| - void PingAbility ( integer nAbilityIndex )
 | - Description:
 | - Ping the specified ability (Equivalent to alt-clicking the ability in the HUD action bar)
 | - 
 | - 
 | - Function: 
-| - CSTRING GetKeybind ( INTEGER nAbilityEntIndex, )
+| - cstring GetKeybind ( integer nAbilityEntIndex )
 | - Description:
 | - Returns the keybind (as a string) for the specified ability.
 | - 
@@ -1983,229 +1983,229 @@ Scope Name: Abilities; Scope Size: 78;
 Scope Name: Items; Scope Size: 38;
 | - 
 | - Function: 
-| - BOOLEAN ShouldDisplayCharges ( INTEGER nEntityIndex, )
+| - boolean ShouldDisplayCharges ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN AlwaysDisplayCharges ( INTEGER nEntityIndex, )
+| - boolean AlwaysDisplayCharges ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN ShowSecondaryCharges ( INTEGER nEntityIndex, )
+| - boolean ShowSecondaryCharges ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN CanBeSoldByLocalPlayer ( INTEGER nEntityIndex, )
+| - boolean CanBeSoldByLocalPlayer ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN CanDoubleTapCast ( INTEGER nEntityIndex, )
+| - boolean CanDoubleTapCast ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN ForceHideCharges ( INTEGER nEntityIndex, )
+| - boolean ForceHideCharges ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsAlertableItem ( INTEGER nEntityIndex, )
+| - boolean IsAlertableItem ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsCastOnPickup ( INTEGER nEntityIndex, )
+| - boolean IsCastOnPickup ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsDisassemblable ( INTEGER nEntityIndex, )
+| - boolean IsDisassemblable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsDroppable ( INTEGER nEntityIndex, )
+| - boolean IsDroppable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsInnatelyDisassemblable ( INTEGER nEntityIndex, )
+| - boolean IsInnatelyDisassemblable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsKillable ( INTEGER nEntityIndex, )
+| - boolean IsKillable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsMuted ( INTEGER nEntityIndex, )
+| - boolean IsMuted ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsPermanent ( INTEGER nEntityIndex, )
+| - boolean IsPermanent ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsPurchasable ( INTEGER nEntityIndex, )
+| - boolean IsPurchasable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsRecipe ( INTEGER nEntityIndex, )
+| - boolean IsRecipe ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsRecipeGenerated ( INTEGER nEntityIndex, )
+| - boolean IsRecipeGenerated ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSellable ( INTEGER nEntityIndex, )
+| - boolean IsSellable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsStackable ( INTEGER nEntityIndex, )
+| - boolean IsStackable ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN ProRatesChargesWhenSelling ( INTEGER nEntityIndex, )
+| - boolean ProRatesChargesWhenSelling ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN RequiresCharges ( INTEGER nEntityIndex, )
+| - boolean RequiresCharges ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER CanBeExecuted ( INTEGER nEntityIndex, )
+| - integer CanBeExecuted ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetCost ( INTEGER nEntityIndex, )
+| - integer GetCost ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetCurrentCharges ( INTEGER nEntityIndex, )
+| - integer GetCurrentCharges ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetSecondaryCharges ( INTEGER nEntityIndex, )
+| - integer GetSecondaryCharges ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetDisplayedCharges ( INTEGER nEntityIndex, )
+| - integer GetDisplayedCharges ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetInitialCharges ( INTEGER nEntityIndex, )
+| - integer GetInitialCharges ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetItemColor ( INTEGER nEntityIndex, )
+| - integer GetItemColor ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetShareability ( INTEGER nEntityIndex, )
+| - integer GetShareability ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetAbilityTextureSF ( INTEGER nEntityIndex, )
+| - cstring GetAbilityTextureSF ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetAssembledTime ( INTEGER nEntityIndex, )
+| - float GetAssembledTime ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetPurchaseTime ( INTEGER nEntityIndex, )
+| - float GetPurchaseTime ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetPurchaser ( INTEGER nItemID, )
+| - integer GetPurchaser ( integer nItemID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN LocalPlayerDisassembleItem ( INTEGER nItem, )
+| - boolean LocalPlayerDisassembleItem ( integer nItem )
 | - Description:
 | - Attempt to have the local player disassemble the specified item. Returns false if the order wasn't issued.
 | - 
 | - 
 | - Function: 
-| - BOOLEAN LocalPlayerDropItemFromStash ( INTEGER nItem, )
+| - boolean LocalPlayerDropItemFromStash ( integer nItem )
 | - Description:
 | - Attempt to have the local player drop the specified item from its stash. Returns false if the order wasn't issued.
 | - 
 | - 
 | - Function: 
-| - BOOLEAN LocalPlayerItemAlertAllies ( INTEGER nItem, )
+| - boolean LocalPlayerItemAlertAllies ( integer nItem )
 | - Description:
 | - Attempt to have the local player alert allies about the specified item. Returns false if the order wasn't issued.
 | - 
 | - 
 | - Function: 
-| - BOOLEAN LocalPlayerMoveItemToStash ( INTEGER nItem, )
+| - boolean LocalPlayerMoveItemToStash ( integer nItem )
 | - Description:
 | - Attempt to have the local player move the specified item to its stash. Returns false if the order wasn't issued.
 | - 
 | - 
 | - Function: 
-| - BOOLEAN LocalPlayerSellItem ( INTEGER nItem, )
+| - boolean LocalPlayerSellItem ( integer nItem )
 | - Description:
 | - Attempt to have the local player sell the specified item. Returns false if the order wasn't issued.
 | - 
@@ -2213,493 +2213,493 @@ Scope Name: Items; Scope Size: 38;
 Scope Name: Game; Scope Size: 82;
 | - 
 | - Function: 
-| - FLOAT Time ( )
+| - float Time ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetGameTime ( )
+| - float GetGameTime ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetGameFrameTime ( )
+| - float GetGameFrameTime ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT GetDOTATime ( BOOLEAN bIncludePreGame, BOOLEAN bIncludeNegativeTime, )
+| - float GetDOTATime ( boolean bIncludePreGame, boolean bIncludeNegativeTime )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsGamePaused ( )
+| - boolean IsGamePaused ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsDayTime ( )
+| - boolean IsDayTime ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsInToolsMode ( )
+| - boolean IsInToolsMode ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsInBanPhase ( )
+| - boolean IsInBanPhase ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetGameWinner ( )
+| - integer GetGameWinner ( )
 | - Description:
 | - Return the team id of the winning team.
 | - 
 | - 
 | - Function: 
-| - FLOAT GetStateTransitionTime ( )
+| - float GetStateTransitionTime ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetCustomGameDifficulty ( )
+| - integer GetCustomGameDifficulty ( )
 | - Description:
 | - Get the difficulty setting of the game.
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsHUDFlipped ( )
+| - boolean IsHUDFlipped ( )
 | - Description:
 | - Returns true if the user has enabled flipped HUD
 | - 
 | - 
 | - Function: 
-| - INTEGER GetScreenWidth ( )
+| - integer GetScreenWidth ( )
 | - Description:
 | - Returns the width of the display.
 | - 
 | - 
 | - Function: 
-| - INTEGER GetScreenHeight ( )
+| - integer GetScreenHeight ( )
 | - Description:
 | - Returns the height of the display.
 | - 
 | - 
 | - Function: 
-| - INTEGER WorldToScreenX ( FLOAT x, FLOAT y, FLOAT z, )
+| - integer WorldToScreenX ( float x, float y, float z )
 | - Description:
 | - Converts the specified x,y,z world co-ordinate into an x screen coordinate. Returns -1 if behind the camera
 | - 
 | - 
 | - Function: 
-| - INTEGER WorldToScreenY ( FLOAT x, FLOAT y, FLOAT z, )
+| - integer WorldToScreenY ( float x, float y, float z )
 | - Description:
 | - Converts the specified x,y,z world co-ordinate into a y screen coordinate. Returns -1 if behind the camera
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY ScreenXYToWorld ( INTEGER nX, INTEGER nY, )
+| - v8_array ScreenXYToWorld ( integer nX, integer nY )
 | - Description:
 | - Converts the specified x, y screen coordinates into a x, y, z world coordinates.
 | - 
 | - 
 | - Function: 
-| - CSTRING GetKeybindForAbility ( INTEGER iSlot, )
+| - cstring GetKeybindForAbility ( integer iSlot )
 | - Description:
 | - Returns the keybind (as a string) for the requested ability slot.
 | - 
 | - 
 | - Function: 
-| - CSTRING GetKeybindForInventorySlot ( INTEGER iSlot, )
+| - cstring GetKeybindForInventorySlot ( integer iSlot )
 | - Description:
 | - Returns the keybind (as a string) for the requested inventory slot.
 | - 
 | - 
 | - Function: 
-| - CSTRING GetKeybindForCommand ( INTEGER nCommand, )
+| - cstring GetKeybindForCommand ( integer nCommand )
 | - Description:
 | - Returns the keybind (as a string).
 | - 
 | - 
 | - Function: 
-| - VOID CreateCustomKeyBind ( CSTRING pszKey, CSTRING pszCommand, )
+| - void CreateCustomKeyBind ( cstring pszKey, cstring pszCommand )
 | - Description:
 | - Create a new keybind.
 | - 
 | - 
 | - Function: 
-| - FLOAT GetNianFightTimeLeft ( )
+| - float GetNianFightTimeLeft ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN Diretide2020ShouldShowGameInfo ( )
+| - boolean Diretide2020ShouldShowGameInfo ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID Diretide2020SetShowGameInfo ( BOOLEAN bShowGameInfo, )
+| - void Diretide2020SetShowGameInfo ( boolean bShowGameInfo )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER Diretide2020GetGameplayTipNumber ( )
+| - integer Diretide2020GetGameplayTipNumber ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID Diretide2020SetGameplayTipNumber ( INTEGER nGameplayTipNumber, )
+| - void Diretide2020SetGameplayTipNumber ( integer nGameplayTipNumber )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER NemesticeGetGameplayTipNumber ( )
+| - integer NemesticeGetGameplayTipNumber ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID NemesticeSetGameplayTipNumber ( INTEGER nGameplayTipNumber, )
+| - void NemesticeSetGameplayTipNumber ( integer nGameplayTipNumber )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN NemesticeShouldShowGameInfo ( )
+| - boolean NemesticeShouldShowGameInfo ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID NemesticeSetShowGameInfo ( BOOLEAN bShowGameInfo, )
+| - void NemesticeSetShowGameInfo ( boolean bShowGameInfo )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ForceCustomUILoad ( )
+| - void ForceCustomUILoad ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID CutToDefaultCamera ( )
+| - void CutToDefaultCamera ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT PlayDataDrivenCamera ( CSTRING pszCameraName, )
+| - float PlayDataDrivenCamera ( cstring pszCameraName )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetState ( )
+| - integer GetState ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN GameStateIs ( INTEGER nState, )
+| - boolean GameStateIs ( integer nState )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN GameStateIsBefore ( INTEGER nState, )
+| - boolean GameStateIsBefore ( integer nState )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN GameStateIsAfter ( INTEGER nState, )
+| - boolean GameStateIsAfter ( integer nState )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID AddCommand ( CSTRING pszCommandName, JS_VALUE callback, CSTRING pszDescription, INTEGER nFlags, )
+| - void AddCommand ( cstring pszCommandName, v8_value callback, cstring pszDescription, integer nFlags )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetLocalPlayerID ( )
+| - integer GetLocalPlayerID ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID PlayerJoinTeam ( INTEGER nTeamID, )
+| - void PlayerJoinTeam ( integer nTeamID )
 | - Description:
 | - Assign the local player to the specified team
 | - 
 | - 
 | - Function: 
-| - VOID AutoAssignPlayersToTeams ( )
+| - void AutoAssignPlayersToTeams ( )
 | - Description:
 | - Assign the currently unassigned players to teams
 | - 
 | - 
 | - Function: 
-| - VOID ShufflePlayerTeamAssignments ( )
+| - void ShufflePlayerTeamAssignments ( )
 | - Description:
 | - Shuffle the team assignments of all of the players currently assigned to a team.
 | - 
 | - 
 | - Function: 
-| - VOID SetRemainingSetupTime ( FLOAT flSeconds, )
+| - void SetRemainingSetupTime ( float flSeconds )
 | - Description:
 | - Set the remaining seconds in team setup before the game starts. -1 to stop the countdown timer
 | - 
 | - 
 | - Function: 
-| - VOID SetAutoLaunchDelay ( FLOAT flSeconds, )
+| - void SetAutoLaunchDelay ( float flSeconds )
 | - Description:
 | - Set the amount of time in seconds that will be set as the remaining time when all players are assigned to a team.
 | - 
 | - 
 | - Function: 
-| - VOID SetAutoLaunchEnabled ( BOOLEAN bEnable, )
+| - void SetAutoLaunchEnabled ( boolean bEnable )
 | - Description:
 | - Enable or disable automatically starting the game once all players are assigned to a team
 | - 
 | - 
 | - Function: 
-| - BOOLEAN GetAutoLaunchEnabled ( )
+| - boolean GetAutoLaunchEnabled ( )
 | - Description:
 | - Return true of false indicating if automatically starting the game is enabled.
 | - 
 | - 
 | - Function: 
-| - VOID SetTeamSelectionLocked ( BOOLEAN bLockTeams, )
+| - void SetTeamSelectionLocked ( boolean bLockTeams )
 | - Description:
 | - Lock the team selection preventing players from swiching teams.
 | - 
 | - 
 | - Function: 
-| - BOOLEAN GetTeamSelectionLocked ( )
+| - boolean GetTeamSelectionLocked ( )
 | - Description:
 | - Returns true or false to indicate if team selection is locked
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetAllTeamIDs ( )
+| - v8_array GetAllTeamIDs ( )
 | - Description:
 | - Get all team IDs
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetAllPlayerIDs ( )
+| - v8_array GetAllPlayerIDs ( )
 | - Description:
 | - Get all player IDs
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetUnassignedPlayerIDs ( )
+| - v8_array GetUnassignedPlayerIDs ( )
 | - Description:
 | - Get unassigned player IDs
 | - 
 | - 
 | - Function: 
-| - INTEGER GetPlayerUltimateStateOrTime ( INTEGER nPlayerID, )
+| - integer GetPlayerUltimateStateOrTime ( integer nPlayerID )
 | - Description:
 | - Get info about the player hero ultimate ability
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsPlayerMuted ( INTEGER nPlayerID, )
+| - boolean IsPlayerMuted ( integer nPlayerID )
 | - Description:
 | - Whether the local player has muted text and voice chat for the specified player id
 | - 
 | - 
 | - Function: 
-| - VOID SetPlayerMuted ( INTEGER nPlayerID, BOOLEAN bMuted, )
+| - void SetPlayerMuted ( integer nPlayerID, boolean bMuted )
 | - Description:
 | - Set whether the local player has muted text and voice chat for the specified player id
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsPlayerMutedVoice ( INTEGER nPlayerID, )
+| - boolean IsPlayerMutedVoice ( integer nPlayerID )
 | - Description:
 | - Whether the local player has muted voice chat for the specified player id
 | - 
 | - 
 | - Function: 
-| - VOID SetPlayerMutedVoice ( INTEGER nPlayerID, BOOLEAN bMutedVoice, )
+| - void SetPlayerMutedVoice ( integer nPlayerID, boolean bMutedVoice )
 | - Description:
 | - Set whether the local player has muted voice chat for the specified player id
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsPlayerMutedText ( INTEGER nPlayerID, )
+| - boolean IsPlayerMutedText ( integer nPlayerID )
 | - Description:
 | - Whether the local player has muted text chat for the specified player id
 | - 
 | - 
 | - Function: 
-| - VOID SetPlayerMutedText ( INTEGER nPlayerID, BOOLEAN bMutedText, )
+| - void SetPlayerMutedText ( integer nPlayerID, boolean bMutedText )
 | - Description:
 | - Set whether the local player has muted text chat for the specified player id
 | - 
 | - 
 | - Function: 
-| - JS_OBJECT GetTeamDetails ( INTEGER nTeam, )
+| - v8_object GetTeamDetails ( integer nTeam )
 | - Description:
 | - Get detailed information for the given team
 | - 
 | - 
 | - Function: 
-| - JS_OBJECT GetLocalPlayerInfo ( )
+| - v8_object GetLocalPlayerInfo ( )
 | - Description:
 | - Get details for the local player
 | - 
 | - 
 | - Function: 
-| - JS_OBJECT GetPlayerItems ( INTEGER nPlayerID, )
+| - v8_object GetPlayerItems ( integer nPlayerID )
 | - Description:
 | - Get info about the player items.
 | - 
 | - 
 | - Function: 
-| - JS_OBJECT GetPlayerInfo ( INTEGER nPlayerID, )
+| - v8_object GetPlayerInfo ( integer nPlayerID )
 | - Description:
 | - Get info about the given player
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetPlayerIDsOnTeam ( INTEGER nTeam, )
+| - v8_array GetPlayerIDsOnTeam ( integer nTeam )
 | - Description:
 | - Get player IDs for the given team
 | - 
 | - 
 | - Function: 
-| - VOID ServerCmd ( CSTRING pMsg, )
+| - void ServerCmd ( cstring pMsg )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDotaRefractHeroes ( BOOLEAN bEnabled, )
+| - void SetDotaRefractHeroes ( boolean bEnabled )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID FinishGame ( )
+| - void FinishGame ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID LeaveCurrentGame ( )
+| - void LeaveCurrentGame ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID Disconnect ( )
+| - void Disconnect ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID FindEventMatch ( )
+| - void FindEventMatch ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SlideOutEventGamePlayButton ( )
+| - void SlideOutEventGamePlayButton ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER EmitSound ( CSTRING pSoundEventName, )
+| - integer EmitSound ( cstring pSoundEventName )
 | - Description:
 | - Emit a sound for the local player. Returns an integer handle that can be passed to StopSound. (Returns 0 on failure.)
 | - 
 | - 
 | - Function: 
-| - VOID StopSound ( INTEGER nHandle, )
+| - void StopSound ( integer nHandle )
 | - Description:
 | - Stop a current playing sound on the local player. Takes handle from a call to EmitSound.
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsShopOpen ( )
+| - boolean IsShopOpen ( )
 | - Description:
 | - Ask whether the in game shop is open.
 | - 
 | - 
 | - Function: 
-| - VOID SetCustomShopEntityString ( CSTRING pszCustomShopEntityString, )
+| - void SetCustomShopEntityString ( cstring pszCustomShopEntityString )
 | - Description:
 | - Set custom shop context.
 | - 
 | - 
 | - Function: 
-| - JS_OBJECT GetMapInfo ( )
+| - v8_object GetMapInfo ( )
 | - Description:
 | - Return information about the current map.
 | - 
 | - 
 | - Function: 
-| - VOID PrepareUnitOrders ( JS_RAW_ARGS args, )
+| - void PrepareUnitOrders ( v8_callback_info args )
 | - Description:
 | - Orders from the local player - takes a single arguments object that supports: dotaunitorder_t OrderType, ent_index TargetIndex, vector Position, ent_index AbilityIndex, OrderIssuer_t OrderIssuer, ent_index UnitIndex, OrderQueueBehavior_t QueueBehavior, bool ShowEffects.
 | - 
 | - 
 | - Function: 
-| - VOID DropItemAtCursor ( INTEGER nControlledUnitEnt, INTEGER nItemEnt, )
+| - void DropItemAtCursor ( integer nControlledUnitEnt, integer nItemEnt )
 | - Description:
 | - Order a unit to drop the specified item at the current cursor location.
 | - 
 | - 
 | - Function: 
-| - FLOAT Length2D ( JS_VALUE vec1, JS_VALUE vec2, )
+| - float Length2D ( v8_value vec1, v8_value vec2 )
 | - Description:
 | - Calculate 2D length.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY Normalized ( JS_VALUE vec, )
+| - v8_array Normalized ( v8_value vec )
 | - Description:
 | - Returns normalized vector.
 | - 
 | - 
 | - Function: 
-| - VOID EnterAbilityLearnMode ( )
+| - void EnterAbilityLearnMode ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID EndAbilityLearnMode ( )
+| - void EndAbilityLearnMode ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsInAbilityLearnMode ( )
+| - boolean IsInAbilityLearnMode ( )
 | - Description:
 | - 
 | - 
@@ -2707,247 +2707,247 @@ Scope Name: Game; Scope Size: 82;
 Scope Name: GameUI; Scope Size: 41;
 | - 
 | - Function: 
-| - VOID SetDefaultUIEnabled ( INTEGER nElementType, BOOLEAN bVisible, )
+| - void SetDefaultUIEnabled ( integer nElementType, boolean bVisible )
 | - Description:
 | - Control whether the default UI is enabled
 | - 
 | - 
 | - Function: 
-| - VOID SavePersistentEventGameData ( JS_VALUE val, )
+| - void SavePersistentEventGameData ( v8_value val )
 | - Description:
 | - Save persistent data used by an event game
 | - 
 | - 
 | - Function: 
-| - VOID LoadPersistentEventGameData ( JS_RAW_ARGS args, )
+| - void LoadPersistentEventGameData ( v8_callback_info args )
 | - Description:
 | - Load persistent data used by an event game
 | - 
 | - 
 | - Function: 
-| - VOID CustomUIConfig ( JS_RAW_ARGS args, )
+| - void CustomUIConfig ( v8_callback_info args )
 | - Description:
 | - Get the current UI configuration
 | - 
 | - 
 | - Function: 
-| - VOID PingMinimapAtLocation ( JS_VALUE vec3, )
+| - void PingMinimapAtLocation ( v8_value vec3 )
 | - Description:
 | - Create a minimap ping at the given location
 | - 
 | - 
 | - Function: 
-| - VOID SetMouseCallback ( JS_VALUE callbackFn, )
+| - void SetMouseCallback ( v8_value callbackFn )
 | - Description:
 | - Install a mouse input filter
 | - 
 | - 
 | - Function: 
-| - VOID EnableAliMode ( BOOLEAN bEnable, INTEGER nPort, JS_VALUE offsetVal, FLOAT flScale, )
+| - void EnableAliMode ( boolean bEnable, integer nPort, v8_value offsetVal, float flScale )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID GetCursorPosition ( JS_RAW_ARGS args, )
+| - void GetCursorPosition ( v8_callback_info args )
 | - Description:
 | - Get the current mouse position.
 | - 
 | - 
 | - Function: 
-| - VOID FindScreenEntities ( JS_RAW_ARGS args, )
+| - void FindScreenEntities ( v8_callback_info args )
 | - Description:
 | - Return the entity index of the entity under the given screen position.
 | - 
 | - 
 | - Function: 
-| - VOID GetScreenWorldPosition ( JS_RAW_ARGS args, )
+| - void GetScreenWorldPosition ( v8_callback_info args )
 | - Description:
 | - Get the world position of the screen position, or null if the cursor is out of the world.
 | - 
 | - 
 | - Function: 
-| - BOOLEAN WasMousePressed ( INTEGER nButtonNum, )
+| - boolean WasMousePressed ( integer nButtonNum )
 | - Description:
 | - Install a mouse input filter
 | - 
 | - 
 | - Function: 
-| - BOOLEAN WasMouseDoublePressed ( INTEGER nButtonNum, )
+| - boolean WasMouseDoublePressed ( integer nButtonNum )
 | - Description:
 | - Install a mouse input filter
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsMouseDown ( INTEGER nButtonNum, )
+| - boolean IsMouseDown ( integer nButtonNum )
 | - Description:
 | - Install a mouse input filter
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsShiftDown ( )
+| - boolean IsShiftDown ( )
 | - Description:
 | - Is the shift button pressed?
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsAltDown ( )
+| - boolean IsAltDown ( )
 | - Description:
 | - Is the alt button pressed?
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsControlDown ( )
+| - boolean IsControlDown ( )
 | - Description:
 | - Is the control button pressed?
 | - 
 | - 
 | - Function: 
-| - INTEGER GetClickBehaviors ( )
+| - integer GetClickBehaviors ( )
 | - Description:
 | - Get the current UI click interaction mode.
 | - 
 | - 
 | - Function: 
-| - VOID SelectUnit ( INTEGER nEntityIndex, BOOLEAN bAddToGroup, )
+| - void SelectUnit ( integer nEntityIndex, boolean bAddToGroup )
 | - Description:
 | - Select a unit, adding it to the group or replacing the current selection.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetCameraLookAtPosition ( )
+| - v8_array GetCameraLookAtPosition ( )
 | - Description:
 | - Get the current look at position.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY GetCameraPosition ( )
+| - v8_array GetCameraPosition ( )
 | - Description:
 | - Get the current camera position.
 | - 
 | - 
 | - Function: 
-| - FLOAT GetCameraLookAtPositionHeightOffset ( )
+| - float GetCameraLookAtPositionHeightOffset ( )
 | - Description:
 | - Get the current look at position height offset.
 | - 
 | - 
 | - Function: 
-| - VOID SetCameraPitchMin ( FLOAT flPitchMin, )
+| - void SetCameraPitchMin ( float flPitchMin )
 | - Description:
 | - Set the minimum camera pitch angle.
 | - 
 | - 
 | - Function: 
-| - VOID SetCameraPitchMax ( FLOAT flPitchMax, )
+| - void SetCameraPitchMax ( float flPitchMax )
 | - Description:
 | - Set the maximum camera pitch angle.
 | - 
 | - 
 | - Function: 
-| - VOID SetCameraYaw ( FLOAT flCameraYaw, )
+| - void SetCameraYaw ( float flCameraYaw )
 | - Description:
 | - Set the camera's yaw.
 | - 
 | - 
 | - Function: 
-| - FLOAT GetCameraYaw ( )
+| - float GetCameraYaw ( )
 | - Description:
 | - Get the camera's yaw.
 | - 
 | - 
 | - Function: 
-| - VOID SetCameraLookAtPositionHeightOffset ( FLOAT flCameraLookAtHeightOffset, )
+| - void SetCameraLookAtPositionHeightOffset ( float flCameraLookAtHeightOffset )
 | - Description:
 | - Offset the camera's look at point.
 | - 
 | - 
 | - Function: 
-| - VOID SetCameraPositionFromLateralLookAtPosition ( FLOAT x, FLOAT y, )
+| - void SetCameraPositionFromLateralLookAtPosition ( float x, float y )
 | - Description:
 | - Set the camera from a lateral position.
 | - 
 | - 
 | - Function: 
-| - VOID SetCameraTerrainAdjustmentEnabled ( BOOLEAN bEnabled, )
+| - void SetCameraTerrainAdjustmentEnabled ( boolean bEnabled )
 | - Description:
 | - Set whether the camera should automatically adjust to average terrain height.
 | - 
 | - 
 | - Function: 
-| - VOID SetCameraDistance ( FLOAT flDistance, )
+| - void SetCameraDistance ( float flDistance )
 | - Description:
 | - Set the camera distance from the look at point.
 | - 
 | - 
 | - Function: 
-| - VOID SetRenderBottomInsetOverride ( INTEGER nInset, )
+| - void SetRenderBottomInsetOverride ( integer nInset )
 | - Description:
 | - Set the gap between the bottom of the screen and the game rendering viewport. (Value expressed as pixels in a normalized 1024x768 viewport.)
 | - 
 | - 
 | - Function: 
-| - VOID SetRenderTopInsetOverride ( INTEGER nInset, )
+| - void SetRenderTopInsetOverride ( integer nInset )
 | - Description:
 | - Set the gap between the top of the screen and the game rendering viewport. (Value expressed as pixels in a normalized 1024x768 viewport.)
 | - 
 | - 
 | - Function: 
-| - VOID SetCameraTarget ( INTEGER nTargetEntIndex, )
+| - void SetCameraTarget ( integer nTargetEntIndex )
 | - Description:
 | - Set the camera target for the local player, or -1 to clear.
 | - 
 | - 
 | - Function: 
-| - VOID SetCameraTargetPosition ( JS_VALUE vec3, FLOAT flLerp, )
+| - void SetCameraTargetPosition ( v8_value vec3, float flLerp )
 | - Description:
 | - Set the camera target as position for the local player over specified lerp.
 | - 
 | - 
 | - Function: 
-| - VOID MoveCameraToEntity ( INTEGER nTargetEntIndex, )
+| - void MoveCameraToEntity ( integer nTargetEntIndex )
 | - Description:
 | - Moves the camera to an entity, but doesn't lock the camera on that entity.
 | - 
 | - 
 | - Function: 
-| - JS_ARRAY WorldToScreenXYClamped ( JS_VALUE vec3, )
+| - v8_array WorldToScreenXYClamped ( v8_value vec3 )
 | - Description:
 | - Converts the specified x,y,z world co-ordinate into an x,y screen coordinate. Will clamp position to always be in front of camera.  Position returned as 0->1.0
 | - 
 | - 
 | - Function: 
-| - INTEGER GetPlayerScoreboardScore ( CSTRING pszScoreboardName, )
+| - integer GetPlayerScoreboardScore ( cstring pszScoreboardName )
 | - Description:
 | - Get the current players scoreboard score for the specified zone.
 | - 
 | - 
 | - Function: 
-| - VOID SendCustomHUDError ( CSTRING pszErrorText, CSTRING pszErrorSound, )
+| - void SendCustomHUDError ( cstring pszErrorText, cstring pszErrorSound )
 | - Description:
 | - Send a custom client side error message with passed string and soundevent.
 | - 
 | - 
 | - Function: 
-| - VOID ReplaceDOTAAbilitySpecialValues ( JS_RAW_ARGS args, )
+| - void ReplaceDOTAAbilitySpecialValues ( v8_callback_info args )
 | - Description:
 | - Given a passed ability, replace the special value variables in the passed localized text.
 | - 
 | - 
 | - Function: 
-| - VOID DisplayCustomContextualTip ( JS_RAW_ARGS args, )
+| - void DisplayCustomContextualTip ( v8_callback_info args )
 | - Description:
 | - Display a custom contextual tip (wizard tip) with specific loc string and duration
 | - 
 | - 
 | - Function: 
-| - VOID SetupDOTATalentNameLabel ( JS_RAW_ARGS args, )
+| - void SetupDOTATalentNameLabel ( v8_callback_info args )
 | - Description:
 | - Set the text of a passed label for a DOTA Talent using ability values.
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsAbilityDOTATalent ( CSTRING pszAbilityName, )
+| - boolean IsAbilityDOTATalent ( cstring pszAbilityName )
 | - Description:
 | - Returns true if the passed ability is a talent.
 | - 
@@ -2955,43 +2955,43 @@ Scope Name: GameUI; Scope Size: 41;
 Scope Name: Particles; Scope Size: 7;
 | - 
 | - Function: 
-| - INTEGER CreateParticle ( CSTRING pParticleName, INTEGER nAttachType, INTEGER nEntityToAttach, )
+| - integer CreateParticle ( cstring pParticleName, integer nAttachType, integer nEntityToAttach )
 | - Description:
 | - Create a particle system
 | - 
 | - 
 | - Function: 
-| - VOID ReleaseParticleIndex ( INTEGER iIndex, )
+| - void ReleaseParticleIndex ( integer iIndex )
 | - Description:
 | - Release a particle system
 | - 
 | - 
 | - Function: 
-| - VOID DestroyParticleEffect ( INTEGER iIndex, BOOLEAN bDestroyImmediately, )
+| - void DestroyParticleEffect ( integer iIndex, boolean bDestroyImmediately )
 | - Description:
 | - Destroy a particle system
 | - 
 | - 
 | - Function: 
-| - VOID SetParticleControl ( INTEGER iIndex, INTEGER iPoint, JS_VALUE vPosVal, )
+| - void SetParticleControl ( integer iIndex, integer iPoint, v8_value vPosVal )
 | - Description:
 | - Set a control point on a particle system
 | - 
 | - 
 | - Function: 
-| - VOID SetParticleControlForward ( INTEGER iIndex, INTEGER iPoint, JS_VALUE vForwardVal, )
+| - void SetParticleControlForward ( integer iIndex, integer iPoint, v8_value vForwardVal )
 | - Description:
 | - Set the orientation on a control point on a particle system
 | - 
 | - 
 | - Function: 
-| - VOID SetParticleAlwaysSimulate ( INTEGER iIndex, )
+| - void SetParticleAlwaysSimulate ( integer iIndex )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetParticleControlEnt ( INTEGER iIndex, INTEGER iPoint, INTEGER iEntIndex, INTEGER iAttachType, CSTRING pszAttachName, JS_VALUE vecFallbackPositionVal, BOOLEAN bIncludeWearables, )
+| - void SetParticleControlEnt ( integer iIndex, integer iPoint, integer iEntIndex, integer iAttachType, cstring pszAttachName, v8_value vecFallbackPositionVal, boolean bIncludeWearables )
 | - Description:
 | - Set a control point to track an entity on a particle system
 | - 
@@ -2999,25 +2999,25 @@ Scope Name: Particles; Scope Size: 7;
 Scope Name: EventData; Scope Size: 4;
 | - 
 | - Function: 
-| - INTEGER GetEventActionScore ( INTEGER unEventID, INTEGER unActionID, )
+| - integer GetEventActionScore ( integer unEventID, integer unActionID )
 | - Description:
 | - Get the score of an EventAction
 | - 
 | - 
 | - Function: 
-| - INTEGER GetPeriodicResourceUsed ( INTEGER unPeriodicResourceID, )
+| - integer GetPeriodicResourceUsed ( integer unPeriodicResourceID )
 | - Description:
 | - Get a periodic resource value used
 | - 
 | - 
 | - Function: 
-| - INTEGER GetPeriodicResourceMax ( INTEGER unPeriodicResourceID, )
+| - integer GetPeriodicResourceMax ( integer unPeriodicResourceID )
 | - Description:
 | - Get a periodic resource value max
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsFirstRunThisEvent ( )
+| - boolean IsFirstRunThisEvent ( )
 | - Description:
 | - Is this the first time we've launched this season?
 | - 
@@ -3025,7 +3025,7 @@ Scope Name: EventData; Scope Size: 4;
 Scope Name: LocalInventory; Scope Size: 1;
 | - 
 | - Function: 
-| - BOOLEAN HasItemByDefinition ( INTEGER nDefIndex, )
+| - boolean HasItemByDefinition ( integer nDefIndex )
 | - Description:
 | - Does the player have an inventory item of a given item definition index?
 | - 
@@ -3033,139 +3033,139 @@ Scope Name: LocalInventory; Scope Size: 1;
 Scope Name: $; Scope Size: 23;
 | - 
 | - Function: 
-| - VOID Msg ( JS_RAW_ARGS noname_arg_0, )
+| - void Msg ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Log a message
 | - 
 | - 
 | - Function: 
-| - VOID AssertHelper ( JS_RAW_ARGS noname_arg_0, )
+| - void AssertHelper ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Trigger an assert
 | - 
 | - 
 | - Function: 
-| - VOID Warning ( JS_RAW_ARGS noname_arg_0, )
+| - void Warning ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Log a warning message to specified channel
 | - 
 | - 
 | - Function: 
-| - VOID DispatchEvent ( JS_RAW_ARGS noname_arg_0, )
+| - void DispatchEvent ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Dispatch an event
 | - 
 | - 
 | - Function: 
-| - VOID DispatchEventAsync ( JS_RAW_ARGS noname_arg_0, )
+| - void DispatchEventAsync ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Dispatch an event to occur later
 | - 
 | - 
 | - Function: 
-| - VOID RegisterEventHandler ( JS_RAW_ARGS noname_arg_0, )
+| - void RegisterEventHandler ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Register an event handler
 | - 
 | - 
 | - Function: 
-| - VOID RegisterForUnhandledEvent ( JS_RAW_ARGS noname_arg_0, )
+| - void RegisterForUnhandledEvent ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Register a handler for an event that is not otherwise handled
 | - 
 | - 
 | - Function: 
-| - VOID UnregisterForUnhandledEvent ( JS_RAW_ARGS noname_arg_0, )
+| - void UnregisterForUnhandledEvent ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Remove an unhandled event handler
 | - 
 | - 
 | - Function: 
-| - VOID FindChildInContext ( JS_RAW_ARGS noname_arg_0, )
+| - void FindChildInContext ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Find an element
 | - 
 | - 
 | - Function: 
-| - VOID AsyncWebRequest ( JS_RAW_ARGS noname_arg_0, )
+| - void AsyncWebRequest ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Make a web request
 | - 
 | - 
 | - Function: 
-| - VOID CreatePanel ( JS_RAW_ARGS noname_arg_0, )
+| - void CreatePanel ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Create a new panel
 | - 
 | - 
 | - Function: 
-| - VOID CreatePanelWithProperties ( JS_RAW_ARGS noname_arg_0, )
+| - void CreatePanelWithProperties ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Create a new panel supplying a JS object as a fourth parameter containing properties to be applied to the panel
 | - 
 | - 
 | - Function: 
-| - VOID Localize ( JS_RAW_ARGS noname_arg_0, )
+| - void Localize ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Localize a string
 | - 
 | - 
 | - Function: 
-| - VOID LocalizePlural ( JS_RAW_ARGS noname_arg_0, )
+| - void LocalizePlural ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Localize a plural string
 | - 
 | - 
 | - Function: 
-| - VOID Language ( JS_RAW_ARGS noname_arg_0, )
+| - void Language ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Get the current language
 | - 
 | - 
 | - Function: 
-| - VOID Schedule ( JS_RAW_ARGS noname_arg_0, )
+| - void Schedule ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Schedule a function to be called later
 | - 
 | - 
 | - Function: 
-| - VOID CancelScheduled ( JS_RAW_ARGS noname_arg_0, )
+| - void CancelScheduled ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Cancelse a scheduled function
 | - 
 | - 
 | - Function: 
-| - VOID GetContextPanel ( JS_RAW_ARGS noname_arg_0, )
+| - void GetContextPanel ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Get the current panel context
 | - 
 | - 
 | - Function: 
-| - VOID RegisterKeyBind ( JS_RAW_ARGS noname_arg_0, )
+| - void RegisterKeyBind ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Register a key binding
 | - 
 | - 
 | - Function: 
-| - VOID Each ( JS_RAW_ARGS noname_arg_0, )
+| - void Each ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Call a function on each given item
 | - 
 | - 
 | - Function: 
-| - VOID DbgIsReloadingScript ( JS_RAW_ARGS noname_arg_0, )
+| - void DbgIsReloadingScript ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Call during JS startup code to check if script is being reloaded
 | - 
 | - 
 | - Function: 
-| - VOID HTMLEscape ( JS_RAW_ARGS noname_arg_0, )
+| - void HTMLEscape ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Convert a string to HTML-safe
 | - 
 | - 
 | - Function: 
-| - VOID LogChannel ( JS_RAW_ARGS noname_arg_0, )
+| - void LogChannel ( v8_callback_info noname_arg_0 )
 | - Description:
 | - Create a logging channel
 | - 
@@ -3173,631 +3173,631 @@ Scope Name: $; Scope Size: 23;
 Scope Name: DOTAHeroModelOverlay; Scope Size: 105;
 | - 
 | - Function: 
-| - BOOLEAN visible ( BOOLEAN noname_arg_0, )
+| - boolean visible ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN enabled ( BOOLEAN noname_arg_0, )
+| - boolean enabled ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN checked ( BOOLEAN noname_arg_0, )
+| - boolean checked ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING defaultfocus ( CSTRING noname_arg_0, )
+| - cstring defaultfocus ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING inputnamespace ( CSTRING noname_arg_0, )
+| - cstring inputnamespace ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN hittest ( BOOLEAN noname_arg_0, )
+| - boolean hittest ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN hittestchildren ( BOOLEAN noname_arg_0, )
+| - boolean hittestchildren ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT tabindex ( FLOAT noname_arg_0, )
+| - float tabindex ( float noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT selectionpos_x ( FLOAT noname_arg_0, )
+| - float selectionpos_x ( float noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT selectionpos_y ( FLOAT noname_arg_0, )
+| - float selectionpos_y ( float noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING id ( )
+| - cstring id ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING layoutfile ( )
+| - cstring layoutfile ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT contentwidth ( )
+| - float contentwidth ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT contentheight ( )
+| - float contentheight ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT desiredlayoutwidth ( )
+| - float desiredlayoutwidth ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT desiredlayoutheight ( )
+| - float desiredlayoutheight ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actuallayoutwidth ( )
+| - float actuallayoutwidth ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actuallayoutheight ( )
+| - float actuallayoutheight ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actualxoffset ( )
+| - float actualxoffset ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actualyoffset ( )
+| - float actualyoffset ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT scrolloffset_y ( )
+| - float scrolloffset_y ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT scrolloffset_x ( )
+| - float scrolloffset_x ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actualuiscale_y ( )
+| - float actualuiscale_y ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actualuiscale_x ( )
+| - float actualuiscale_x ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 style ( )
+| - typeunknown style ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID AddClass ( CSTRING noname_arg_0, )
+| - void AddClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID RemoveClass ( CSTRING noname_arg_0, )
+| - void RemoveClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasClass ( CSTRING noname_arg_0, )
+| - boolean BHasClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BAscendantHasClass ( CSTRING noname_arg_0, )
+| - boolean BAscendantHasClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetHasClass ( CSTRING noname_arg_0, BOOLEAN noname_arg_1, )
+| - void SetHasClass ( cstring noname_arg_0, boolean noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ToggleClass ( CSTRING noname_arg_0, )
+| - void ToggleClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SwitchClass ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - void SwitchClass ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID TriggerClass ( CSTRING noname_arg_0, )
+| - void TriggerClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ClearPanelEvent ( CSTRING noname_arg_0, )
+| - void ClearPanelEvent ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDraggable ( BOOLEAN noname_arg_0, )
+| - void SetDraggable ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsDraggable ( )
+| - boolean IsDraggable ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSizeValid ( )
+| - boolean IsSizeValid ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetChildCount ( )
+| - integer GetChildCount ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 GetChild ( INTEGER noname_arg_0, )
+| - typeunknown GetChild ( integer noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetChildIndex ( _UNK17 noname_arg_0, )
+| - integer GetChildIndex ( typeunknown noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 Children ( )
+| - typeunknown Children ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindChildrenWithClassTraverse ( CSTRING noname_arg_0, )
+| - typeunknown FindChildrenWithClassTraverse ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 GetParent ( )
+| - typeunknown GetParent ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetParent ( _UNK17 noname_arg_0, )
+| - void SetParent ( typeunknown noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindChild ( CSTRING noname_arg_0, )
+| - typeunknown FindChild ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindChildTraverse ( CSTRING noname_arg_0, )
+| - typeunknown FindChildTraverse ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindChildInLayoutFile ( CSTRING noname_arg_0, )
+| - typeunknown FindChildInLayoutFile ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindPanelInLayoutFile ( CSTRING noname_arg_0, )
+| - typeunknown FindPanelInLayoutFile ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindAncestor ( CSTRING noname_arg_0, )
+| - typeunknown FindAncestor ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID RemoveAndDeleteChildren ( )
+| - void RemoveAndDeleteChildren ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID MoveChildBefore ( _UNK17 noname_arg_0, _UNK17 noname_arg_1, )
+| - void MoveChildBefore ( typeunknown noname_arg_0, typeunknown noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID MoveChildAfter ( _UNK17 noname_arg_0, _UNK17 noname_arg_1, )
+| - void MoveChildAfter ( typeunknown noname_arg_0, typeunknown noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 GetPositionWithinWindow ( )
+| - typeunknown GetPositionWithinWindow ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 GetPositionWithinAncestor ( _UNK17 noname_arg_0, )
+| - typeunknown GetPositionWithinAncestor ( typeunknown noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ApplyStyles ( BOOLEAN noname_arg_0, )
+| - void ApplyStyles ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ClearPropertyFromCode ( _UNK17 noname_arg_0, )
+| - void ClearPropertyFromCode ( typeunknown noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID DeleteAsync ( FLOAT noname_arg_0, )
+| - void DeleteAsync ( float noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BIsTransparent ( )
+| - boolean BIsTransparent ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BAcceptsInput ( )
+| - boolean BAcceptsInput ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BAcceptsFocus ( )
+| - boolean BAcceptsFocus ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN SetFocus ( )
+| - boolean SetFocus ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN UpdateFocusInContext ( )
+| - boolean UpdateFocusInContext ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasHoverStyle ( )
+| - boolean BHasHoverStyle ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetAcceptsFocus ( BOOLEAN noname_arg_0, )
+| - void SetAcceptsFocus ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDisableFocusOnMouseDown ( BOOLEAN noname_arg_0, )
+| - void SetDisableFocusOnMouseDown ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasKeyFocus ( )
+| - boolean BHasKeyFocus ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetScrollParentToFitWhenFocused ( BOOLEAN noname_arg_0, )
+| - void SetScrollParentToFitWhenFocused ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BScrollParentToFitWhenFocused ( )
+| - boolean BScrollParentToFitWhenFocused ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSelected ( )
+| - boolean IsSelected ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasDescendantKeyFocus ( )
+| - boolean BHasDescendantKeyFocus ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BLoadLayout ( CSTRING noname_arg_0, BOOLEAN noname_arg_1, BOOLEAN noname_arg_2, )
+| - boolean BLoadLayout ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID BLoadLayoutFromString ( JS_RAW_ARGS noname_arg_0, )
+| - void BLoadLayoutFromString ( v8_callback_info noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID LoadLayoutFromStringAsync ( CSTRING noname_arg_0, BOOLEAN noname_arg_1, BOOLEAN noname_arg_2, )
+| - void LoadLayoutFromStringAsync ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID LoadLayoutAsync ( CSTRING noname_arg_0, BOOLEAN noname_arg_1, BOOLEAN noname_arg_2, )
+| - void LoadLayoutAsync ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BLoadLayoutSnippet ( CSTRING noname_arg_0, )
+| - boolean BLoadLayoutSnippet ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasLayoutSnippet ( CSTRING noname_arg_0, )
+| - boolean BHasLayoutSnippet ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BCreateChildren ( CSTRING noname_arg_0, )
+| - boolean BCreateChildren ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetTopOfInputContext ( BOOLEAN noname_arg_0, )
+| - void SetTopOfInputContext ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariable ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - void SetDialogVariable ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariableInt ( CSTRING noname_arg_0, INTEGER noname_arg_1, )
+| - void SetDialogVariableInt ( cstring noname_arg_0, integer noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariableTime ( CSTRING noname_arg_0, INT64 noname_arg_1, )
+| - void SetDialogVariableTime ( cstring noname_arg_0, integer64 noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariableLocString ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - void SetDialogVariableLocString ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariablePluralLocStringInt ( CSTRING noname_arg_0, CSTRING noname_arg_1, INT64 noname_arg_2, )
+| - void SetDialogVariablePluralLocStringInt ( cstring noname_arg_0, cstring noname_arg_1, integer64 noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollToTop ( )
+| - void ScrollToTop ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollToBottom ( )
+| - void ScrollToBottom ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollToLeftEdge ( )
+| - void ScrollToLeftEdge ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollToRightEdge ( )
+| - void ScrollToRightEdge ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollParentToMakePanelFit ( _UNK17 noname_arg_0, BOOLEAN noname_arg_1, )
+| - void ScrollParentToMakePanelFit ( typeunknown noname_arg_0, boolean noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BCanSeeInParentScroll ( )
+| - boolean BCanSeeInParentScroll ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAttributeInt ( CSTRING noname_arg_0, INTEGER noname_arg_1, )
+| - integer GetAttributeInt ( cstring noname_arg_0, integer noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetAttributeString ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - cstring GetAttributeString ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - UNSIGNED GetAttributeUInt32 ( CSTRING noname_arg_0, UNSIGNED noname_arg_1, )
+| - uint GetAttributeUInt32 ( cstring noname_arg_0, uint noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetAttributeInt ( CSTRING noname_arg_0, INTEGER noname_arg_1, )
+| - void SetAttributeInt ( cstring noname_arg_0, integer noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetAttributeString ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - void SetAttributeString ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetAttributeUInt32 ( CSTRING noname_arg_0, UNSIGNED noname_arg_1, )
+| - void SetAttributeUInt32 ( cstring noname_arg_0, uint noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetInputNamespace ( CSTRING noname_arg_0, )
+| - void SetInputNamespace ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID RegisterForReadyEvents ( BOOLEAN noname_arg_0, )
+| - void RegisterForReadyEvents ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BReadyForDisplay ( )
+| - boolean BReadyForDisplay ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetReadyForDisplay ( BOOLEAN noname_arg_0, )
+| - void SetReadyForDisplay ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetPositionInPixels ( FLOAT noname_arg_0, FLOAT noname_arg_1, FLOAT noname_arg_2, )
+| - void SetPositionInPixels ( float noname_arg_0, float noname_arg_1, float noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID Data ( JS_RAW_ARGS noname_arg_0, )
+| - void Data ( v8_callback_info noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetPanelEvent ( JS_RAW_ARGS noname_arg_0, )
+| - void SetPanelEvent ( v8_callback_info noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID RunScriptInPanelContext ( JS_RAW_ARGS noname_arg_0, )
+| - void RunScriptInPanelContext ( v8_callback_info noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN rememberchildfocus ( BOOLEAN noname_arg_0, )
+| - boolean rememberchildfocus ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING paneltype ( )
+| - cstring paneltype ( )
 | - Description:
 | - 
 | - 
@@ -3805,631 +3805,631 @@ Scope Name: DOTAHeroModelOverlay; Scope Size: 105;
 Scope Name: Panel; Scope Size: 105;
 | - 
 | - Function: 
-| - BOOLEAN visible ( BOOLEAN noname_arg_0, )
+| - boolean visible ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN enabled ( BOOLEAN noname_arg_0, )
+| - boolean enabled ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN checked ( BOOLEAN noname_arg_0, )
+| - boolean checked ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING defaultfocus ( CSTRING noname_arg_0, )
+| - cstring defaultfocus ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING inputnamespace ( CSTRING noname_arg_0, )
+| - cstring inputnamespace ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN hittest ( BOOLEAN noname_arg_0, )
+| - boolean hittest ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN hittestchildren ( BOOLEAN noname_arg_0, )
+| - boolean hittestchildren ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT tabindex ( FLOAT noname_arg_0, )
+| - float tabindex ( float noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT selectionpos_x ( FLOAT noname_arg_0, )
+| - float selectionpos_x ( float noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT selectionpos_y ( FLOAT noname_arg_0, )
+| - float selectionpos_y ( float noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING id ( )
+| - cstring id ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING layoutfile ( )
+| - cstring layoutfile ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT contentwidth ( )
+| - float contentwidth ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT contentheight ( )
+| - float contentheight ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT desiredlayoutwidth ( )
+| - float desiredlayoutwidth ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT desiredlayoutheight ( )
+| - float desiredlayoutheight ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actuallayoutwidth ( )
+| - float actuallayoutwidth ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actuallayoutheight ( )
+| - float actuallayoutheight ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actualxoffset ( )
+| - float actualxoffset ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actualyoffset ( )
+| - float actualyoffset ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT scrolloffset_y ( )
+| - float scrolloffset_y ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT scrolloffset_x ( )
+| - float scrolloffset_x ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actualuiscale_y ( )
+| - float actualuiscale_y ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actualuiscale_x ( )
+| - float actualuiscale_x ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 style ( )
+| - typeunknown style ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID AddClass ( CSTRING noname_arg_0, )
+| - void AddClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID RemoveClass ( CSTRING noname_arg_0, )
+| - void RemoveClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasClass ( CSTRING noname_arg_0, )
+| - boolean BHasClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BAscendantHasClass ( CSTRING noname_arg_0, )
+| - boolean BAscendantHasClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetHasClass ( CSTRING noname_arg_0, BOOLEAN noname_arg_1, )
+| - void SetHasClass ( cstring noname_arg_0, boolean noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ToggleClass ( CSTRING noname_arg_0, )
+| - void ToggleClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SwitchClass ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - void SwitchClass ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID TriggerClass ( CSTRING noname_arg_0, )
+| - void TriggerClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ClearPanelEvent ( CSTRING noname_arg_0, )
+| - void ClearPanelEvent ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDraggable ( BOOLEAN noname_arg_0, )
+| - void SetDraggable ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsDraggable ( )
+| - boolean IsDraggable ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSizeValid ( )
+| - boolean IsSizeValid ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetChildCount ( )
+| - integer GetChildCount ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 GetChild ( INTEGER noname_arg_0, )
+| - typeunknown GetChild ( integer noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetChildIndex ( _UNK17 noname_arg_0, )
+| - integer GetChildIndex ( typeunknown noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 Children ( )
+| - typeunknown Children ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindChildrenWithClassTraverse ( CSTRING noname_arg_0, )
+| - typeunknown FindChildrenWithClassTraverse ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 GetParent ( )
+| - typeunknown GetParent ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetParent ( _UNK17 noname_arg_0, )
+| - void SetParent ( typeunknown noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindChild ( CSTRING noname_arg_0, )
+| - typeunknown FindChild ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindChildTraverse ( CSTRING noname_arg_0, )
+| - typeunknown FindChildTraverse ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindChildInLayoutFile ( CSTRING noname_arg_0, )
+| - typeunknown FindChildInLayoutFile ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindPanelInLayoutFile ( CSTRING noname_arg_0, )
+| - typeunknown FindPanelInLayoutFile ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindAncestor ( CSTRING noname_arg_0, )
+| - typeunknown FindAncestor ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID RemoveAndDeleteChildren ( )
+| - void RemoveAndDeleteChildren ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID MoveChildBefore ( _UNK17 noname_arg_0, _UNK17 noname_arg_1, )
+| - void MoveChildBefore ( typeunknown noname_arg_0, typeunknown noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID MoveChildAfter ( _UNK17 noname_arg_0, _UNK17 noname_arg_1, )
+| - void MoveChildAfter ( typeunknown noname_arg_0, typeunknown noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 GetPositionWithinWindow ( )
+| - typeunknown GetPositionWithinWindow ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 GetPositionWithinAncestor ( _UNK17 noname_arg_0, )
+| - typeunknown GetPositionWithinAncestor ( typeunknown noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ApplyStyles ( BOOLEAN noname_arg_0, )
+| - void ApplyStyles ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ClearPropertyFromCode ( _UNK17 noname_arg_0, )
+| - void ClearPropertyFromCode ( typeunknown noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID DeleteAsync ( FLOAT noname_arg_0, )
+| - void DeleteAsync ( float noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BIsTransparent ( )
+| - boolean BIsTransparent ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BAcceptsInput ( )
+| - boolean BAcceptsInput ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BAcceptsFocus ( )
+| - boolean BAcceptsFocus ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN SetFocus ( )
+| - boolean SetFocus ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN UpdateFocusInContext ( )
+| - boolean UpdateFocusInContext ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasHoverStyle ( )
+| - boolean BHasHoverStyle ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetAcceptsFocus ( BOOLEAN noname_arg_0, )
+| - void SetAcceptsFocus ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDisableFocusOnMouseDown ( BOOLEAN noname_arg_0, )
+| - void SetDisableFocusOnMouseDown ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasKeyFocus ( )
+| - boolean BHasKeyFocus ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetScrollParentToFitWhenFocused ( BOOLEAN noname_arg_0, )
+| - void SetScrollParentToFitWhenFocused ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BScrollParentToFitWhenFocused ( )
+| - boolean BScrollParentToFitWhenFocused ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSelected ( )
+| - boolean IsSelected ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasDescendantKeyFocus ( )
+| - boolean BHasDescendantKeyFocus ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BLoadLayout ( CSTRING noname_arg_0, BOOLEAN noname_arg_1, BOOLEAN noname_arg_2, )
+| - boolean BLoadLayout ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID BLoadLayoutFromString ( JS_RAW_ARGS noname_arg_0, )
+| - void BLoadLayoutFromString ( v8_callback_info noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID LoadLayoutFromStringAsync ( CSTRING noname_arg_0, BOOLEAN noname_arg_1, BOOLEAN noname_arg_2, )
+| - void LoadLayoutFromStringAsync ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID LoadLayoutAsync ( CSTRING noname_arg_0, BOOLEAN noname_arg_1, BOOLEAN noname_arg_2, )
+| - void LoadLayoutAsync ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BLoadLayoutSnippet ( CSTRING noname_arg_0, )
+| - boolean BLoadLayoutSnippet ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasLayoutSnippet ( CSTRING noname_arg_0, )
+| - boolean BHasLayoutSnippet ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BCreateChildren ( CSTRING noname_arg_0, )
+| - boolean BCreateChildren ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetTopOfInputContext ( BOOLEAN noname_arg_0, )
+| - void SetTopOfInputContext ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariable ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - void SetDialogVariable ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariableInt ( CSTRING noname_arg_0, INTEGER noname_arg_1, )
+| - void SetDialogVariableInt ( cstring noname_arg_0, integer noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariableTime ( CSTRING noname_arg_0, INT64 noname_arg_1, )
+| - void SetDialogVariableTime ( cstring noname_arg_0, integer64 noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariableLocString ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - void SetDialogVariableLocString ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariablePluralLocStringInt ( CSTRING noname_arg_0, CSTRING noname_arg_1, INT64 noname_arg_2, )
+| - void SetDialogVariablePluralLocStringInt ( cstring noname_arg_0, cstring noname_arg_1, integer64 noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollToTop ( )
+| - void ScrollToTop ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollToBottom ( )
+| - void ScrollToBottom ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollToLeftEdge ( )
+| - void ScrollToLeftEdge ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollToRightEdge ( )
+| - void ScrollToRightEdge ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollParentToMakePanelFit ( _UNK17 noname_arg_0, BOOLEAN noname_arg_1, )
+| - void ScrollParentToMakePanelFit ( typeunknown noname_arg_0, boolean noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BCanSeeInParentScroll ( )
+| - boolean BCanSeeInParentScroll ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAttributeInt ( CSTRING noname_arg_0, INTEGER noname_arg_1, )
+| - integer GetAttributeInt ( cstring noname_arg_0, integer noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetAttributeString ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - cstring GetAttributeString ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - UNSIGNED GetAttributeUInt32 ( CSTRING noname_arg_0, UNSIGNED noname_arg_1, )
+| - uint GetAttributeUInt32 ( cstring noname_arg_0, uint noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetAttributeInt ( CSTRING noname_arg_0, INTEGER noname_arg_1, )
+| - void SetAttributeInt ( cstring noname_arg_0, integer noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetAttributeString ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - void SetAttributeString ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetAttributeUInt32 ( CSTRING noname_arg_0, UNSIGNED noname_arg_1, )
+| - void SetAttributeUInt32 ( cstring noname_arg_0, uint noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetInputNamespace ( CSTRING noname_arg_0, )
+| - void SetInputNamespace ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID RegisterForReadyEvents ( BOOLEAN noname_arg_0, )
+| - void RegisterForReadyEvents ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BReadyForDisplay ( )
+| - boolean BReadyForDisplay ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetReadyForDisplay ( BOOLEAN noname_arg_0, )
+| - void SetReadyForDisplay ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetPositionInPixels ( FLOAT noname_arg_0, FLOAT noname_arg_1, FLOAT noname_arg_2, )
+| - void SetPositionInPixels ( float noname_arg_0, float noname_arg_1, float noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID Data ( JS_RAW_ARGS noname_arg_0, )
+| - void Data ( v8_callback_info noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetPanelEvent ( JS_RAW_ARGS noname_arg_0, )
+| - void SetPanelEvent ( v8_callback_info noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID RunScriptInPanelContext ( JS_RAW_ARGS noname_arg_0, )
+| - void RunScriptInPanelContext ( v8_callback_info noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN rememberchildfocus ( BOOLEAN noname_arg_0, )
+| - boolean rememberchildfocus ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING paneltype ( )
+| - cstring paneltype ( )
 | - Description:
 | - 
 | - 
@@ -4437,631 +4437,631 @@ Scope Name: Panel; Scope Size: 105;
 Scope Name: TabButton; Scope Size: 105;
 | - 
 | - Function: 
-| - BOOLEAN visible ( BOOLEAN noname_arg_0, )
+| - boolean visible ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN enabled ( BOOLEAN noname_arg_0, )
+| - boolean enabled ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN checked ( BOOLEAN noname_arg_0, )
+| - boolean checked ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING defaultfocus ( CSTRING noname_arg_0, )
+| - cstring defaultfocus ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING inputnamespace ( CSTRING noname_arg_0, )
+| - cstring inputnamespace ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN hittest ( BOOLEAN noname_arg_0, )
+| - boolean hittest ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN hittestchildren ( BOOLEAN noname_arg_0, )
+| - boolean hittestchildren ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT tabindex ( FLOAT noname_arg_0, )
+| - float tabindex ( float noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT selectionpos_x ( FLOAT noname_arg_0, )
+| - float selectionpos_x ( float noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT selectionpos_y ( FLOAT noname_arg_0, )
+| - float selectionpos_y ( float noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING id ( )
+| - cstring id ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING layoutfile ( )
+| - cstring layoutfile ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT contentwidth ( )
+| - float contentwidth ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT contentheight ( )
+| - float contentheight ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT desiredlayoutwidth ( )
+| - float desiredlayoutwidth ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT desiredlayoutheight ( )
+| - float desiredlayoutheight ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actuallayoutwidth ( )
+| - float actuallayoutwidth ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actuallayoutheight ( )
+| - float actuallayoutheight ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actualxoffset ( )
+| - float actualxoffset ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actualyoffset ( )
+| - float actualyoffset ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT scrolloffset_y ( )
+| - float scrolloffset_y ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT scrolloffset_x ( )
+| - float scrolloffset_x ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actualuiscale_y ( )
+| - float actualuiscale_y ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - FLOAT actualuiscale_x ( )
+| - float actualuiscale_x ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 style ( )
+| - typeunknown style ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID AddClass ( CSTRING noname_arg_0, )
+| - void AddClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID RemoveClass ( CSTRING noname_arg_0, )
+| - void RemoveClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasClass ( CSTRING noname_arg_0, )
+| - boolean BHasClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BAscendantHasClass ( CSTRING noname_arg_0, )
+| - boolean BAscendantHasClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetHasClass ( CSTRING noname_arg_0, BOOLEAN noname_arg_1, )
+| - void SetHasClass ( cstring noname_arg_0, boolean noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ToggleClass ( CSTRING noname_arg_0, )
+| - void ToggleClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SwitchClass ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - void SwitchClass ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID TriggerClass ( CSTRING noname_arg_0, )
+| - void TriggerClass ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ClearPanelEvent ( CSTRING noname_arg_0, )
+| - void ClearPanelEvent ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDraggable ( BOOLEAN noname_arg_0, )
+| - void SetDraggable ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsDraggable ( )
+| - boolean IsDraggable ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSizeValid ( )
+| - boolean IsSizeValid ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetChildCount ( )
+| - integer GetChildCount ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 GetChild ( INTEGER noname_arg_0, )
+| - typeunknown GetChild ( integer noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetChildIndex ( _UNK17 noname_arg_0, )
+| - integer GetChildIndex ( typeunknown noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 Children ( )
+| - typeunknown Children ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindChildrenWithClassTraverse ( CSTRING noname_arg_0, )
+| - typeunknown FindChildrenWithClassTraverse ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 GetParent ( )
+| - typeunknown GetParent ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetParent ( _UNK17 noname_arg_0, )
+| - void SetParent ( typeunknown noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindChild ( CSTRING noname_arg_0, )
+| - typeunknown FindChild ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindChildTraverse ( CSTRING noname_arg_0, )
+| - typeunknown FindChildTraverse ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindChildInLayoutFile ( CSTRING noname_arg_0, )
+| - typeunknown FindChildInLayoutFile ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindPanelInLayoutFile ( CSTRING noname_arg_0, )
+| - typeunknown FindPanelInLayoutFile ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 FindAncestor ( CSTRING noname_arg_0, )
+| - typeunknown FindAncestor ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID RemoveAndDeleteChildren ( )
+| - void RemoveAndDeleteChildren ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID MoveChildBefore ( _UNK17 noname_arg_0, _UNK17 noname_arg_1, )
+| - void MoveChildBefore ( typeunknown noname_arg_0, typeunknown noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID MoveChildAfter ( _UNK17 noname_arg_0, _UNK17 noname_arg_1, )
+| - void MoveChildAfter ( typeunknown noname_arg_0, typeunknown noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 GetPositionWithinWindow ( )
+| - typeunknown GetPositionWithinWindow ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - _UNK17 GetPositionWithinAncestor ( _UNK17 noname_arg_0, )
+| - typeunknown GetPositionWithinAncestor ( typeunknown noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ApplyStyles ( BOOLEAN noname_arg_0, )
+| - void ApplyStyles ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ClearPropertyFromCode ( _UNK17 noname_arg_0, )
+| - void ClearPropertyFromCode ( typeunknown noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID DeleteAsync ( FLOAT noname_arg_0, )
+| - void DeleteAsync ( float noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BIsTransparent ( )
+| - boolean BIsTransparent ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BAcceptsInput ( )
+| - boolean BAcceptsInput ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BAcceptsFocus ( )
+| - boolean BAcceptsFocus ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN SetFocus ( )
+| - boolean SetFocus ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN UpdateFocusInContext ( )
+| - boolean UpdateFocusInContext ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasHoverStyle ( )
+| - boolean BHasHoverStyle ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetAcceptsFocus ( BOOLEAN noname_arg_0, )
+| - void SetAcceptsFocus ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDisableFocusOnMouseDown ( BOOLEAN noname_arg_0, )
+| - void SetDisableFocusOnMouseDown ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasKeyFocus ( )
+| - boolean BHasKeyFocus ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetScrollParentToFitWhenFocused ( BOOLEAN noname_arg_0, )
+| - void SetScrollParentToFitWhenFocused ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BScrollParentToFitWhenFocused ( )
+| - boolean BScrollParentToFitWhenFocused ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN IsSelected ( )
+| - boolean IsSelected ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasDescendantKeyFocus ( )
+| - boolean BHasDescendantKeyFocus ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BLoadLayout ( CSTRING noname_arg_0, BOOLEAN noname_arg_1, BOOLEAN noname_arg_2, )
+| - boolean BLoadLayout ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID BLoadLayoutFromString ( JS_RAW_ARGS noname_arg_0, )
+| - void BLoadLayoutFromString ( v8_callback_info noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID LoadLayoutFromStringAsync ( CSTRING noname_arg_0, BOOLEAN noname_arg_1, BOOLEAN noname_arg_2, )
+| - void LoadLayoutFromStringAsync ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID LoadLayoutAsync ( CSTRING noname_arg_0, BOOLEAN noname_arg_1, BOOLEAN noname_arg_2, )
+| - void LoadLayoutAsync ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BLoadLayoutSnippet ( CSTRING noname_arg_0, )
+| - boolean BLoadLayoutSnippet ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BHasLayoutSnippet ( CSTRING noname_arg_0, )
+| - boolean BHasLayoutSnippet ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BCreateChildren ( CSTRING noname_arg_0, )
+| - boolean BCreateChildren ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetTopOfInputContext ( BOOLEAN noname_arg_0, )
+| - void SetTopOfInputContext ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariable ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - void SetDialogVariable ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariableInt ( CSTRING noname_arg_0, INTEGER noname_arg_1, )
+| - void SetDialogVariableInt ( cstring noname_arg_0, integer noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariableTime ( CSTRING noname_arg_0, INT64 noname_arg_1, )
+| - void SetDialogVariableTime ( cstring noname_arg_0, integer64 noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariableLocString ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - void SetDialogVariableLocString ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetDialogVariablePluralLocStringInt ( CSTRING noname_arg_0, CSTRING noname_arg_1, INT64 noname_arg_2, )
+| - void SetDialogVariablePluralLocStringInt ( cstring noname_arg_0, cstring noname_arg_1, integer64 noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollToTop ( )
+| - void ScrollToTop ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollToBottom ( )
+| - void ScrollToBottom ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollToLeftEdge ( )
+| - void ScrollToLeftEdge ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollToRightEdge ( )
+| - void ScrollToRightEdge ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID ScrollParentToMakePanelFit ( _UNK17 noname_arg_0, BOOLEAN noname_arg_1, )
+| - void ScrollParentToMakePanelFit ( typeunknown noname_arg_0, boolean noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BCanSeeInParentScroll ( )
+| - boolean BCanSeeInParentScroll ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - INTEGER GetAttributeInt ( CSTRING noname_arg_0, INTEGER noname_arg_1, )
+| - integer GetAttributeInt ( cstring noname_arg_0, integer noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING GetAttributeString ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - cstring GetAttributeString ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - UNSIGNED GetAttributeUInt32 ( CSTRING noname_arg_0, UNSIGNED noname_arg_1, )
+| - uint GetAttributeUInt32 ( cstring noname_arg_0, uint noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetAttributeInt ( CSTRING noname_arg_0, INTEGER noname_arg_1, )
+| - void SetAttributeInt ( cstring noname_arg_0, integer noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetAttributeString ( CSTRING noname_arg_0, CSTRING noname_arg_1, )
+| - void SetAttributeString ( cstring noname_arg_0, cstring noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetAttributeUInt32 ( CSTRING noname_arg_0, UNSIGNED noname_arg_1, )
+| - void SetAttributeUInt32 ( cstring noname_arg_0, uint noname_arg_1 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetInputNamespace ( CSTRING noname_arg_0, )
+| - void SetInputNamespace ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID RegisterForReadyEvents ( BOOLEAN noname_arg_0, )
+| - void RegisterForReadyEvents ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN BReadyForDisplay ( )
+| - boolean BReadyForDisplay ( )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetReadyForDisplay ( BOOLEAN noname_arg_0, )
+| - void SetReadyForDisplay ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetPositionInPixels ( FLOAT noname_arg_0, FLOAT noname_arg_1, FLOAT noname_arg_2, )
+| - void SetPositionInPixels ( float noname_arg_0, float noname_arg_1, float noname_arg_2 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID Data ( JS_RAW_ARGS noname_arg_0, )
+| - void Data ( v8_callback_info noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID SetPanelEvent ( JS_RAW_ARGS noname_arg_0, )
+| - void SetPanelEvent ( v8_callback_info noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - VOID RunScriptInPanelContext ( JS_RAW_ARGS noname_arg_0, )
+| - void RunScriptInPanelContext ( v8_callback_info noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - BOOLEAN rememberchildfocus ( BOOLEAN noname_arg_0, )
+| - boolean rememberchildfocus ( boolean noname_arg_0 )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - CSTRING paneltype ( )
+| - cstring paneltype ( )
 | - Description:
 | - 
 | - 
