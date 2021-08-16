@@ -3310,7 +3310,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 | - CVar Default Value: 1.0
 | - 
-| - CVar Current Value: 0.666667
+| - CVar Current Value: 0.555556
 | - 
 
 | - 
@@ -12357,7 +12357,7 @@ criteria values are optional.
 | - 
 | - CVar Default Value: 3
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 3
 | - 
 
 | - 
