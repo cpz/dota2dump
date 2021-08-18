@@ -3530,6 +3530,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
+| - CVar Name: dota_hero_demo_default_enemy
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: npc_dota_hero_axe
+| - 
+| - CVar Current Value: npc_dota_hero_axe
+| - 
+
+| - 
 | - CVar Name: dota_load_all_hero_sounds
 |- 
 | - CVar Description: Loads all hero sound entries, for diagnostics
@@ -3859,6 +3869,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: cc_captiontrace
 |- 
 | - CVar Description: Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud)
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: dota_hero_demo_towers_enabled
+|- 
+| - CVar Description: 
 | - 
 | - CVar Default Value: 1
 | - 
@@ -29015,6 +29035,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: 20
 | - 
 | - CVar Current Value: 20
+| - 
+
+| - 
+| - CVar Name: dota_hero_demo_spawn_creeps_enabled
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
