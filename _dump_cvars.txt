@@ -3310,7 +3310,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 | - CVar Default Value: 1.0
 | - 
-| - CVar Current Value: 0.555556
+| - CVar Current Value: 1.000000
 | - 
 
 | - 
@@ -4863,6 +4863,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
+| - CVar Name: physics_hull_sphere_cast_sat_experimental
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: rcon_address
 |- 
 | - CVar Description: Address of remote server if sending unconnected rcon commands (format x.x.x.x:p) 
@@ -5835,9 +5845,9 @@ Format: find_ent <substring>
 |- 
 | - CVar Description: 
 | - 
-| - CVar Default Value: 5.0f
+| - CVar Default Value: 1.0f
 | - 
-| - CVar Current Value: 5.0f
+| - CVar Current Value: 1.0f
 | - 
 
 | - 
@@ -6351,16 +6361,6 @@ Format: find_ent <substring>
 | - 
 
 | - 
-| - CVar Name: r_light_binner_fixed_half_fov
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 60
-| - 
-| - CVar Current Value: 60
-| - 
-
-| - 
 | - CVar Name: snd_print_samplers
 |- 
 | - CVar Description: List all available samplers
@@ -6498,6 +6498,16 @@ Format: find_ent <substring>
 | - 
 
 | - 
+| - CVar Name: phys_shoot_angular_speed
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 3600
+| - 
+| - CVar Current Value: 3600
+| - 
+
+| - 
 | - CVar Name: dota_test_challenge
 |- 
 | - CVar Description: 
@@ -6531,16 +6541,6 @@ Format: find_ent <substring>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
-| - 
-
-| - 
-| - CVar Name: r_suppress_redundant_state_changes_vbs
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -6592,7 +6592,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -6659,12 +6659,6 @@ Format: find_ent <substring>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
-| - 
-
-| - 
-| - CVar Name: mix_input
-|- 
-| - CVar Description: Set an input mix value
 | - 
 
 | - 
@@ -7121,6 +7115,16 @@ Format: find_ent <substring>
 | - CVar Default Value: 
 | - 
 | - CVar Current Value: 
+| - 
+
+| - 
+| - CVar Name: dota_spectator_enable_edgepan_temporary_free_camera
+|- 
+| - CVar Description: Enable spectator takeover camera when edge panning.
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -7873,6 +7877,12 @@ Format: find_ent <substring>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: dota_spectator_hudshow
+|- 
+| - CVar Description: 
 | - 
 
 | - 
@@ -8977,16 +8987,6 @@ Format: find_ent <substring>
 | - 
 
 | - 
-| - CVar Name: dota_joy_inner_deadzone
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 2048
-| - 
-| - CVar Current Value: 2048
-| - 
-
-| - 
 | - CVar Name: dota_lightning_lerp_exponent
 |- 
 | - CVar Description: 
@@ -9137,7 +9137,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -9959,16 +9959,6 @@ Format: find_ent <substring>
 | - 
 
 | - 
-| - CVar Name: phys_shoot_torque
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 100000000
-| - 
-| - CVar Current Value: 100000000
-| - 
-
-| - 
 | - CVar Name: dota_reconnect_idle_buffer_time
 |- 
 | - CVar Description: How much extra time the player has after reconnecting before he gets marked as AFK.
@@ -10755,6 +10745,12 @@ Format: find_ent <substring>
 | - 
 
 | - 
+| - CVar Name: reload_model
+|- 
+| - CVar Description: Force a reload of a vmdl resource
+| - 
+
+| - 
 | - CVar Name: cl_physics_report_active
 |- 
 | - CVar Description: Lists all active physics objects
@@ -11070,7 +11066,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 
 | - 
-| - CVar Current Value: 784377496281910152
+| - CVar Current Value: 631381618981344948
 | - 
 
 | - 
@@ -11756,16 +11752,6 @@ criteria values are optional.
 | - 
 
 | - 
-| - CVar Name: dota_joy_cursor_speed
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1.5
-| - 
-| - CVar Current Value: 1.5
-| - 
-
-| - 
 | - CVar Name: dota_camera_smart_follow_offset_time
 |- 
 | - CVar Description: 
@@ -12184,7 +12170,7 @@ criteria values are optional.
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -12377,7 +12363,7 @@ criteria values are optional.
 | - 
 | - CVar Default Value: 3
 | - 
-| - CVar Current Value: 3
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -12497,6 +12483,12 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: -1
 | - 
 | - CVar Current Value: -1
+| - 
+
+| - 
+| - CVar Name: vmix_output
+|- 
+| - CVar Description: Dump main graph control output values
 | - 
 
 | - 
@@ -13098,7 +13090,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -13111,16 +13103,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: dota_item_execute
 |- 
 | - CVar Description: 
-| - 
-
-| - 
-| - CVar Name: dota_hud_dvr_expand_button_visible
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
 | - 
 
 | - 
@@ -13150,6 +13132,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: dota_bot_debug_clear_all
 |- 
 | - CVar Description: Disables all bot debugging.
+| - 
+
+| - 
+| - CVar Name: nav_draw_markup
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -15174,7 +15166,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -16009,6 +16001,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
+| - CVar Name: r_cpu_light_binner_use_gpu
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: sc_log_stats
 |- 
 | - CVar Description: 
@@ -16418,9 +16420,9 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 |- 
 | - CVar Description: 
 | - 
-| - CVar Default Value: 0.2
+| - CVar Default Value: 0
 | - 
-| - CVar Current Value: 0.2
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -17285,6 +17287,16 @@ Format: find_ent_index <index>
 | - CVar Name: sv_dota_custom_game_cache_test_download
 |- 
 | - CVar Description: <custom game ID> [<expected_timestamp>].  Test code to cache UGC to dedicated server
+| - 
+
+| - 
+| - CVar Name: dota_playtest_required_heroes
+|- 
+| - CVar Description: Required heroes in a playtest.
+| - 
+| - CVar Default Value: 
+| - 
+| - CVar Current Value: 
 | - 
 
 | - 
@@ -18756,7 +18768,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 
 | - 
-| - CVar Current Value: 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -19335,16 +19347,6 @@ Format: find_ent_index <index>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: @panorama_new_box_shadow
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
 | - 
 
 | - 
@@ -20698,16 +20700,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: dota_joy_edgepan_border
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0.1
-| - 
-| - CVar Current Value: 0.1
-| - 
-
-| - 
 | - CVar Name: dota_health_bar_threat_icons_force_value
 |- 
 | - CVar Description: 
@@ -20909,6 +20901,16 @@ Format: find_ent_index <index>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: dota_hud_custom_css_class
+|- 
+| - CVar Description: Add a custom class to the root of the HUD for testing purposes.
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -21568,6 +21570,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: dota_selected_broadcaster_player_id
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: shop_select_itemrow
 |- 
 | - CVar Description: buy ( or set quickbuy with shift held ) a particular displayed row
@@ -21597,6 +21609,16 @@ Format: find_ent_index <index>
 | - CVar Name: report_soundpatch
 |- 
 | - CVar Description: reports sound patch count
+| - 
+
+| - 
+| - CVar Name: aghsfort_hero_undying_max_zombies
+|- 
+| - CVar Description: AGHSFORT - Maximum amount of zombies that can be spawned.
+| - 
+| - CVar Default Value: 64
+| - 
+| - CVar Current Value: 64
 | - 
 
 | - 
@@ -22542,16 +22564,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: dota_watch_live_friends_only
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: dota_gift_permissions_request_timeout
 |- 
 | - CVar Description: 
@@ -22625,16 +22637,6 @@ Format: find_ent_index <index>
 | - CVar Default Value: 600
 | - 
 | - CVar Current Value: 600
-| - 
-
-| - 
-| - CVar Name: nav_obstacle_keep_inside_poly
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
 | - 
 
 | - 
@@ -22841,7 +22843,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 2
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -23101,7 +23103,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -23238,26 +23240,6 @@ Format: find_ent_index <index>
 | - CVar Default Value: 2.0
 | - 
 | - CVar Current Value: 2.0
-| - 
-
-| - 
-| - CVar Name: dota_joy_outer_deadzone
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 4096
-| - 
-| - CVar Current Value: 4096
-| - 
-
-| - 
-| - CVar Name: dota_joy_cursor_gravity_friendly
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0.0
-| - 
-| - CVar Current Value: 0.0
 | - 
 
 | - 
@@ -23965,9 +23947,9 @@ Format: find_ent_index <index>
 |- 
 | - CVar Description: Multiply water drag for buoyancy
 | - 
-| - CVar Default Value: 0.1
+| - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0.1
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -24534,9 +24516,9 @@ Format: find_ent_index <index>
 |- 
 | - CVar Description: 
 | - 
-| - CVar Default Value: 8
+| - CVar Default Value: 256
 | - 
-| - CVar Current Value: 8
+| - CVar Current Value: 256
 | - 
 
 | - 
@@ -24632,12 +24614,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: dota_spectator_resetreplayspeed
-|- 
-| - CVar Description: 
-| - 
-
-| - 
 | - CVar Name: crowbar_impact_damage_mass
 |- 
 | - CVar Description: 
@@ -24664,7 +24640,13 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 3
+| - 
+
+| - 
+| - CVar Name: instant_replay_goto_tick_relative
+|- 
+| - CVar Description: Goto a direct timestamp of the replay
 | - 
 
 | - 
@@ -25008,16 +24990,6 @@ Format: find_ent_index <index>
 | - CVar Default Value: 0.5
 | - 
 | - CVar Current Value: 0.5
-| - 
-
-| - 
-| - CVar Name: dota_joy_cursor_gravity_ui
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0.2
-| - 
-| - CVar Current Value: 0.2
 | - 
 
 | - 
@@ -26071,16 +26043,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: dota_joy_cursor_gravity_enemy
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0.5
-| - 
-| - CVar Current Value: 0.5
-| - 
-
-| - 
 | - CVar Name: dota_camera_hero_inspector_drag_yaw_min
 |- 
 | - CVar Description: 
@@ -26552,6 +26514,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 2
 | - 
 | - CVar Current Value: 2
+| - 
+
+| - 
+| - CVar Name: dota_spectator_hudhide
+|- 
+| - CVar Description: 
 | - 
 
 | - 
@@ -27139,7 +27107,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Name: dota_spectator_pausetoggle
 |- 
-| - CVar Description: 
+| - CVar Description: Toggle replay play/pause
 | - 
 
 | - 
@@ -27373,6 +27341,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_export_team_logos
+|- 
+| - CVar Description: 
+| - 
+
+| - 
 | - CVar Name: sv_player_stuck_tolerance
 |- 
 | - CVar Description: 
@@ -27531,7 +27505,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1620691200
 | - 
-| - CVar Current Value: 1621890000
+| - CVar Current Value: 1627851600
 | - 
 
 | - 
@@ -27950,6 +27924,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: nav_test_split_obstacle_size
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 30
+| - 
+| - CVar Current Value: 30
+| - 
+
+| - 
 | - CVar Name: nav_obstacle_validate
 |- 
 | - CVar Description: 
@@ -27977,6 +27961,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: 2
 | - 
 | - CVar Current Value: 2
+| - 
+
+| - 
+| - CVar Name: snd_occlusion_bounces
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -28262,16 +28256,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: dota_joy_pow
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 2
-| - 
-| - CVar Current Value: 2
-| - 
-
-| - 
 | - CVar Name: ugc_fake_state
 |- 
 | - CVar Description: 1=s, 2=L, 4=I, 8=U, 16=D, 32=P
@@ -28481,6 +28465,16 @@ Arguments: <weapon_name>
 | - CVar Name: startdemos
 |- 
 | - CVar Description: Play demos in demo sequence.
+| - 
+
+| - 
+| - CVar Name: hlx_combine_barrier_cell_spacing
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 6
+| - 
+| - CVar Current Value: 6
 | - 
 
 | - 
@@ -28781,16 +28775,6 @@ Arguments: <weapon_name>
 | - CVar Name: cl_imgui_set_selection
 |- 
 | - CVar Description: Sets ImGui selection
-| - 
-
-| - 
-| - CVar Name: dota_joy_edgepan_speed
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 5000
-| - 
-| - CVar Current Value: 5000
 | - 
 
 | - 
@@ -29822,7 +29806,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 388
+| - CVar Current Value: 260
 | - 
 
 | - 
@@ -29937,6 +29921,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_camera_temporary_freecamera_time
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 2.5
+| - 
+| - CVar Current Value: 2.5
+| - 
+
+| - 
 | - CVar Name: activategameui
 |- 
 | - CVar Description: 
@@ -30000,16 +29994,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: -1.0f
 | - 
 | - CVar Current Value: -1.0f
-| - 
-
-| - 
-| - CVar Name: nav_obstacle_stats
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -30252,6 +30236,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: 30.0
 | - 
 | - CVar Current Value: 30.0
+| - 
+
+| - 
+| - CVar Name: dota_watch_pause_at_the_end_of_all_replays
+|- 
+| - CVar Description: Pause at the end of replays
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -30568,7 +30562,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Name: sc_hdr_enabled_override
 |- 
-| - CVar Description: Override default setting for HDR rendering.
+| - CVar Description: Override default setting for HDR rendering. -1 default, 0 NoHdr, 1 Hdr, 2 Hdr 1010102
 | - 
 | - CVar Default Value: -1
 | - 
@@ -31106,6 +31100,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: spectator_save_scenario
+|- 
+| - CVar Description: [-binary] [-ugly] save scenario of the game currently being spectated
+| - 
+
+| - 
 | - CVar Name: dota_enemy_color_b_cb
 |- 
 | - CVar Description: 
@@ -31237,12 +31237,6 @@ Arguments: <weapon_name>
 | - CVar Name: dota_radar
 |- 
 | - CVar Description: Activate radar mode
-| - 
-
-| - 
-| - CVar Name: dota_spectator_rewind
-|- 
-| - CVar Description: 
 | - 
 
 | - 
@@ -33026,6 +33020,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_chat_filter_settings_apply_to_spectators
+|- 
+| - CVar Description: Whether chat filtering applies to spectating as well or not.
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: dota_ogre_magi_arcana_disable_streak_display
 |- 
 | - CVar Description: 
@@ -33410,7 +33414,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -34344,6 +34348,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: physics_sphere_cast_with_epsilon_experimental
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: ik_groundrule_enabled
 |- 
 | - CVar Description: 
@@ -34816,7 +34830,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 120
 | - 
-| - CVar Current Value: 240.000000
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -34996,19 +35010,19 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: dota_watch_bot_script_only
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: dota_courier_burst
 |- 
 | - CVar Description: Activate speed burst on courier
+| - 
+
+| - 
+| - CVar Name: dota_spectator_options_autohide
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -35764,6 +35778,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: nav_draw_markup_offset
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 4
+| - 
+| - CVar Current Value: 4
+| - 
+
+| - 
 | - CVar Name: csm_bias_override_1
 |- 
 | - CVar Description: 
@@ -36060,6 +36084,12 @@ Arguments: <weapon_name>
 | - CVar Name: writeip
 |- 
 | - CVar Description: Save the ban list to banned_ip.cfg.
+| - 
+
+| - 
+| - CVar Name: vis_debug_sunclusters
+|- 
+| - CVar Description: Showing clusters for sun/csm rendering. Red (full sun csm & lighting), Orange (no viewmodel sun or csm), Green (no sun at all)
 | - 
 
 | - 
@@ -36623,7 +36653,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Name: dota_spectator_increasereplayspeed
 |- 
-| - CVar Description: 
+| - CVar Description: Increase replay speed
 | - 
 
 | - 
@@ -36909,16 +36939,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: dota_joy_pan_speed
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 4000
-| - 
-| - CVar Current Value: 4000
-| - 
-
-| - 
 | - CVar Name: dota_camera_distance_min
 |- 
 | - CVar Description: 
@@ -36951,7 +36971,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Name: dota_spectator_watching_broadcaster
 |- 
-| - CVar Description: Indicates if you are watching a broadcaster in player view, so that the handling of selection can be treated differently. Meaningless when not in player view specator mode.
+| - CVar Description: Indicates if you are watching a broadcaster in player view, so that the handling of selection can be treated differently. Meaningless when not in player view spectator mode.
 | - 
 | - CVar Default Value: 0
 | - 
@@ -37002,6 +37022,16 @@ Arguments: <weapon_name>
 | - CVar Name: dota_start_party_ready_check
 |- 
 | - CVar Description: Start a party ready check.
+| - 
+
+| - 
+| - CVar Name: dota_fight_recap_button_stay_time
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 35
+| - 
+| - CVar Current Value: 35
 | - 
 
 | - 
@@ -38588,6 +38618,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_spectator_options_enabled
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: sv_script_think_interval
 |- 
 | - CVar Description: 
@@ -39088,7 +39128,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 
 | - 
-| - CVar Current Value: 32
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -39866,6 +39906,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: -1.0
 | - 
 | - CVar Current Value: -1.0
+| - 
+
+| - 
+| - CVar Name: vmix_input
+|- 
+| - CVar Description: Set an input mix value
 | - 
 
 | - 
@@ -40998,16 +41044,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: engine_drop_frames_on_present_stall
-|- 
-| - CVar Description: Feature to skip rendering when the CPU gets ahead of the GPU and additional frames would likely stall.
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: tv_relay
 |- 
 | - CVar Description: Connect to SourceTV server and relay broadcast.
@@ -41193,6 +41229,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: snd_occlusion_rays
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 4
+| - 
+| - CVar Current Value: 4
 | - 
 
 | - 
@@ -41486,7 +41532,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1.0
 | - 
-| - CVar Current Value: 0.460340
+| - CVar Current Value: 0.080737
 | - 
 
 | - 
@@ -42470,12 +42516,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: dota_dpc_team_test_purchase
-|- 
-| - CVar Description: Test purchase of items for DPC
-| - 
-
-| - 
 | - CVar Name: workshop_download_debug
 |- 
 | - CVar Description: Test different custom game download states
@@ -42770,16 +42810,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: hlvr_combine_barrier_cell_spacing
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 6
-| - 
-| - CVar Current Value: 6
-| - 
-
-| - 
 | - CVar Name: cl_ShowBoneSetupEnts
 |- 
 | - CVar Description: Show which entities are having their bones setup each frame.
@@ -42842,7 +42872,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -42887,13 +42917,23 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_playtest_recommended_heroes
+|- 
+| - CVar Description: Required heroes in a playtest.
+| - 
+| - CVar Default Value: 
+| - 
+| - CVar Current Value: 
+| - 
+
+| - 
 | - CVar Name: nav_draw_area_filled
 |- 
 | - CVar Description: 
 | - 
-| - CVar Default Value: 0
+| - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -43067,7 +43107,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Name: dota_spectator_decreasereplayspeed
 |- 
-| - CVar Description: 
+| - CVar Description: Decrease replay speed
 | - 
 
 | - 

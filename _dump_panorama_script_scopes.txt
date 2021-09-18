@@ -536,7 +536,7 @@ Scope Name: Players; Scope Size: 43;
 | - If player is in perspective mode, returns the followed players id.  Else, -1.
 | - 
 
-Scope Name: Entities; Scope Size: 162;
+Scope Name: Entities; Scope Size: 163;
 | - 
 | - Function: 
 | - v8_array GetAbsOrigin ( integer nEntityIndex )
@@ -696,6 +696,12 @@ Scope Name: Entities; Scope Size: 162;
 | - 
 | - Function: 
 | - boolean IsBoss ( integer nEntityIndex )
+| - Description:
+| - 
+| - 
+| - 
+| - Function: 
+| - boolean IsBossCreature ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
@@ -1115,7 +1121,7 @@ Scope Name: Entities; Scope Size: 162;
 | - 
 | - 
 | - Function: 
-| - integer GetHealthThinkRegen ( integer nEntityIndex )
+| - float GetHealthThinkRegen ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
@@ -1145,7 +1151,7 @@ Scope Name: Entities; Scope Size: 162;
 | - 
 | - 
 | - Function: 
-| - integer GetStates ( integer nEntityIndex )
+| - uint64 GetStates ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
@@ -1609,7 +1615,7 @@ Scope Name: Abilities; Scope Size: 78;
 | - 
 | - 
 | - Function: 
-| - integer GetBehavior ( integer nEntityIndex )
+| - uint64 GetBehavior ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
@@ -1843,7 +1849,7 @@ Scope Name: Abilities; Scope Size: 78;
 | - 
 | - 
 | - Function: 
-| - float GetAOERadius ( integer nEntityIndex )
+| - integer GetAOERadius ( integer nEntityIndex )
 | - Description:
 | - 
 | - 
@@ -3170,7 +3176,7 @@ Scope Name: $; Scope Size: 23;
 | - Create a logging channel
 | - 
 
-Scope Name: DOTAHeroModelOverlay; Scope Size: 105;
+Scope Name: DOTAHeroModelOverlay; Scope Size: 101;
 | - 
 | - Function: 
 | - boolean visible ( boolean noname_arg_0 )
@@ -3599,24 +3605,6 @@ Scope Name: DOTAHeroModelOverlay; Scope Size: 105;
 | - 
 | - 
 | - Function: 
-| - void BLoadLayoutFromString ( v8_callback_info noname_arg_0 )
-| - Description:
-| - 
-| - 
-| - 
-| - Function: 
-| - void LoadLayoutFromStringAsync ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
-| - Description:
-| - 
-| - 
-| - 
-| - Function: 
-| - void LoadLayoutAsync ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
-| - Description:
-| - 
-| - 
-| - 
-| - Function: 
 | - boolean BLoadLayoutSnippet ( cstring noname_arg_0 )
 | - Description:
 | - 
@@ -3624,12 +3612,6 @@ Scope Name: DOTAHeroModelOverlay; Scope Size: 105;
 | - 
 | - Function: 
 | - boolean BHasLayoutSnippet ( cstring noname_arg_0 )
-| - Description:
-| - 
-| - 
-| - 
-| - Function: 
-| - boolean BCreateChildren ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
@@ -3802,7 +3784,7 @@ Scope Name: DOTAHeroModelOverlay; Scope Size: 105;
 | - 
 | - 
 
-Scope Name: Panel; Scope Size: 105;
+Scope Name: Panel; Scope Size: 101;
 | - 
 | - Function: 
 | - boolean visible ( boolean noname_arg_0 )
@@ -4231,24 +4213,6 @@ Scope Name: Panel; Scope Size: 105;
 | - 
 | - 
 | - Function: 
-| - void BLoadLayoutFromString ( v8_callback_info noname_arg_0 )
-| - Description:
-| - 
-| - 
-| - 
-| - Function: 
-| - void LoadLayoutFromStringAsync ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
-| - Description:
-| - 
-| - 
-| - 
-| - Function: 
-| - void LoadLayoutAsync ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
-| - Description:
-| - 
-| - 
-| - 
-| - Function: 
 | - boolean BLoadLayoutSnippet ( cstring noname_arg_0 )
 | - Description:
 | - 
@@ -4256,12 +4220,6 @@ Scope Name: Panel; Scope Size: 105;
 | - 
 | - Function: 
 | - boolean BHasLayoutSnippet ( cstring noname_arg_0 )
-| - Description:
-| - 
-| - 
-| - 
-| - Function: 
-| - boolean BCreateChildren ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
@@ -4434,7 +4392,7 @@ Scope Name: Panel; Scope Size: 105;
 | - 
 | - 
 
-Scope Name: TabButton; Scope Size: 105;
+Scope Name: TabButton; Scope Size: 101;
 | - 
 | - Function: 
 | - boolean visible ( boolean noname_arg_0 )
@@ -4863,24 +4821,6 @@ Scope Name: TabButton; Scope Size: 105;
 | - 
 | - 
 | - Function: 
-| - void BLoadLayoutFromString ( v8_callback_info noname_arg_0 )
-| - Description:
-| - 
-| - 
-| - 
-| - Function: 
-| - void LoadLayoutFromStringAsync ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
-| - Description:
-| - 
-| - 
-| - 
-| - Function: 
-| - void LoadLayoutAsync ( cstring noname_arg_0, boolean noname_arg_1, boolean noname_arg_2 )
-| - Description:
-| - 
-| - 
-| - 
-| - Function: 
 | - boolean BLoadLayoutSnippet ( cstring noname_arg_0 )
 | - Description:
 | - 
@@ -4888,12 +4828,6 @@ Scope Name: TabButton; Scope Size: 105;
 | - 
 | - Function: 
 | - boolean BHasLayoutSnippet ( cstring noname_arg_0 )
-| - Description:
-| - 
-| - 
-| - 
-| - Function: 
-| - boolean BCreateChildren ( cstring noname_arg_0 )
 | - Description:
 | - 
 | - 
