@@ -64,7 +64,7 @@
 | - CVar Name: ent_animgraph_record
 |- 
 | - CVar Description: Toggles recording of animgraph replay of the given entity(s)
-	Arguments:		{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -164,7 +164,7 @@
 | - CVar Name: cli_ent_vcollide_wireframe
 |- 
 | - CVar Description: Displays the interpolated vcollide wireframe pm am entity.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -268,13 +268,23 @@
 | - 
 
 | - 
+| - CVar Name: mat_tonemap_csgo_force_average_lum_min
+|- 
+| - CVar Description: Override. Old default was 3.0
+| - 
+| - CVar Default Value: -1.0
+| - 
+| - CVar Current Value: -1.0
+| - 
+
+| - 
 | - CVar Name: snd_musicvolume
 |- 
 | - CVar Description: Music volume
 | - 
 | - CVar Default Value: 1.0
 | - 
-| - CVar Current Value: 0.320113
+| - CVar Current Value: 1.000000
 | - 
 
 | - 
@@ -565,7 +575,7 @@
 | - CVar Name: cl_ik_enable_only_this_chain
 |- 
 | - CVar Description: Disables all chains except for the mentioned one on the selected entity(ies), by name of the chain.
-	Arguments:   	{chain_name} [entity_name | {class_name} | no argument picks what player is looking at]
+	Arguments:   	<chain_name> < {entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at} >
 | - 
 
 | - 
@@ -621,6 +631,16 @@
 | - 
 
 | - 
+| - CVar Name: dota_settings_healthbar_boss_creep_height_offset
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: -4.0
+| - 
+| - CVar Current Value: -4.0
+| - 
+
+| - 
 | - CVar Name: dota_hud_portrait_force_alive
 |- 
 | - CVar Description: 
@@ -670,7 +690,7 @@
 | - CVar Name: showtriggers_toggle
 |- 
 | - CVar Description: Displays the movement bounding box for the triggers in orange.  Some entites will also display entity specific overlays.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -710,7 +730,7 @@
 | - 
 | - CVar Default Value: 2
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 2
 | - 
 
 | - 
@@ -1198,6 +1218,16 @@
 | - 
 
 | - 
+| - CVar Name: dota_number_of_samples_for_lane_prediction
+|- 
+| - CVar Description: Number of samples used to guess players lane selection
+| - 
+| - CVar Default Value: 8000
+| - 
+| - CVar Current Value: 8000
+| - 
+
+| - 
 | - CVar Name: nav_smooth_relax_use_timesteps
 |- 
 | - CVar Description: 
@@ -1344,7 +1374,7 @@
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -1907,6 +1937,16 @@
 | - 
 
 | - 
+| - CVar Name: mat_tonemap_csgo_bloom_start_value
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: -1.0
+| - 
+| - CVar Current Value: -1.0
+| - 
+
+| - 
 | - CVar Name: net_messageinfo
 |- 
 | - CVar Description: Display info about a message (by classname or id)
@@ -2014,16 +2054,6 @@
 | - CVar Name: script_reload
 |- 
 | - CVar Description: Reload scripts
-| - 
-
-| - 
-| - CVar Name: physicsshadowupdate_render
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -2368,7 +2398,7 @@
 | - CVar Name: npc_kill
 |- 
 | - CVar Description: Kills the given NPC(s)
-Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is looking at
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -2663,7 +2693,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: cl_ent_animgraph_record
 |- 
 | - CVar Description: Toggles recording of animgraph replay of the given entity(s)
-	Arguments:		{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -2973,16 +3003,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
-| - CVar Name: dota_bot_match_difficulty
-|- 
-| - CVar Description: Difficulty to play coop bot matches against
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: dota_hud_portrait_killer_inset_left
 |- 
 | - CVar Description: 
@@ -3012,7 +3032,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: ent_text256
 |- 
 | - CVar Description: Displays text debugging information about the given entity(ies) [within 256 units of the player] on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -3075,6 +3095,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: 21.0
 | - 
 | - CVar Current Value: 21.0
+| - 
+
+| - 
+| - CVar Name: mat_tonemap_csgo_force_use_alpha
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: -1.0
+| - 
+| - CVar Current Value: -1.0
 | - 
 
 | - 
@@ -3176,19 +3206,19 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
-| - CVar Name: dev_show_event_dungeon_leaderboards
-|- 
-| - CVar Description: Show the Dungeon event leaderboards
-| - 
-
-| - 
 | - CVar Name: dota_season_toasts
 |- 
 | - CVar Description: 
 | - 
-| - CVar Default Value: 0
+| - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: dev_show_event_dungeon_leaderboards
+|- 
+| - CVar Description: Show the Dungeon event leaderboards
 | - 
 
 | - 
@@ -3320,7 +3350,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 | - CVar Default Value: 
 | - 
-| - CVar Current Value: -6 2 -4 -3 1
+| - CVar Current Value: 
 | - 
 
 | - 
@@ -3536,7 +3566,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 | - CVar Default Value: npc_dota_hero_axe
 | - 
-| - CVar Current Value: npc_dota_hero_axe
+| - CVar Current Value: npc_dota_hero_tidehunter
 | - 
 
 | - 
@@ -3569,24 +3599,14 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: ent_script_dump
 |- 
 | - CVar Description: Dumps the names and values of this entity's script scope to the console
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
 | - CVar Name: ent_joints
 |- 
 | - CVar Description: Displays the joint names + axes an entity.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
-| - 
-
-| - 
-| - CVar Name: vm_fade
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -3672,7 +3692,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 2
 | - 
 
 | - 
@@ -3906,6 +3926,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
+| - CVar Name: dota_taunt_second_cooldown
+|- 
+| - CVar Description: If trying to spam taunts, then amount of time you have to wait until that will be allowed again.
+| - 
+| - CVar Default Value: 60.0
+| - 
+| - CVar Current Value: 60.0
+| - 
+
+| - 
 | - CVar Name: dota_salute_rate_limit_seconds
 |- 
 | - CVar Description: The amount of seconds that you must wait before you can salute again.
@@ -3923,6 +3953,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: -1.0
 | - 
 | - CVar Current Value: -1.0
+| - 
+
+| - 
+| - CVar Name: mat_tonemap_csgo_debug
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -4036,6 +4076,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
+| - CVar Name: dota_externalwebapi_debug_leagueid
+|- 
+| - CVar Description: Set this to test the external web API as if the game were a specific league.
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: -herochatwheel
 |- 
 | - CVar Description: Executes the highlighted hero chatwheel menu item
@@ -4061,13 +4111,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: ent_animgraph_setvar
 |- 
 | - CVar Description: Sets a variable on the animgraph of the given entity(s)
-	Arguments:   <varname>=<value>		{entity_name} / {class_name} / no argument picks what player is looking at 
-| - 
-
-| - 
-| - CVar Name: subclass_change
-|- 
-| - CVar Description: Changes the subclass of the given subclass where the player is looking.
+	Arguments:   <varname>=<value>	<{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}>
 | - 
 
 | - 
@@ -4075,6 +4119,13 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 |- 
 | - CVar Description: Give a supply of ammo for current weapon..
 
+| - 
+
+| - 
+| - CVar Name: subclass_change
+|- 
+| - CVar Description: Changes the subclass of the given entity.
+	Arguments:   	<new_subclass> {entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -4781,7 +4832,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 | - CVar Default Value: 
 | - 
-| - CVar Current Value: 8 CPUs (4 cores), Frequency: 2.4 GHz,  Features: F/M/S 6/58/9 GenuineIntel 'Intel(R) Core(TM) i7-3630QM CPU @ 2.40GHz' SSE SSE2 SSE4.1 SSE4.2 AVX MMX RDTSC CMOV FCMOV (64-bit process)
+| - CVar Current Value: 8 CPUs (4 cores), Frequency: 2.4 GHz,  Features: F/M/S 6/58/9 GenuineIntel 'Intel(R) Core(TM) i7-3630QM CPU @ 2.40GHz' SSE SSE2 SSE4.1 SSE4.2 AVX MMX RDTSC CMOV FCMOV PCLMULQDQ (64-bit process)
 | - 
 
 | - 
@@ -4801,13 +4852,17 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
-| - CVar Name: video_mode_screenshots
+| - CVar Name: dota_player_smart_multiunit_cast
 |- 
-| - CVar Description: dump screenshots at all supported video modes
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
-| - CVar Name: dota_player_smart_multiunit_cast
+| - CVar Name: dota_profile_show_past_game_analysis
 |- 
 | - CVar Description: 
 | - 
@@ -4867,9 +4922,9 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 |- 
 | - CVar Description: 
 | - 
-| - CVar Default Value: 0
+| - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -5013,7 +5068,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -5062,7 +5117,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: cl_ent_remove
 |- 
 | - CVar Description: Removes the given entity(s)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -5120,6 +5175,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: cast_intervals
 |- 
 | - CVar Description: Tests interval ray cast
+| - 
+
+| - 
+| - CVar Name: debug_takedamage_summaries
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -5312,7 +5377,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: ent_remove
 |- 
 | - CVar Description: Removes the given entity(s)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -5395,16 +5460,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: -1
 | - 
 | - CVar Current Value: -1
-| - 
-
-| - 
-| - CVar Name: cl_debug_player_use
-|- 
-| - CVar Description: Visualizes +use logic for the given range. Green cross=trace success, Red cross=trace too far, Green box=radius success
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -5517,16 +5572,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: vmix_debug_list
 |- 
 | - CVar Description: Debug dump the list of available vmix graphs
-| - 
-
-| - 
-| - CVar Name: r_gpu_driver_high
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 1638421
 | - 
 
 | - 
@@ -5784,6 +5829,16 @@ Format: find_ent <substring>
 | - 
 
 | - 
+| - CVar Name: snd_sound_areas_debug_interval
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0.2
+| - 
+| - CVar Current Value: 0.2
+| - 
+
+| - 
 | - CVar Name: dota_particle_parallel_prerender
 |- 
 | - CVar Description: 
@@ -5986,7 +6041,7 @@ Format: find_ent <substring>
 | - CVar Name: ent_skeleton
 |- 
 | - CVar Description: Displays the skeleton for the given entity(ies).
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -6101,6 +6156,12 @@ Format: find_ent <substring>
 | - CVar Default Value: 1.0
 | - 
 | - CVar Current Value: 1.0
+| - 
+
+| - 
+| - CVar Name: dota_spectator_skip_fwd_1
+|- 
+| - CVar Description: Skip replay forward by 1st increment
 | - 
 
 | - 
@@ -6305,7 +6366,7 @@ Format: find_ent <substring>
 | - CVar Name: ent_select
 |- 
 | - CVar Description: Select or deselects the given entities(s) for later manipulation
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -6412,7 +6473,7 @@ Format: find_ent <substring>
 | - CVar Name: cl_ent_vcollide_wireframe
 |- 
 | - CVar Description: Displays the interpolated vcollide wireframe pm am entity.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -6592,7 +6653,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -6609,6 +6670,16 @@ Format: find_ent <substring>
 | - CVar Name: lightquery_debug_indirect_lighting
 |- 
 | - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: cq_send_player_simulation_times
+|- 
+| - CVar Description: 1 = send player simulation times, verify on client, 0 = don't send simulation times
 | - 
 | - CVar Default Value: 1
 | - 
@@ -6719,16 +6790,6 @@ Format: find_ent <substring>
 | - CVar Default Value: 500
 | - 
 | - CVar Current Value: 500
-| - 
-
-| - 
-| - CVar Name: snd_sos_show_client_xmit
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -7534,6 +7595,16 @@ Format: find_ent <substring>
 | - 
 
 | - 
+| - CVar Name: mat_tonemap_csgo_force_accelerate_exposure_down
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: -1.0
+| - 
+| - CVar Current Value: -1.0
+| - 
+
+| - 
 | - CVar Name: ik_debug_all_chains_unique_color_per_chain
 |- 
 | - CVar Description: 
@@ -7826,7 +7897,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -7876,7 +7947,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -8004,7 +8075,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 0.25
 | - 
-| - CVar Current Value: 0.800000
+| - CVar Current Value: 0.250000
 | - 
 
 | - 
@@ -8340,7 +8411,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 1.0
 | - 
-| - CVar Current Value: 0.279037
+| - CVar Current Value: 1.000000
 | - 
 
 | - 
@@ -9276,6 +9347,16 @@ Format: find_ent <substring>
 | - 
 
 | - 
+| - CVar Name: snd_sound_areas_debug
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: cc_linger_time
 |- 
 | - CVar Description: Close caption linger time.
@@ -9751,7 +9832,7 @@ Format: find_ent <substring>
 | - CVar Name: cl_ent_viewoffset
 |- 
 | - CVar Description: Displays the eye position for the given entity(ies) in red.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -9775,6 +9856,16 @@ Format: find_ent <substring>
 | - 
 
 | - 
+| - CVar Name: dota_portrait_animate
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: cl_dota_showents
 |- 
 | - CVar Description: Dump entity list to console.
@@ -9788,16 +9879,6 @@ Format: find_ent <substring>
 | - CVar Default Value: 3500
 | - 
 | - CVar Current Value: 3500
-| - 
-
-| - 
-| - CVar Name: dota_portrait_animate
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -10012,16 +10093,6 @@ Format: find_ent <substring>
 | - CVar Name: cl_eye_sin_wave
 |- 
 | - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: hud_takesshots
-|- 
-| - CVar Description: Auto-save a scoreboard screenshot at the end of a map.
 | - 
 | - CVar Default Value: 0
 | - 
@@ -10484,7 +10555,7 @@ Format: find_ent <substring>
 | - CVar Name: particle_test_stop
 |- 
 | - CVar Description: Stops all particle systems on the selected entities.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -10611,9 +10682,9 @@ Format: find_ent <substring>
 | - 
 
 | - 
-| - CVar Name: vr_screenshake_scale
+| - CVar Name: zoom_sensitivity_ratio
 |- 
-| - CVar Description: 
+| - CVar Description: Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 | - 
 | - CVar Default Value: 1.0
 | - 
@@ -10647,16 +10718,6 @@ Format: find_ent <substring>
 | - 
 
 | - 
-| - CVar Name: zoom_sensitivity_ratio
-|- 
-| - CVar Description: Additional mouse sensitivity scale factor applied when FOV is zoomed in.
-| - 
-| - CVar Default Value: 1.0
-| - 
-| - CVar Current Value: 1.0
-| - 
-
-| - 
 | - CVar Name: dota_camera_assisted_camera_operator_radius_scale_at_zoomed_out
 |- 
 | - CVar Description: 
@@ -10674,16 +10735,6 @@ Format: find_ent <substring>
 | - CVar Default Value: 1048576
 | - 
 | - CVar Current Value: 1048576
-| - 
-
-| - 
-| - CVar Name: dota_cache_duration_allstar_cache_s
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 300
-| - 
-| - CVar Current Value: 300
 | - 
 
 | - 
@@ -10912,7 +10963,7 @@ Format: find_ent <substring>
 | - CVar Name: cl_ent_text
 |- 
 | - CVar Description: Displays text debugging information about the given entity(ies) on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -11066,7 +11117,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 
 | - 
-| - CVar Current Value: 631381618981344948
+| - CVar Current Value: 543482804733546282
 | - 
 
 | - 
@@ -11089,7 +11140,7 @@ Format: find_ent <substring>
 | - CVar Name: ent_rbox
 |- 
 | - CVar Description: Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -11265,6 +11316,16 @@ Format: find_ent <substring>
 USAGE: rr_forceconcept <target> <concept> "criteria1:value1,criteria2:value2,..."
 criteria values are optional.
 
+| - 
+
+| - 
+| - CVar Name: dota_taunt_base_cooldown
+|- 
+| - CVar Description: The amount of time after a taunt is finished that you always have to wait before taunting again.
+| - 
+| - CVar Default Value: 2.0
+| - 
+| - CVar Current Value: 2.0
 | - 
 
 | - 
@@ -11457,16 +11518,6 @@ criteria values are optional.
 | - CVar Default Value: 10
 | - 
 | - CVar Current Value: 10
-| - 
-
-| - 
-| - CVar Name: dota_turbo_neutral_item_time_offset
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 420
-| - 
-| - CVar Current Value: 420
 | - 
 
 | - 
@@ -11892,7 +11943,7 @@ criteria values are optional.
 | - CVar Name: cli_ent_attachments
 |- 
 | - CVar Description: Displays the interpolated attachment points on an entity.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -12462,7 +12513,7 @@ criteria values are optional.
 | - CVar Name: npc_destroy
 |- 
 | - CVar Description: Removes the given NPC(s) from the universe
-Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is looking at
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -12740,7 +12791,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: ent_vcollide_wireframe
 |- 
 | - CVar Description: Displays the interpolated vcollide wireframe pm am entity.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -12751,16 +12802,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
-| - 
-
-| - 
-| - CVar Name: mp_clan_ready_signal
-|- 
-| - CVar Description: Text that team leader from each team must speak for the match to begin
-| - 
-| - CVar Default Value: ready
-| - 
-| - CVar Current Value: ready
 | - 
 
 | - 
@@ -13171,7 +13212,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 4
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -13387,6 +13428,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
+| - CVar Name: mat_tonemap_csgo_bloom_scale
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: -1.0
+| - 
+| - CVar Current Value: -1.0
+| - 
+
+| - 
 | - CVar Name: snd_samplers_stop_note
 |- 
 | - CVar Description: Stop a note from a specified sampler
@@ -13416,16 +13467,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: cl_ent_show_contexts
 |- 
 | - CVar Description: Show entity contexts in ent_text display
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: vm_draw_always
-|- 
-| - CVar Description: 
 | - 
 | - CVar Default Value: 0
 | - 
@@ -13496,16 +13537,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: player_use_radius
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 80
-| - 
-| - CVar Current Value: 80
 | - 
 
 | - 
@@ -13770,6 +13801,12 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
+| - CVar Name: cl_debugoverlay_hide_imgui
+|- 
+| - CVar Description: Hides the overlay.
+| - 
+
+| - 
 | - CVar Name: spec_track
 |- 
 | - CVar Description: Tracks an entity in spec mode
@@ -13787,6 +13824,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: dota_idle_rare_tower_scale
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 2
+| - 
+| - CVar Current Value: 2
 | - 
 
 | - 
@@ -13950,16 +13997,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
-| - CVar Name: joy_autoaimdampenrange
-|- 
-| - CVar Description: The stick range where autoaim dampening is applied. 0 = off
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: slot6
 |- 
 | - CVar Description: 
@@ -14045,23 +14082,13 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: ent_kill
 |- 
 | - CVar Description: Kills the given entity(s)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
 | - CVar Name: commentary_cvarsnotchanging
 |- 
 | - CVar Description: 
-| - 
-
-| - 
-| - CVar Name: sv_turbophysics
-|- 
-| - CVar Description: Turns on turbo physics
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
 | - 
 
 | - 
@@ -14088,16 +14115,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: -1.0f
 | - 
 | - CVar Current Value: -1.0f
-| - 
-
-| - 
-| - CVar Name: mat_reload_shaders_multithreaded
-|- 
-| - CVar Description: If we should use multithreaded shader recompilation during mat_reloadshaders.
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
 | - 
 
 | - 
@@ -14162,7 +14179,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: ent_text_sticky_remove
 |- 
 | - CVar Description: Removes from the list of names to display text debugging information about the given entity(ies) on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -14295,6 +14312,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: 120.0
 | - 
 | - CVar Current Value: 120.0
+| - 
+
+| - 
+| - CVar Name: dota_alt_show_rune_spawn_times
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -14646,17 +14673,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
-| - CVar Name: sv_soundemitter_trace
-|- 
-| - CVar Description: Show all EmitSound calls including their symbolic name and the actual wave file they resolved to. (-1 = for nobody, 0 = for everybody, n = for one entity)
-
-| - 
-| - CVar Default Value: -1
-| - 
-| - CVar Current Value: -1
-| - 
-
-| - 
 | - CVar Name: dota_default_gold
 |- 
 | - CVar Description: 
@@ -14761,6 +14777,12 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
+| - CVar Name: cl_ent_show_damage
+|- 
+| - CVar Description: Sets damage display mode.  When on, you will see the amount of damage dealt over the target's head.
+| - 
+
+| - 
 | - CVar Name: cl_pred_track
 |- 
 | - CVar Description: <entindex> <fieldname>:  Track changes to entity index entindex, for field fieldname.
@@ -14860,6 +14882,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: 188
 | - 
 | - CVar Current Value: 188
+| - 
+
+| - 
+| - CVar Name: dota_scenario_autosave
+|- 
+| - CVar Description: Enable autosaves while spectating a match from lobby
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -15120,7 +15152,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: cl_ent_script_dump
 |- 
 | - CVar Description: Dumps the names and values of this entity's script scope to the console
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -15378,6 +15410,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
+| - CVar Name: dota_settings_healthbar_boss_creep_width_offset
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 20.0
+| - 
+| - CVar Current Value: 20.0
+| - 
+
+| - 
 | - CVar Name: dota_minimap_draw_cocaster_camera
 |- 
 | - CVar Description: 
@@ -15405,6 +15447,12 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: ent_show_damage
+|- 
+| - CVar Description: Sets damage display mode.  When on, you will see the amount of damage dealt over the target's head.
 | - 
 
 | - 
@@ -15564,6 +15612,12 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
+| - CVar Name: dota_spectator_skip_fwd_2
+|- 
+| - CVar Description: Skip replay forward by 2nd increment
+| - 
+
+| - 
 | - CVar Name: fow_degree_fade_out_rate_midpoint
 |- 
 | - CVar Description: FoW area fade out rate (0.0 - 1.0)
@@ -15587,7 +15641,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: ent_text
 |- 
 | - CVar Description: Displays text debugging information about the given entity(ies) on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -15955,16 +16009,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 
 | - 
-| - CVar Name: snd_opvar_set_point_update_interval
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: .2
-| - 
-| - CVar Current Value: .2
-| - 
-
-| - 
 | - CVar Name: cc_showmissing
 |- 
 | - CVar Description: Show missing closecaption entries.
@@ -15972,6 +16016,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: snd_opvar_set_point_update_interval
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: .2
+| - 
+| - CVar Current Value: .2
 | - 
 
 | - 
@@ -16336,7 +16390,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Name: ent_animgraph_debug
 |- 
 | - CVar Description: Displays debug draws about the given entity(ies) animgraph
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -16527,6 +16581,16 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: dota_trophies_cache_duration
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 300
+| - 
+| - CVar Current Value: 300
 | - 
 
 | - 
@@ -17108,7 +17172,7 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -17149,16 +17213,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: 450
 | - 
 | - CVar Current Value: 450
-| - 
-
-| - 
-| - CVar Name: hidehud
-|- 
-| - CVar Description: bitmask: 1=weapon selection, 2=flashlight, 4=all, 8=health, 16=player dead, 32=needssuit, 64=misc, 128=chat, 256=crosshair, 512=vehicle crosshair, 1024=in vehicle
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -17221,16 +17275,6 @@ Arguments:   	{npc_name} / {npc_class_name} / no argument picks what player is l
 | - CVar Default Value: 8.0f
 | - 
 | - CVar Current Value: 8.0f
-| - 
-
-| - 
-| - CVar Name: vprof_could_not_detect_vtrace
-|- 
-| - CVar Description: The engine will set this to 1 if vprof_vtrace is enabled but VTrace itself was not detected.
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -17330,16 +17374,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: cl_viewmodelsclonedasworld
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: dota_projection_note_picks_transition_flipped
 |- 
 | - CVar Description: 
@@ -17366,7 +17400,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 0.25
 | - 
-| - CVar Current Value: 0.500000
+| - CVar Current Value: 0.250000
 | - 
 
 | - 
@@ -17479,7 +17513,7 @@ Format: find_ent_index <index>
 | - CVar Name: cl_ent_messages
 |- 
 | - CVar Description: Toggles input/output message display for the selected entity(ies).  The name of the entity will be displayed as well as any messages that it sends or receives.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -17565,7 +17599,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 
 | - 
-| - CVar Current Value: -5 1 -2 -7 -16 -9 10 -6 -3 4
+| - CVar Current Value: -5 -9 10 -6 -3 4 1
 | - 
 
 | - 
@@ -17582,16 +17616,6 @@ Format: find_ent_index <index>
 | - CVar Name: say
 |- 
 | - CVar Description: Display player message
-| - 
-
-| - 
-| - CVar Name: mp_timelimit
-|- 
-| - CVar Description: game time per map in minutes
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -17687,6 +17711,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: dota_show_cast_range
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: dota_ui_armory_item_duplicate
 |- 
 | - CVar Description: 
@@ -17726,6 +17760,16 @@ Format: find_ent_index <index>
 | - CVar Name: econ_show_items_with_tag
 |- 
 | - CVar Description: Lists the item definitions that have a specified tag.
+| - 
+
+| - 
+| - CVar Name: sv_template_debug
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -17870,7 +17914,7 @@ Format: find_ent_index <index>
 | - CVar Name: cl_ent_hitbox
 |- 
 | - CVar Description: Displays the hitboxes for the given entity(ies).
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -17947,6 +17991,16 @@ Format: find_ent_index <index>
 | - CVar Default Value: -1
 | - 
 | - CVar Current Value: -1
+| - 
+
+| - 
+| - CVar Name: dota_alt_show_lane_creep_gold_bounty
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -18150,7 +18204,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Name: ent_scale
 |- 
-| - CVar Description: Scales entities.	Arguments: <scale factor> {entity_name} / {class_name} / no argument picks what player is looking at
+| - CVar Description: Scales entities.	Arguments: <scale factor> <{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}>
 | - 
 
 | - 
@@ -18329,6 +18383,12 @@ Format: find_ent_index <index>
 | - CVar Default Value: 2600
 | - 
 | - CVar Current Value: 2600
+| - 
+
+| - 
+| - CVar Name: dota_spectator_skip
+|- 
+| - CVar Description: Skip replay by a number of seconds.
 | - 
 
 | - 
@@ -18630,7 +18690,7 @@ Format: find_ent_index <index>
 |- 
 | - CVar Description: Displays the pivot for the given entity(ies).
 	(y=up=green, z=forward=blue, x=left=red). 
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -18768,7 +18828,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 
 | - 
 
 | - 
@@ -18952,16 +19012,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: cloth_iv_store_back
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: spec_freeze_traveltime
 |- 
 | - CVar Description: Time taken to zoom in to frame a target in observer freeze cam.
@@ -18972,7 +19022,7 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: mp_fraglimit
+| - CVar Name: cloth_iv_store_back
 |- 
 | - CVar Description: 
 | - 
@@ -18989,16 +19039,6 @@ Format: find_ent_index <index>
 | - CVar Default Value: 45
 | - 
 | - CVar Current Value: 45
-| - 
-
-| - 
-| - CVar Name: dota_gamemode_ability_draft_shuffle_draft_order
-|- 
-| - CVar Description: Should the players on each team draft in a random order?
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
 | - 
 
 | - 
@@ -19080,7 +19120,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -19420,6 +19460,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: dota_ability_draft_shuffle_players
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: dota_draft_trivia_enabled
 |- 
 | - CVar Description: 
@@ -19523,7 +19573,7 @@ Format: find_ent_index <index>
 | - CVar Name: cl_ent_text_radius
 |- 
 | - CVar Description: Displays text debugging information about the given entity(ies) [near the player] on top of the entity (See Overlay Text)
-	2 Arguments:   	Radius, {entity_name/class_name/ no argument picks what player is looking at}
+	2 Arguments:   	<Radius> <{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}>
 | - 
 
 | - 
@@ -19602,6 +19652,16 @@ Format: find_ent_index <index>
 | - CVar Name: nav_toggle_deselecting
 |- 
 | - CVar Description: Start or stop continuously removing from the selected set.
+| - 
+
+| - 
+| - CVar Name: mat_tonemap_csgo_uncap_exposure
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -19838,19 +19898,15 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: script_help
+| - CVar Name: dota_spectator_skip_back_1
 |- 
-| - CVar Description: Output help for script functions
+| - CVar Description: Skip replay back by 1st increment
 | - 
 
 | - 
-| - CVar Name: viewmodel_offset_y
+| - CVar Name: script_help
 |- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0.0
-| - 
-| - CVar Current Value: 0.000000
+| - CVar Description: Output help for script functions
 | - 
 
 | - 
@@ -20036,6 +20092,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: dota_fake_front_page_cell_top_game
+|- 
+| - CVar Description: Creates fake game data for a top game on the front page cells. 0 = disabled, 1 = regular game, 2 = league game
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: dota_fake_control_groups
 |- 
 | - CVar Description: 
@@ -20128,10 +20194,20 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: bot_mimic_spec_buttons
+|- 
+| - CVar Description: +attack, +jump etc are used for spectator control instead of being passed on to spectated bot
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: cl_ik_toggle_chain
 |- 
 | - CVar Description: Toggles on a chain in the selected entity(ies), by name of the chain.
-	Arguments:   	{chain_name} [entity_name | {class_name} | no argument picks what player is looking at]
+	Arguments:   	<chain_name> < {entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at} >
 | - 
 
 | - 
@@ -20158,16 +20234,6 @@ Format: find_ent_index <index>
 | - CVar Default Value: 0.35
 | - 
 | - CVar Current Value: 0.35
-| - 
-
-| - 
-| - CVar Name: bot_mimic_spec_buttons
-|- 
-| - CVar Description: +attack, +jump etc are used for spectator control instead of being passed on to spectated bot
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
 | - 
 
 | - 
@@ -20232,13 +20298,13 @@ Format: find_ent_index <index>
 | - CVar Name: ent_setname
 |- 
 | - CVar Description: Sets the targetname of the given entity(s)
-	Arguments:   	{new entity name} {entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	<new entity name> <{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}>
 | - 
 
 | - 
-| - CVar Name: ai_force_serverside_ragdoll
+| - CVar Name: mp_forcecamera
 |- 
-| - CVar Description: 
+| - CVar Description: Restricts spectator modes for dead players
 | - 
 | - CVar Default Value: 0
 | - 
@@ -20256,6 +20322,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: ai_force_serverside_ragdoll
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: vismon_trace_limit
 |- 
 | - CVar Description: 
@@ -20263,16 +20339,6 @@ Format: find_ent_index <index>
 | - CVar Default Value: 12
 | - 
 | - CVar Current Value: 12
-| - 
-
-| - 
-| - CVar Name: mp_forcecamera
-|- 
-| - CVar Description: Restricts spectator modes for dead players
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -20480,7 +20546,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -20739,6 +20805,12 @@ Format: find_ent_index <index>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: debugoverlay_hide_imgui
+|- 
+| - CVar Description: Hides the overlay.
 | - 
 
 | - 
@@ -21419,6 +21491,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: mat_tonemap_csgo_force_percent_target
+|- 
+| - CVar Description: Override. Old default was 45.
+| - 
+| - CVar Default Value: -1.0
+| - 
+| - CVar Current Value: -1.0
+| - 
+
+| - 
 | - CVar Name: snd_async_stream_spew
 |- 
 | - CVar Description: Spew streaming info ( 0=Off, 1=streams, 2=buffers
@@ -21908,16 +21990,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: vr_throw_velocity_scale
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1.6
-| - 
-| - CVar Current Value: 1.6
-| - 
-
-| - 
 | - CVar Name: lservercfgfile
 |- 
 | - CVar Description: 
@@ -22098,6 +22170,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: dota_local_bot_match_script_index
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: dota_loading_screen_battle_cup_dev
 |- 
 | - CVar Description: 
@@ -22245,7 +22327,7 @@ Format: find_ent_index <index>
 | - CVar Name: cl_ent_text_sticky_dump
 |- 
 | - CVar Description: Spews the list of names to display text debugging information about the given entity(ies) on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -22554,6 +22636,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: dota_fantasy_popup_help_dpc
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: cl_dota_recent_games_include_practice_matches
 |- 
 | - CVar Description: 
@@ -22685,7 +22777,7 @@ Format: find_ent_index <index>
 | - CVar Name: cl_ent_text_clear
 |- 
 | - CVar Description: Hide text debugging information about the given entity(ies) on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -22925,9 +23017,9 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: sv_infinite_clips
+| - CVar Name: ai_debug_dyninteractions
 |- 
-| - CVar Description: Player's backpack will never run out of clips
+| - CVar Description: Debug the NPC dynamic interaction system.
 | - 
 | - CVar Default Value: 0
 | - 
@@ -22949,7 +23041,7 @@ Format: find_ent_index <index>
 |- 
 | - CVar Description: Dispatches the test particle system with the parameters specified in particle_test_file,
  particle_test_attach_mode and particle_test_attach_param on the entity the player is looking at.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -22980,6 +23072,16 @@ Format: find_ent_index <index>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: dota_sv_load_scenario_timeout
+|- 
+| - CVar Description: Timeout to receive saved scenario from GC
+| - 
+| - CVar Default Value: 20.0
+| - 
+| - CVar Current Value: 20.0
 | - 
 
 | - 
@@ -23093,7 +23195,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -23103,7 +23205,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -23126,7 +23228,7 @@ Format: find_ent_index <index>
 | - CVar Name: ent_attachments
 |- 
 | - CVar Description: Displays the attachment points on an entity.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -23209,7 +23311,7 @@ Format: find_ent_index <index>
 | - CVar Name: cl_ent_joints
 |- 
 | - CVar Description: Displays the joint names + axes an entity.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -23423,7 +23525,7 @@ Format: find_ent_index <index>
 | - CVar Name: cl_ent_absbox
 |- 
 | - CVar Description: Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -23443,7 +23545,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -23478,26 +23580,6 @@ Format: find_ent_index <index>
 
 | - 
 | - CVar Name: dota_graph_player_items_min_quality
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: sv_debug_player_use
-|- 
-| - CVar Description: Visualizes +use logic. Green cross=trace success, Red cross=trace too far, Green box=radius success
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: mp_weaponstay
 |- 
 | - CVar Description: 
 | - 
@@ -23602,7 +23684,7 @@ Format: find_ent_index <index>
 | - CVar Name: cl_ent_setname
 |- 
 | - CVar Description: Sets the targetname of the given entity(s)
-	Arguments:   	{new entity name} {entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	<new entity name> <{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}>
 | - 
 
 | - 
@@ -23819,7 +23901,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -24316,7 +24398,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -24438,7 +24520,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -24614,6 +24696,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: dota_cheers_enable_scene_reload
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: crowbar_impact_damage_mass
 |- 
 | - CVar Description: 
@@ -24753,16 +24845,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: sk_crowbar_lead_time
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0.9
-| - 
-| - CVar Current Value: 0.9
-| - 
-
-| - 
 | - CVar Name: dota_path_report_time_ms
 |- 
 | - CVar Description: 
@@ -24883,16 +24965,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: weapon_showproficiency
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: sv_noclipaccelerate
 |- 
 | - CVar Description: 
@@ -24963,7 +25035,7 @@ Format: find_ent_index <index>
 | - CVar Name: cli_ent_hitbox
 |- 
 | - CVar Description: Displays the skeleton for the given entity(ies).
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -25023,6 +25095,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: frontpage_overwrite_twitch_stream
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 
+| - 
+| - CVar Current Value: 
+| - 
+
+| - 
 | - CVar Name: dota_hud_queued_orders_max_orders
 |- 
 | - CVar Description: 
@@ -25030,16 +25112,6 @@ Format: find_ent_index <index>
 | - CVar Default Value: 5
 | - 
 | - CVar Current Value: 5
-| - 
-
-| - 
-| - CVar Name: autoaim_max_deflect
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0.99
-| - 
-| - CVar Current Value: 0.99
 | - 
 
 | - 
@@ -25105,6 +25177,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: tv_listen_voice_indices_h
+|- 
+| - CVar Description: High 32 bits of bitfield of entindices to listen to voice messages from when connected to SourceTV, default is none
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: +movedown
 |- 
 | - CVar Description: 
@@ -25137,13 +25219,10 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: vr_throw_ang_scale
+| - CVar Name: remove_weapon
 |- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
+| - CVar Description: Remove a weapon held by the player.
+	Arguments: <weapon subclass name>
 | - 
 
 | - 
@@ -25258,16 +25337,6 @@ Format: find_ent_index <index>
 | - CVar Default Value: -1
 | - 
 | - CVar Current Value: -1
-| - 
-
-| - 
-| - CVar Name: mapcyclefile
-|- 
-| - CVar Description: Name of the .txt file used to cycle the maps on multiplayer servers 
-| - 
-| - CVar Default Value: mapcycle.txt
-| - 
-| - CVar Current Value: mapcycle.txt
 | - 
 
 | - 
@@ -25393,16 +25462,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: vr_debug_actions
-|- 
-| - CVar Description: Debug digital action data.
-| - 
-| - CVar Default Value: 
-| - 
-| - CVar Current Value: 
-| - 
-
-| - 
 | - CVar Name: locator_background_border_thickness
 |- 
 | - CVar Description: How many pixels the background borders the left and right.
@@ -25506,7 +25565,7 @@ Format: find_ent_index <index>
 | - CVar Name: ent_bbox
 |- 
 | - CVar Description: Displays the movement bounding box for the given entity(ies) in orange.  Some entites will also display entity specific overlays.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -25577,16 +25636,6 @@ Format: find_ent_index <index>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
-| - 
-
-| - 
-| - CVar Name: vm_camera_scale
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1.0f
-| - 
-| - CVar Current Value: 1.0f
 | - 
 
 | - 
@@ -25740,7 +25789,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 2
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 2
 | - 
 
 | - 
@@ -25794,6 +25843,16 @@ Format: find_ent <substring>
 |- 
 | - CVar Description: Use a particular weapon	
 Arguments: <weapon_name>
+| - 
+
+| - 
+| - CVar Name: ai_task_pre_script
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -26013,9 +26072,9 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: cloth_debug_draw
+| - CVar Name: spec_centerchasecam
 |- 
-| - CVar Description: 
+| - CVar Description: Looks at the target player's center, instead of his eye position, in chase came mode
 | - 
 | - CVar Default Value: 0
 | - 
@@ -26023,9 +26082,9 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: spec_centerchasecam
+| - CVar Name: cloth_debug_draw
 |- 
-| - CVar Description: Looks at the target player's center, instead of his eye position, in chase came mode
+| - CVar Description: 
 | - 
 | - CVar Default Value: 0
 | - 
@@ -26050,12 +26109,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: -60.0
 | - 
 | - CVar Current Value: -60.0
-| - 
-
-| - 
-| - CVar Name: cl_trade_steamid
-|- 
-| - CVar Description: Trade with a person by steam id
 | - 
 
 | - 
@@ -26098,7 +26151,7 @@ Arguments: <weapon_name>
 | - CVar Name: ent_hitbox
 |- 
 | - CVar Description: Displays the hitboxes for the given entity(ies).
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -26224,10 +26277,20 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: cl_template_debug
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: cl_ent_text256
 |- 
 | - CVar Description: Displays text debugging information about the given entity(ies) [within 256 units of the player] on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -26417,16 +26480,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: r_retinaburn_capture_next_frame
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: tv_name
 |- 
 | - CVar Description: SourceTV host name
@@ -26523,13 +26576,13 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: vm_debug
+| - CVar Name: snd_sound_area_entity_update_interval
 |- 
 | - CVar Description: 
 | - 
-| - CVar Default Value: 0
+| - CVar Default Value: .2
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: .2
 | - 
 
 | - 
@@ -26827,6 +26880,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: mat_tonemap_csgo_force_min
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: -1.0
+| - 
+| - CVar Current Value: -1.0
+| - 
+
+| - 
 | - CVar Name: cloth_quad_smooth_rate
 |- 
 | - CVar Description: 
@@ -26924,16 +26987,6 @@ Arguments: <weapon_name>
 | - CVar Name: subclass_create
 |- 
 | - CVar Description: Creates an entity of the given subclass where the player is looking.
-| - 
-
-| - 
-| - CVar Name: player_incap_use_radius
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 96
-| - 
-| - CVar Current Value: 96
 | - 
 
 | - 
@@ -27187,6 +27240,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_settings_healthbar_boss_creep_icon_size
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 24.0
+| - 
+| - CVar Current Value: 24.0
+| - 
+
+| - 
 | - CVar Name: r_VehicleViewDampen
 |- 
 | - CVar Description: 
@@ -27347,13 +27410,23 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: sv_player_stuck_tolerance
+| - CVar Name: dota_scenario_enable
 |- 
-| - CVar Description: 
+| - CVar Description: Enable scenario ui in private lobbies
 | - 
-| - CVar Default Value: 10
+| - CVar Default Value: 0
 | - 
-| - CVar Current Value: 10
+| - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: cojob_lock_hold_warning_threshold_ms
+|- 
+| - CVar Description: How long in milliseconds before we warn about lock hold duration
+| - 
+| - CVar Default Value: 10000
+| - 
+| - CVar Current Value: 10000
 | - 
 
 | - 
@@ -27503,9 +27576,9 @@ Arguments: <weapon_name>
 |- 
 | - CVar Description: 
 | - 
-| - CVar Default Value: 1620691200
+| - CVar Default Value: 1638320400
 | - 
-| - CVar Current Value: 1627851600
+| - CVar Current Value: 1639083600
 | - 
 
 | - 
@@ -27515,7 +27588,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -27525,9 +27598,29 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_league_force_public
+|- 
+| - CVar Description: A comma separated list of league ids to force public usage
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: rr_debugresponses
 |- 
 | - CVar Description: Show verbose matching output (1 for simple, 2 for rule scoring, 3 for noisy). If set to 4, it will only show response success/failure for npc_selected NPCs.
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: cq_player_times_warn_diff
+|- 
+| - CVar Description: Warn if player simulation time on client is not the same as that of server tick last received
 | - 
 | - CVar Default Value: 0
 | - 
@@ -27591,9 +27684,9 @@ Arguments: <weapon_name>
 |- 
 | - CVar Description: 
 | - 
-| - CVar Default Value: 1
+| - CVar Default Value: 0
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -27604,16 +27697,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: -1
 | - 
 | - CVar Current Value: -1
-| - 
-
-| - 
-| - CVar Name: cl_ragdoll_default_scale
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1.0
-| - 
-| - CVar Current Value: 1.0
 | - 
 
 | - 
@@ -27890,7 +27973,7 @@ Arguments: <weapon_name>
 | - CVar Name: ent_text_sticky_clear
 |- 
 | - CVar Description: Clears the list of names to display text debugging information about the given entity(ies) on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -27987,6 +28070,10 @@ Arguments: <weapon_name>
 | - CVar Name: r_textures_evict_all
 |- 
 | - CVar Description: Evict all resident texture.
+| - 
+| - CVar Default Value: 
+| - 
+| - CVar Current Value: p7:B
 | - 
 
 | - 
@@ -28228,16 +28315,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: muzzleflash_light
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: impulse
 |- 
 | - CVar Description: 
@@ -28465,16 +28542,6 @@ Arguments: <weapon_name>
 | - CVar Name: startdemos
 |- 
 | - CVar Description: Play demos in demo sequence.
-| - 
-
-| - 
-| - CVar Name: hlx_combine_barrier_cell_spacing
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 6
-| - 
-| - CVar Current Value: 6
 | - 
 
 | - 
@@ -28768,7 +28835,7 @@ Arguments: <weapon_name>
 | - CVar Name: cl_ent_text_sticky_remove
 |- 
 | - CVar Description: Removes from the list of names to display text debugging information about the given entity(ies) on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -29006,12 +29073,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: dota_portrait_model
-|- 
-| - CVar Description: Sets the model used in the portrait editor
-| - 
-
-| - 
 | - CVar Name: dota_camera_assisted_camera_operator_pan_movement_interp_multiplier_in
 |- 
 | - CVar Description: 
@@ -29038,7 +29099,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -29249,7 +29310,7 @@ Arguments: <weapon_name>
 | - CVar Name: npc_select
 |- 
 | - CVar Description: Select or deselects the given NPC(s) for later manipulation.  Selected NPC's are shown surrounded by a red translucent box
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -29372,7 +29433,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: false
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -29494,16 +29555,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: xc_crouch_debounce
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: dota_spawn_creeps_mid
 |- 
 | - CVar Description: Force spawn of all mid lane creeps.
@@ -29517,6 +29568,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: 
 | - 
 | - CVar Current Value: 
+| - 
+
+| - 
+| - CVar Name: dota_pause_limit
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 180.0
+| - 
+| - CVar Current Value: 180.0
 | - 
 
 | - 
@@ -29589,6 +29650,16 @@ Arguments: <weapon_name>
 | - CVar Name: dota_game_account_client_debug
 |- 
 | - CVar Description: Prints game account client info
+| - 
+
+| - 
+| - CVar Name: dota_watch_show_ti_standings_this_many_days_in_advance
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 3
+| - 
+| - CVar Current Value: 3
 | - 
 
 | - 
@@ -29704,7 +29775,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -29806,7 +29877,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 260
+| - CVar Current Value: 128
 | - 
 
 | - 
@@ -29823,7 +29894,7 @@ Arguments: <weapon_name>
 | - CVar Name: ent_autoaim
 |- 
 | - CVar Description: Displays the entity's autoaim radius.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -29834,16 +29905,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: follow_attachment
 | - 
 | - CVar Current Value: follow_attachment
-| - 
-
-| - 
-| - CVar Name: snd_sos_show_server_xmit
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -30089,16 +30150,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: mp_clan_readyrestart
-|- 
-| - CVar Description: If non-zero, game will restart once someone from each team gives the ready signal
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: nav_test_bfs_lattice_dist_1
 |- 
 | - CVar Description: 
@@ -30268,7 +30319,7 @@ Arguments: <weapon_name>
 | - CVar Name: ent_viewoffset
 |- 
 | - CVar Description: Displays the eye position for the given entity(ies) in red.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -30449,16 +30500,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: spec_chasedistancestep
-|- 
-| - CVar Description: Amount to adjust the chase cam's distance on a zoom request
-| - 
-| - CVar Default Value: 10
-| - 
-| - CVar Current Value: 10
-| - 
-
-| - 
 | - CVar Name: +lookup
 |- 
 | - CVar Description: 
@@ -30488,7 +30529,7 @@ Arguments: <weapon_name>
 | - CVar Name: ent_text_sticky_dump
 |- 
 | - CVar Description: Spews the list of names to display text debugging information about the given entity(ies) on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -30942,7 +30983,7 @@ Arguments: <weapon_name>
 |- 
 | - CVar Description: Displays the pivot for the given entity(ies).
 	(y=up=green, z=forward=blue, x=left=red). 
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -31080,6 +31121,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: hud_reloadscheme
+|- 
+| - CVar Description: Reloads hud layout and animation scripts.
+| - 
+
+| - 
 | - CVar Name: dota_mouse_spectator_window_lock
 |- 
 | - CVar Description: If enabled, mouse will be locked to the window when in game and spectating in a mode that doesn't give camera control
@@ -31102,7 +31149,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Name: spectator_save_scenario
 |- 
-| - CVar Description: [-binary] [-ugly] save scenario of the game currently being spectated
+| - CVar Description: [-binary] [-nopretty] save scenario of the game currently being spectated
 | - 
 
 | - 
@@ -31123,16 +31170,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: 10.0
 | - 
 | - CVar Current Value: 10.0
-| - 
-
-| - 
-| - CVar Name: mp_chattime
-|- 
-| - CVar Description: amount of time players can chat after the game is over
-| - 
-| - CVar Default Value: 10
-| - 
-| - CVar Current Value: 10
 | - 
 
 | - 
@@ -31450,16 +31487,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: r_flashlight_topdown
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: -dota_camera_center_on_hero
 |- 
 | - CVar Description: 
@@ -31755,7 +31782,7 @@ Arguments: <weapon_name>
 | - CVar Name: ik_enable_only_this_chain
 |- 
 | - CVar Description: Disables all chains except for the mentioned one on the selected entity(ies), by name of the chain.
-	Arguments:   	{chain_name} [entity_name | {class_name} | no argument picks what player is looking at]
+	Arguments:   	<chain_name> < {entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at} >
 | - 
 
 | - 
@@ -31802,6 +31829,16 @@ Arguments: <weapon_name>
 | - CVar Name: sc_list_extradata_allocations
 |- 
 | - CVar Description: Prints out the overall extra data allocation counts
+| - 
+
+| - 
+| - CVar Name: mat_tonemap_csgo_force_max
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: -1.0
+| - 
+| - CVar Current Value: -1.0
 | - 
 
 | - 
@@ -32025,6 +32062,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_aghsfort_watch_tower_allow_completion
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: dota_modifier_dump
 |- 
 | - CVar Description: Dump all modifiers on all entities.
@@ -32122,11 +32169,21 @@ Arguments: <weapon_name>
 | - CVar Name: cl_ent_animgraph_debug
 |- 
 | - CVar Description: Displays debug draws about the given entity(ies) animgraph
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
 | - CVar Name: vr_lesson_highlight_override_pos_z
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: commentary_node_use_viewfacing
 |- 
 | - CVar Description: 
 | - 
@@ -32326,16 +32383,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: joy_autoaimdampen
-|- 
-| - CVar Description: How much to scale user stick input when the gun is pointing at a valid target.
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: dota_cycle_selected
 |- 
 | - CVar Description: 
@@ -32503,6 +32550,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0.8
 | - 
 | - CVar Current Value: 0.8
+| - 
+
+| - 
+| - CVar Name: dota_use_aghanims_postprocess_material
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -32721,6 +32778,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: 
 | - 
 | - CVar Current Value: 
+| - 
+
+| - 
+| - CVar Name: mat_tonemap_csgo_force_scale
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0.0
+| - 
+| - CVar Current Value: 0.0
 | - 
 
 | - 
@@ -33030,6 +33097,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_watch_show_ti_standings_this_many_days_after
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 3
+| - 
+| - CVar Current Value: 3
+| - 
+
+| - 
 | - CVar Name: dota_ogre_magi_arcana_disable_streak_display
 |- 
 | - CVar Description: 
@@ -33206,17 +33283,17 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: dota_cheap_water
+| - CVar Name: cl_dota_cache_hitboxes_model_bind_pose
 |- 
 | - CVar Description: 
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
-| - CVar Name: cl_dota_cache_hitboxes_model_bind_pose
+| - CVar Name: dota_cheap_water
 |- 
 | - CVar Description: 
 | - 
@@ -33414,7 +33491,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -33441,6 +33518,16 @@ Arguments: <weapon_name>
 | - CVar Name: dota_show_killgraph
 |- 
 | - CVar Description: 
+| - 
+
+| - 
+| - CVar Name: ai_dynamicinteractions_lerp_time
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0.5
+| - 
+| - CVar Current Value: 0.5
 | - 
 
 | - 
@@ -33477,6 +33564,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: -1
 | - 
 | - CVar Current Value: -1
+| - 
+
+| - 
+| - CVar Name: mat_tonemap_csgo_force_percent_bright_pixels
+|- 
+| - CVar Description: Override. Old value was 1.0
+| - 
+| - CVar Default Value: -1.0
+| - 
+| - CVar Current Value: -1.0
 | - 
 
 | - 
@@ -33607,7 +33704,7 @@ Arguments: <weapon_name>
 | - CVar Name: ent_text_sticky_add
 |- 
 | - CVar Description: Adds to list of names to display text debugging information about the given entity(ies) on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -33628,6 +33725,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: 4.0
 | - 
 | - CVar Current Value: 4.0
+| - 
+
+| - 
+| - CVar Name: r_particle_max_texture_layers
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: -1
+| - 
+| - CVar Current Value: -1
 | - 
 
 | - 
@@ -33673,7 +33780,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 
 | - 
-| - CVar Current Value: -dx11 (cfg -dx11)
+| - CVar Current Value: -dx11
 | - 
 
 | - 
@@ -33927,6 +34034,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_scenario_autosave_interval
+|- 
+| - CVar Description: Interval in seconds between auto-saves
+| - 
+| - CVar Default Value: 10
+| - 
+| - CVar Current Value: 10
+| - 
+
+| - 
 | - CVar Name: dota_bot_match_use_matchmaking
 |- 
 | - CVar Description: Fill a bot practice match with human teammates via matchmaking.
@@ -34065,16 +34182,6 @@ Arguments: <weapon_name>
 | - CVar Name: groups
 |- 
 | - CVar Description: Show status of all spawn groups.
-| - 
-
-| - 
-| - CVar Name: vm_camera_interp_speed
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 8.0
-| - 
-| - CVar Current Value: 8.0
 | - 
 
 | - 
@@ -34540,16 +34647,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: dota_bot_match_script_index
-|- 
-| - CVar Description: Bot script index to use for matchmaking
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: dota_post_game_lobby
 |- 
 | - CVar Description: Show post game lobby with current lobby
@@ -34660,7 +34757,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1.0
 | - 
-| - CVar Current Value: 0.532578
+| - CVar Current Value: 1.000000
 | - 
 
 | - 
@@ -34830,7 +34927,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 120
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 120
 | - 
 
 | - 
@@ -35200,16 +35297,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: scene_forcecombined
-|- 
-| - CVar Description: When playing back, force use of combined .wav files even in english.
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: dota_npc_creep_pushback_height_scale
 |- 
 | - CVar Description: 
@@ -35227,16 +35314,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: 300
 | - 
 | - CVar Current Value: 300
-| - 
-
-| - 
-| - CVar Name: items_game_use_gc_copy
-|- 
-| - CVar Description: If set, items_game.txt will be stomped by the GC.
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -35552,7 +35629,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 6
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -35978,7 +36055,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 
 | - 
-| - CVar Current Value: 1c3fr09
+| - CVar Current Value: 0x1BADB002
 | - 
 
 | - 
@@ -36037,7 +36114,7 @@ Arguments: <weapon_name>
 | - CVar Name: ent_show_response_criteria
 |- 
 | - CVar Description: Print, to the console, an entity's current criteria set used to select responses.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -36406,7 +36483,7 @@ Arguments: <weapon_name>
 | - CVar Name: cl_ent_attachments
 |- 
 | - CVar Description: Displays the attachment points on an entity.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -36562,6 +36639,13 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: soundscape_dumpclient
+|- 
+| - CVar Description: Dumps the client's soundscape data.
+
+| - 
+
+| - 
 | - CVar Name: cl_parallel_frame_simulate
 |- 
 | - CVar Description: 
@@ -36575,13 +36659,6 @@ Arguments: <weapon_name>
 | - CVar Name: cl_updatevisibility
 |- 
 | - CVar Description: Updates visibility bits.
-| - 
-
-| - 
-| - CVar Name: soundscape_dumpclient
-|- 
-| - CVar Description: Dumps the client's soundscape data.
-
 | - 
 
 | - 
@@ -36660,7 +36737,7 @@ Arguments: <weapon_name>
 | - CVar Name: ent_absbox
 |- 
 | - CVar Description: Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -36769,17 +36846,7 @@ Arguments: <weapon_name>
 | - CVar Name: cl_ent_text_sticky_add
 |- 
 | - CVar Description: Adds to list of names to display text debugging information about the given entity(ies) on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
-| - 
-
-| - 
-| - CVar Name: vm_camera_no_roll
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -37177,7 +37244,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -37513,7 +37580,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -37731,10 +37798,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_spectator_skip_back_2
+|- 
+| - CVar Description: Skip replay back by 2nd increment
+| - 
+
+| - 
 | - CVar Name: ent_text_clear
 |- 
 | - CVar Description: Hide text debugging information about the given entity(ies) on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -37862,6 +37935,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: toggle_duck
+|- 
+| - CVar Description: 
+| - 
+
+| - 
 | - CVar Name: -cameragrip
 |- 
 | - CVar Description: 
@@ -37964,16 +38043,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: autoaim_max_dist
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 2160
-| - 
-| - CVar Current Value: 2160
-| - 
-
-| - 
 | - CVar Name: say_team
 |- 
 | - CVar Description: Display player message to team
@@ -38037,16 +38106,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: r_gpu_driver_low
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 920035
 | - 
 
 | - 
@@ -38361,7 +38420,7 @@ Arguments: <weapon_name>
 | - CVar Name: ik_toggle_chain
 |- 
 | - CVar Description: Toggles on a chain in the selected entity(ies), by name of the chain.
-	Arguments:   	{chain_name} [entity_name | {class_name} | no argument picks what player is looking at]
+	Arguments:   	<chain_name> < {entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at} >
 | - 
 
 | - 
@@ -38658,16 +38717,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: tf_escort_score_rate
-|- 
-| - CVar Description: Score for escorting the train, in points per second
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: notarget
 |- 
 | - CVar Description: Toggle. Player becomes hidden to NPCs.
@@ -38892,16 +38941,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: viewmodel_offset_x
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0.0
-| - 
-| - CVar Current Value: 0.000000
-| - 
-
-| - 
 | - CVar Name: dota_1v1_skip_strategy
 |- 
 | - CVar Description: 
@@ -39110,9 +39149,9 @@ Arguments: <weapon_name>
 |- 
 | - CVar Description: 
 | - 
-| - CVar Default Value: 15.0
+| - CVar Default Value: 600.0
 | - 
-| - CVar Current Value: 15.0
+| - CVar Current Value: 600.0
 | - 
 
 | - 
@@ -39127,6 +39166,16 @@ Arguments: <weapon_name>
 | - CVar Description: 
 | - 
 | - CVar Default Value: 
+| - 
+| - CVar Current Value: 33
+| - 
+
+| - 
+| - CVar Name: dota_drow_ranger_arcana_disable_display
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
 | - 
@@ -39319,7 +39368,7 @@ Arguments: <weapon_name>
 | - CVar Name: ent_text_radius
 |- 
 | - CVar Description: Displays text debugging information about the given entity(ies) [near the player] on top of the entity (See Overlay Text)
-	2 Arguments:   	Radius, {entity_name/class_name/ no argument picks what player is looking at}
+	2 Arguments:   	<Radius> <{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}>
 | - 
 
 | - 
@@ -39360,6 +39409,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: item_whitelist.txt
 | - 
 | - CVar Current Value: item_whitelist.txt
+| - 
+
+| - 
+| - CVar Name: r_grass_parallel_load
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -39691,16 +39750,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: vm_camera
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: +moveright
 |- 
 | - CVar Description: 
@@ -39980,7 +40029,7 @@ Arguments: <weapon_name>
 | - CVar Name: cl_ent_bbox
 |- 
 | - CVar Description: Displays the movement bounding box for the given entity(ies) in orange.  Some entites will also display entity specific overlays.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -39988,7 +40037,7 @@ Arguments: <weapon_name>
 |- 
 | - CVar Description: Displays the interpolated pivot for the given entity(ies).
 	(y=up=green, z=forward=blue, x=left=red). 
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -40054,7 +40103,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 29
+| - CVar Current Value: 33
 | - 
 
 | - 
@@ -40204,7 +40253,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 9699386
+| - CVar Current Value: 2
 | - 
 
 | - 
@@ -40284,6 +40333,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: mat_tonemap_csgo_force_rate
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: -1.0
+| - 
+| - CVar Current Value: -1.0
+| - 
+
+| - 
 | - CVar Name: anim_resource_validate_on_load
 |- 
 | - CVar Description: Validates the animation group channel list against the animations on load for every animation
@@ -40300,6 +40359,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: resource_manifest_validate_modules
+|- 
+| - CVar Description: Scan all of the loaded modules and validate any resource manifests found
+| - 
+
+| - 
 | - CVar Name: engine_platform_name_extended
 |- 
 | - CVar Description: Platform the engine is running on.
@@ -40312,7 +40377,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Name: cl_ent_scale
 |- 
-| - CVar Description: Scales entities.	Arguments: <scale factor> {entity_name} / {class_name} / no argument picks what player is looking at
+| - CVar Description: Scales entities.	Arguments: <scale factor> <{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}>
 | - 
 
 | - 
@@ -40359,26 +40424,6 @@ Arguments: <weapon_name>
 | - CVar Name: noclip
 |- 
 | - CVar Description: Toggle. Player becomes non-solid and flies.  Optional argument of 0 or 1 to force enable/disable
-| - 
-
-| - 
-| - CVar Name: move_fall_sound_z
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: -30.0
-| - 
-| - CVar Current Value: -30.0
-| - 
-
-| - 
-| - CVar Name: template_debug
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -40690,23 +40735,13 @@ Arguments: <weapon_name>
 | - CVar Name: cli_ent_skeleton
 |- 
 | - CVar Description: Displays the skeleton for the given entity(ies).
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
 | - CVar Name: url_execute
 |- 
 | - CVar Description: Executes url-based commands, used for incoming commands from url-based launches when the game's already running.
-| - 
-
-| - 
-| - CVar Name: vr_fakevr_lockhands
-|- 
-| - CVar Description: Lock Hands to current world position
-| - 
-| - CVar Default Value: 
-| - 
-| - CVar Current Value: 
 | - 
 
 | - 
@@ -40954,16 +40989,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: vr_spawn_at_player_start
-|- 
-| - CVar Description: Whether to spawn the player or the anchor at the info_player_start. (0 = Honor the info_player_start spawnflags, 1 = spawn at the info_player_start position)
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: dota_post_game_report_time
 |- 
 | - CVar Description: Time after the signout completes that we can still report and commend players, given the lobby id
@@ -40991,16 +41016,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
-| - 
-
-| - 
-| - CVar Name: r_allow_morph_batching_on_base
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -41354,16 +41369,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: mp_flashlight
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: dota_bot_disable
 |- 
 | - CVar Description: 
@@ -41532,7 +41537,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1.0
 | - 
-| - CVar Current Value: 0.080737
+| - CVar Current Value: 0.000000
 | - 
 
 | - 
@@ -41734,16 +41739,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: nextlevel
-|- 
-| - CVar Description: If set to a valid map name, will change to this map during the next changelevel
-| - 
-| - CVar Default Value: 
-| - 
-| - CVar Current Value: 
-| - 
-
-| - 
 | - CVar Name: debug_physimpact
 |- 
 | - CVar Description: 
@@ -41751,12 +41746,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: sv_save_session_persisters
-|- 
-| - CVar Description: Saves session persister data immediately.
 | - 
 
 | - 
@@ -41950,16 +41939,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: viewmodel_offset_z
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0.0
-| - 
-| - CVar Current Value: 0.000000
-| - 
-
-| - 
 | - CVar Name: phys_length_damping_ratio
 |- 
 | - CVar Description: Spring damping ratio for length constraint
@@ -42003,6 +41982,16 @@ Arguments: <weapon_name>
 | - CVar Name: fow_server_stats
 |- 
 | - CVar Description: displays fog of war stats
+| - 
+
+| - 
+| - CVar Name: dota_unit_relative_move_bounce
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1.0
+| - 
+| - CVar Current Value: 1.0
 | - 
 
 | - 
@@ -42062,7 +42051,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0.001
 | - 
-| - CVar Current Value: 0.052000
+| - CVar Current Value: 0.001000
 | - 
 
 | - 
@@ -42121,7 +42110,7 @@ Arguments: <weapon_name>
 | - CVar Name: cl_ent_skeleton
 |- 
 | - CVar Description: Displays the skeleton for the given entity(ies).
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -42161,7 +42150,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -42178,17 +42167,7 @@ Arguments: <weapon_name>
 | - CVar Name: ent_messages
 |- 
 | - CVar Description: Toggles input/output message display for the selected entity(ies).  The name of the entity will be displayed as well as any messages that it sends or receives.
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at
-| - 
-
-| - 
-| - CVar Name: weapon_debug_muzzles
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -42204,7 +42183,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 10
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 10
 | - 
 
 | - 
@@ -42404,6 +42383,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_local_bot_match_difficulty
+|- 
+| - CVar Description: Difficulty to play local bot matches against
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: snd_sos_show_operator_shutdown
 |- 
 | - CVar Description: 
@@ -42437,14 +42426,14 @@ Arguments: <weapon_name>
 | - CVar Name: cl_ent_text_sticky_clear
 |- 
 | - CVar Description: Clears the list of names to display text debugging information about the given entity(ies) on top of the entity (See Overlay Text)
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
 | - CVar Name: cl_ent_select
 |- 
 | - CVar Description: Select or deselects the given entities(s) for later manipulation
-	Arguments:   	{entity_name} / {class_name} / no argument picks what player is looking at 
+	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 | - 
 
 | - 
@@ -42666,7 +42655,17 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: dota_alt_show_neutral_creep_gold_bounty
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -42882,7 +42881,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -42973,7 +42972,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 4000
 | - 
-| - CVar Current Value: 65535.000000
+| - CVar Current Value: 10025.178711
 | - 
 
 | - 
@@ -43251,7 +43250,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 4
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -43268,12 +43267,6 @@ Arguments: <weapon_name>
 | - CVar Name: dota_spectator_selectprevioushero
 |- 
 | - CVar Description: 
-| - 
-
-| - 
-| - CVar Name: bug_swap
-|- 
-| - CVar Description: Automatically swaps the current weapon for the bug bait and back again.
 | - 
 
 | - 

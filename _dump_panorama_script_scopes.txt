@@ -276,7 +276,7 @@ Scope Name: Buffs; Scope Size: 14;
 | - Get the ability that generated the modifier.
 | - 
 
-Scope Name: Players; Scope Size: 43;
+Scope Name: Players; Scope Size: 45;
 | - 
 | - Function: 
 | - integer GetMaxPlayers ( )
@@ -471,6 +471,12 @@ Scope Name: Players; Scope Size: 43;
 | - 
 | - 
 | - Function: 
+| - integer GetSelectedHeroID ( integer iPlayerID )
+| - Description:
+| - Get the player's selected hero id.
+| - 
+| - 
+| - Function: 
 | - float GetGoldPerMin ( integer iPlayerID )
 | - Description:
 | - Average gold earned per minute for this player.
@@ -502,6 +508,12 @@ Scope Name: Players; Scope Size: 43;
 | - 
 | - Function: 
 | - void PlayerPortraitClicked ( integer nClickedPlayerID, boolean bHoldingCtrl, boolean bHoldingAlt )
+| - Description:
+| - .
+| - 
+| - 
+| - Function: 
+| - void PlayerPortraitDoubleClicked ( integer nClickedPlayerID, boolean bHoldingCtrl, boolean bHoldingAlt )
 | - Description:
 | - .
 | - 
@@ -2216,7 +2228,7 @@ Scope Name: Items; Scope Size: 38;
 | - Attempt to have the local player sell the specified item. Returns false if the order wasn't issued.
 | - 
 
-Scope Name: Game; Scope Size: 82;
+Scope Name: Game; Scope Size: 86;
 | - 
 | - Function: 
 | - float Time ( )
@@ -2442,6 +2454,30 @@ Scope Name: Game; Scope Size: 82;
 | - 
 | - Function: 
 | - void AddCommand ( cstring pszCommandName, v8_value callback, cstring pszDescription, integer nFlags )
+| - Description:
+| - 
+| - 
+| - 
+| - Function: 
+| - v8_value GetJoyFocusPanel ( )
+| - Description:
+| - 
+| - 
+| - 
+| - Function: 
+| - void SetJoyFocusPanel ( v8_value pPanelArg )
+| - Description:
+| - 
+| - 
+| - 
+| - Function: 
+| - void PushJoyFocusPanel ( v8_value pPanelArg )
+| - Description:
+| - 
+| - 
+| - 
+| - Function: 
+| - void PopJoyFocusPanel ( )
 | - Description:
 | - 
 | - 
@@ -3095,7 +3131,7 @@ Scope Name: $; Scope Size: 23;
 | - Function: 
 | - void AsyncWebRequest ( v8_callback_info noname_arg_0 )
 | - Description:
-| - Make a web request
+| - Make a web request (deprecated)
 | - 
 | - 
 | - Function: 
