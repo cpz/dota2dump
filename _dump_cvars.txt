@@ -121,6 +121,16 @@
 | - 
 
 | - 
+| - CVar Name: r_cpu_light_binner_default_spec_env_fade_time
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1.0
+| - 
+| - CVar Current Value: 1.0
+| - 
+
+| - 
 | - CVar Name: r_render_to_cubemap_debug
 |- 
 | - CVar Description: 
@@ -677,16 +687,6 @@
 | - 
 
 | - 
-| - CVar Name: mp_defaultteam
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: showtriggers_toggle
 |- 
 | - CVar Description: Displays the movement bounding box for the triggers in orange.  Some entites will also display entity specific overlays.
@@ -730,7 +730,7 @@
 | - 
 | - CVar Default Value: 2
 | - 
-| - CVar Current Value: 2
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -1066,12 +1066,6 @@
 | - 
 
 | - 
-| - CVar Name: save_set_subdirectory
-|- 
-| - CVar Description: 
-| - 
-
-| - 
 | - CVar Name: sv_noclipduringpause
 |- 
 | - CVar Description: If cheats are enabled, then you can noclip with the game paused (for doing screenshots, etc.).
@@ -1089,6 +1083,12 @@
 | - CVar Default Value: 20
 | - 
 | - CVar Current Value: 20
+| - 
+
+| - 
+| - CVar Name: save_set_subdirectory
+|- 
+| - CVar Description: 
 | - 
 
 | - 
@@ -1205,6 +1205,16 @@
 | - CVar Default Value: 300
 | - 
 | - CVar Current Value: 300
+| - 
+
+| - 
+| - CVar Name: phys_powered_ragdoll_debug
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -1374,7 +1384,7 @@
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -1595,6 +1605,26 @@
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: nav_gen_connect_allow_multiple
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: nav_gen_split_multi_connection_polys
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -2119,16 +2149,6 @@
 | - 
 
 | - 
-| - CVar Name: ik_locks_enabled
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: mesh_calculate_curvature_smooth_pass_count
 |- 
 | - CVar Description: 
@@ -2136,6 +2156,16 @@
 | - CVar Default Value: 3
 | - 
 | - CVar Current Value: 3
+| - 
+
+| - 
+| - CVar Name: ik_locks_enabled
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -2454,16 +2484,6 @@
 | - 
 
 | - 
-| - CVar Name: vprof_counters_show_minmax
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: tv_relaypassword
 |- 
 | - CVar Description: SourceTV password for relay proxies
@@ -2471,6 +2491,16 @@
 | - CVar Default Value: 
 | - 
 | - CVar Current Value: 
+| - 
+
+| - 
+| - CVar Name: vprof_counters_show_minmax
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -2651,16 +2681,6 @@
 | - CVar Default Value: 4096
 | - 
 | - CVar Current Value: 4096
-| - 
-
-| - 
-| - CVar Name: r_show_skymap
-|- 
-| - CVar Description: Draw the sky map
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -3340,7 +3360,7 @@
 | - 
 | - CVar Default Value: 1.0
 | - 
-| - CVar Current Value: 1.000000
+| - CVar Current Value: 0.781250
 | - 
 
 | - 
@@ -3458,22 +3478,6 @@
 | - 
 
 | - 
-| - CVar Name: consoletool
-|- 
-| - CVar Description: Open a VConsole subtool.
-| - 
-
-| - 
-| - CVar Name: screenshot_subdir
-|- 
-| - CVar Description: Set the screenshot directory.
-| - 
-| - CVar Default Value: screenshots
-| - 
-| - CVar Current Value: screenshots
-| - 
-
-| - 
 | - CVar Name: tv_autoretry
 |- 
 | - CVar Description: Relay proxies retry connection after network timeout
@@ -3491,6 +3495,22 @@
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: consoletool
+|- 
+| - CVar Description: Open a VConsole subtool.
+| - 
+
+| - 
+| - CVar Name: screenshot_subdir
+|- 
+| - CVar Description: Set the screenshot directory.
+| - 
+| - CVar Default Value: screenshots
+| - 
+| - CVar Current Value: screenshots
 | - 
 
 | - 
@@ -3936,6 +3956,16 @@
 | - 
 
 | - 
+| - CVar Name: dota_server_add_chat_mute_entries
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: dota_salute_rate_limit_seconds
 |- 
 | - CVar Description: The amount of seconds that you must wait before you can salute again.
@@ -4189,7 +4219,7 @@
 | - 
 | - CVar Name: crash_error
 |- 
-| - CVar Description: Cause the engine to crash by spewing an error (Debug!!)
+| - CVar Description: Cause the engine to crash by Plat_FatalError on main thread (Debug!!)
 | - 
 
 | - 
@@ -4862,16 +4892,6 @@
 | - 
 
 | - 
-| - CVar Name: dota_profile_show_past_game_analysis
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: dota_bot_force_pick_slot
 |- 
 | - CVar Description: Force picks to be mapped to specific player ids.
@@ -5169,6 +5189,16 @@
 | - CVar Default Value: 5.0
 | - 
 | - CVar Current Value: 5.0
+| - 
+
+| - 
+| - CVar Name: animgraph_record_all
+|- 
+| - CVar Description: Automatically start recording AnimGraphs when they get created, and save them to disk when they are destroyed
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -5575,16 +5605,6 @@
 | - 
 
 | - 
-| - CVar Name: cl_consistencycheck_interval
-|- 
-| - CVar Description: Perform a consistency check after this amount of time (seconds) has passed since the last.
-| - 
-| - CVar Default Value: 180.0
-| - 
-| - CVar Current Value: 180.0
-| - 
-
-| - 
 | - CVar Name: sv_snapshot_unlimited
 |- 
 | - CVar Description: For debugging, don't throw away old snapshots so that if you break in debugger (on remote client or server) it won't require an uncompressed update to resume.  You may run out of memory of course...
@@ -5773,16 +5793,6 @@ Format: find_ent <substring>
 | - 
 
 | - 
-| - CVar Name: particle_cloth_experimental_support
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: snd_headphone_pan_radial_weight
 |- 
 | - CVar Description: Apply cos(angle) * weight before pan law
@@ -5792,6 +5802,16 @@ Format: find_ent <substring>
 | - CVar Name: snd_sos_print_stack_exec_list
 |- 
 | - CVar Description: Prints the current stack execution list
+| - 
+
+| - 
+| - CVar Name: cloth_dry_drag_soften
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -6444,6 +6464,16 @@ Format: find_ent <substring>
 | - 
 
 | - 
+| - CVar Name: tv_password
+|- 
+| - CVar Description: SourceTV password for all clients
+| - 
+| - CVar Default Value: 
+| - 
+| - CVar Current Value: 
+| - 
+
+| - 
 | - CVar Name: toggleconsole
 |- 
 | - CVar Description: Show/hide the console.
@@ -6457,16 +6487,6 @@ Format: find_ent <substring>
 | - CVar Default Value: 2000
 | - 
 | - CVar Current Value: 2000
-| - 
-
-| - 
-| - CVar Name: tv_password
-|- 
-| - CVar Description: SourceTV password for all clients
-| - 
-| - CVar Default Value: 
-| - 
-| - CVar Current Value: 
 | - 
 
 | - 
@@ -6670,16 +6690,6 @@ Format: find_ent <substring>
 | - CVar Name: lightquery_debug_indirect_lighting
 |- 
 | - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
-| - CVar Name: cq_send_player_simulation_times
-|- 
-| - CVar Description: 1 = send player simulation times, verify on client, 0 = don't send simulation times
 | - 
 | - CVar Default Value: 1
 | - 
@@ -7379,16 +7389,6 @@ Format: find_ent <substring>
 | - 
 
 | - 
-| - CVar Name: sv_can_quit_from_script
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: ent_debug_draw_thinkers
 |- 
 | - CVar Description: 
@@ -7897,7 +7897,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -7928,16 +7928,6 @@ Format: find_ent <substring>
 | - CVar Default Value: 4.5
 | - 
 | - CVar Current Value: 4.5
-| - 
-
-| - 
-| - CVar Name: dota_fantasy_popup_help_ti9
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
 | - 
 
 | - 
@@ -8030,16 +8020,6 @@ Format: find_ent <substring>
 | - CVar Name: lua_report_memory
 |- 
 | - CVar Description: 
-| - 
-
-| - 
-| - CVar Name: sv_logdownloadlist
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -8653,8 +8633,18 @@ Format: find_ent <substring>
 | - 
 | - CVar Name: cl_log_tick
 |- 
-| - CVar Description: Log when a tick is recieved
+| - CVar Description: Log when a tick is received
 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: tv_maxrate
+|- 
+| - CVar Description: Max SourceTV spectator bandwidth rate allowed, 0 == unlimited
 | - 
 | - CVar Default Value: 0
 | - 
@@ -8669,16 +8659,6 @@ Format: find_ent <substring>
 | - CVar Default Value: english
 | - 
 | - CVar Current Value: russian
-| - 
-
-| - 
-| - CVar Name: tv_maxrate
-|- 
-| - CVar Description: Max SourceTV spectator bandwidth rate allowed, 0 == unlimited
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -9022,16 +9002,6 @@ Format: find_ent <substring>
 | - 
 
 | - 
-| - CVar Name: @panorama_dragscroll_mintime_vr
-|- 
-| - CVar Description: Minimum time that the mouse button must be down before a move is treated as a drag scroll in VR
-| - 
-| - CVar Default Value: 0.1
-| - 
-| - CVar Current Value: 0.1
-| - 
-
-| - 
 | - CVar Name: cl_latch_report
 |- 
 | - CVar Description: Enable to skip client-side animation
@@ -9208,7 +9178,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -9322,16 +9292,6 @@ Format: find_ent <substring>
 | - CVar Default Value: 524288
 | - 
 | - CVar Current Value: 524288
-| - 
-
-| - 
-| - CVar Name: @panorama_volume_effects
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1.0f
-| - 
-| - CVar Current Value: 1.0f
 | - 
 
 | - 
@@ -9862,7 +9822,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -10254,16 +10214,6 @@ Format: find_ent <substring>
 | - 
 
 | - 
-| - CVar Name: @panorama_volume_ambient
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0.48f
-| - 
-| - CVar Current Value: 0.48f
-| - 
-
-| - 
 | - CVar Name: fog_start
 |- 
 | - CVar Description: 
@@ -10463,16 +10413,6 @@ Format: find_ent <substring>
 | - CVar Name: vr_lesson_highlight_override_pos_x
 |- 
 | - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: steamworks_sessionid_client
-|- 
-| - CVar Description: The client session ID for the new steamworks gamestats.
 | - 
 | - CVar Default Value: 0
 | - 
@@ -10927,6 +10867,16 @@ Format: find_ent <substring>
 | - CVar Default Value: shot
 | - 
 | - CVar Current Value: shot
+| - 
+
+| - 
+| - CVar Name: engine_allow_multiple_ticks_per_frame
+|- 
+| - CVar Description: When the client is catching up in low frame rate situations, should we run tick more than once a frame?
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -11583,16 +11533,6 @@ criteria values are optional.
 | - 
 
 | - 
-| - CVar Name: nav_show_player_counts
-|- 
-| - CVar Description: Show current player counts in each area.
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: cl_display_game_events
 |- 
 | - CVar Description: 
@@ -11758,16 +11698,6 @@ criteria values are optional.
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: engine_drop_frame_ticks
-|- 
-| - CVar Description: Feature to skip ticks when the client is catching up in low frame rate situations.
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 1
 | - 
 
 | - 
@@ -11960,6 +11890,16 @@ criteria values are optional.
 | - CVar Name: -dota_control_group
 |- 
 | - CVar Description: 
+| - 
+
+| - 
+| - CVar Name: dota_hero_demo_default_ally
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: npc_dota_hero_axe
+| - 
+| - CVar Current Value: npc_dota_hero_axe
 | - 
 
 | - 
@@ -12221,7 +12161,7 @@ criteria values are optional.
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -12414,7 +12354,7 @@ criteria values are optional.
 | - 
 | - CVar Default Value: 3
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -12704,16 +12644,6 @@ criteria values are optional.
 | - 
 
 | - 
-| - CVar Name: mat_luxels
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: tv_instant_replay_full_frame_time
 |- 
 | - CVar Description: Seconds between full frame embeddeds
@@ -12721,6 +12651,16 @@ criteria values are optional.
 | - CVar Default Value: 30
 | - 
 | - CVar Current Value: 30
+| - 
+
+| - 
+| - CVar Name: mat_luxels
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -12931,7 +12871,7 @@ criteria values are optional.
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -13212,7 +13152,7 @@ criteria values are optional.
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 4
 | - 
 
 | - 
@@ -13903,12 +13843,6 @@ criteria values are optional.
 | - 
 
 | - 
-| - CVar Name: dota_show_team_fan_content_evaluator
-|- 
-| - CVar Description: 
-| - 
-
-| - 
 | - CVar Name: dota_soccer_gesture_delay
 |- 
 | - CVar Description: 
@@ -14115,6 +14049,26 @@ criteria values are optional.
 | - CVar Default Value: -1.0f
 | - 
 | - CVar Current Value: -1.0f
+| - 
+
+| - 
+| - CVar Name: navspace_debug_stringpull
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: phys_powered_ragdoll_min_frequency
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0.5f
+| - 
+| - CVar Current Value: 0.5f
 | - 
 
 | - 
@@ -14345,16 +14299,6 @@ criteria values are optional.
 | - 
 
 | - 
-| - CVar Name: mp_teamoverride
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: dota_killcam_history_time
 |- 
 | - CVar Description: 
@@ -14390,16 +14334,6 @@ criteria values are optional.
 | - CVar Name: vis_debug_record_start
 |- 
 | - CVar Description: Record a path to debug vis
-| - 
-
-| - 
-| - CVar Name: mat_disable_normal_mapping
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -14905,6 +14839,16 @@ criteria values are optional.
 | - 
 
 | - 
+| - CVar Name: dota_arcana_disable_hud_display
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: false
+| - 
+| - CVar Current Value: false
+| - 
+
+| - 
 | - CVar Name: broadcaster_quickstats_maxl
 |- 
 | - CVar Description: 
@@ -15198,7 +15142,7 @@ criteria values are optional.
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -15350,13 +15294,13 @@ criteria values are optional.
 | - 
 
 | - 
-| - CVar Name: @panorama_frame_limit_microseconds
+| - CVar Name: @panorama_command_reordering
 |- 
 | - CVar Description: 
 | - 
-| - CVar Default Value: 5000
+| - CVar Default Value: 1
 | - 
-| - CVar Current Value: 5000
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -15456,6 +15400,16 @@ criteria values are optional.
 | - 
 
 | - 
+| - CVar Name: phys_powered_ragdoll_enable
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: cc_norepeat
 |- 
 | - CVar Description: In multiplayer games, don't repeat captions more often than this many seconds.
@@ -15508,12 +15462,6 @@ criteria values are optional.
 | - 
 
 | - 
-| - CVar Name: hideconsole
-|- 
-| - CVar Description: Hide the console.
-| - 
-
-| - 
 | - CVar Name: tv_dispatchmode
 |- 
 | - CVar Description: Dispatch clients to relay proxies: 0=never, 1=if appropriate, 2=always
@@ -15521,6 +15469,12 @@ criteria values are optional.
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: hideconsole
+|- 
+| - CVar Description: Hide the console.
 | - 
 
 | - 
@@ -16101,6 +16055,16 @@ criteria values are optional.
 | - 
 
 | - 
+| - CVar Name: nav_gen_split_multi_connection_polys_tol
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0.01f
+| - 
+| - CVar Current Value: 0.01f
+| - 
+
+| - 
 | - CVar Name: nav_blockers_can_affect_flow
 |- 
 | - CVar Description: Set this convar to 0 if you want the 'affectsFlow' property of func_nav_blockers to be ignored
@@ -16134,6 +16098,16 @@ criteria values are optional.
 | - CVar Default Value: 0.25
 | - 
 | - CVar Current Value: 0.25
+| - 
+
+| - 
+| - CVar Name: dota_battlereport_cache_duration
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 300
+| - 
+| - CVar Current Value: 300
 | - 
 
 | - 
@@ -16371,12 +16345,6 @@ criteria values are optional.
 | - 
 
 | - 
-| - CVar Name: cg_start_loading
-|- 
-| - CVar Description: Listen server started loading
-| - 
-
-| - 
 | - CVar Name: phys_visualize_awake_dynamic_only
 |- 
 | - CVar Description: 
@@ -16526,12 +16494,6 @@ criteria values are optional.
 | - 
 
 | - 
-| - CVar Name: vis_debug_lock
-|- 
-| - CVar Description: Lock vis LOS origin to current
-| - 
-
-| - 
 | - CVar Name: tv_chattimelimit
 |- 
 | - CVar Description: Limits spectators to chat only every n seconds
@@ -16562,9 +16524,25 @@ criteria values are optional.
 | - 
 
 | - 
+| - CVar Name: vis_debug_lock
+|- 
+| - CVar Description: Lock vis LOS origin to current
+| - 
+
+| - 
 | - CVar Name: Test_Checkpoint
 |- 
 | - CVar Description: Indicate to a test script that a checkpoint has been reached
+| - 
+
+| - 
+| - CVar Name: @panorama_frame_limit_v8_gc_microseconds
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 5000
+| - 
+| - CVar Current Value: 5000
 | - 
 
 | - 
@@ -17186,16 +17164,6 @@ criteria values are optional.
 | - 
 
 | - 
-| - CVar Name: @panorama_dragscroll_affordance_vr
-|- 
-| - CVar Description: Minimum mouse movement in pixels before a move is treated as a drag scroll in VR
-| - 
-| - CVar Default Value: 100
-| - 
-| - CVar Current Value: 100
-| - 
-
-| - 
 | - CVar Name: iv_wrapped_parallel_latch
 |- 
 | - CVar Description: 
@@ -17506,7 +17474,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Name: mem_dump
 |- 
-| - CVar Description: Dump memory stats to text file.
+| - CVar Description: Dump memory stats to text file or <stdout>.
 | - 
 
 | - 
@@ -17773,16 +17741,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: net_showevents
-|- 
-| - CVar Description: Dump game events to console (1=client only, 2=all).
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: muzzle_flash_enable
 |- 
 | - CVar Description: 
@@ -17790,6 +17748,16 @@ Format: find_ent_index <index>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: net_showevents
+|- 
+| - CVar Description: Dump game events to console (1=client only, 2=all).
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -18776,13 +18744,13 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: sv_reserve_slots_for_reconnecting_players
+| - CVar Name: sv_parallel_packentities
 |- 
-| - CVar Description: Reserve slots for reconnecting human players.
+| - CVar Description: Set to 1 to use threaded snapshot sending on listen servers, 2 for dedicated servers.
 | - 
-| - CVar Default Value: 0
+| - CVar Default Value: 2
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 2
 | - 
 
 | - 
@@ -18796,19 +18764,19 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: sv_parallel_packentities
-|- 
-| - CVar Description: Set to 1 to use threaded snapshot sending on listen servers, 2 for dedicated servers.
-| - 
-| - CVar Default Value: 2
-| - 
-| - CVar Current Value: 2
-| - 
-
-| - 
 | - CVar Name: gameui_preventescape
 |- 
 | - CVar Description: Escape key doesn't hide game UI
+| - 
+
+| - 
+| - CVar Name: dota_workshop_legacy_model_import
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -19120,7 +19088,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -19367,16 +19335,6 @@ Format: find_ent_index <index>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
-| - 
-
-| - 
-| - CVar Name: r_show_ssao
-|- 
-| - CVar Description: Draw the SSAO occlusion buffer
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -19685,9 +19643,9 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: cl_spewmeta
+| - CVar Name: crash_error_thread
 |- 
-| - CVar Description: Spew serializer meta
+| - CVar Description: Cause the engine to crash by Plat_FatalError on non-main thread (Debug!!)
 | - 
 
 | - 
@@ -19776,6 +19734,16 @@ Format: find_ent_index <index>
 
 | - 
 | - CVar Name: nav_test_curve_opt
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: navspace_debug_trace
 |- 
 | - CVar Description: 
 | - 
@@ -20546,7 +20514,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -21114,6 +21082,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: cq_enable
+|- 
+| - CVar Description: Run one usercmd per server tick and maintain a buffer.  Client speeds up/slows down it's usercmd tick rate to maintain server command queue buffering.
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: ent_messages_draw
 |- 
 | - CVar Description: Visualizes all entity input/output activity.
@@ -21138,16 +21116,6 @@ Format: find_ent_index <index>
 |- 
 | - CVar Description: Teleport the specified entity to where the player is looking.
 	Format: ent_teleport <entity name>
-| - 
-
-| - 
-| - CVar Name: cq_enable
-|- 
-| - CVar Description: Run one usercmd per server tick and maintain a buffer.  Client speeds up/slows down it's usercmd tick rate to maintain server command queue buffering.
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -21527,16 +21495,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: host_showcachemiss
-|- 
-| - CVar Description: Print a debug message when the client or server cache is missed.
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: bindtoggle
 |- 
 | - CVar Description: Performs a bind <key> "increment var <cvar> 0 1 1".
@@ -21868,6 +21826,16 @@ Format: find_ent_index <index>
 | - 
 
 | - 
+| - CVar Name: nav_test_path_space
+|- 
+| - CVar Description: Should nav_test_path test 3d navigation?
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: r_light_probe_volume_debug_grid_roughness
 |- 
 | - CVar Description: roughness for LPV debug grid
@@ -22055,12 +22023,6 @@ Format: find_ent_index <index>
 | - CVar Name: path
 |- 
 | - CVar Description: Show the filesystem path.
-| - 
-
-| - 
-| - CVar Name: cl_print_consistency_list
-|- 
-| - CVar Description: Display's the contents and flags of the current consistency list
 | - 
 
 | - 
@@ -22935,7 +22897,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 2
 | - 
 
 | - 
@@ -23502,16 +23464,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: convars_echo_toggle_changes
-|- 
-| - CVar Description: Echo to the console changes caused by toggling.
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: tv_snapshotrate
 |- 
 | - CVar Description: Snapshots broadcasted per second
@@ -23519,6 +23471,16 @@ Format: find_ent_index <index>
 | - CVar Default Value: 20
 | - 
 | - CVar Current Value: 20
+| - 
+
+| - 
+| - CVar Name: convars_echo_toggle_changes
+|- 
+| - CVar Description: Echo to the console changes caused by toggling.
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -23545,7 +23507,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -23901,7 +23863,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -24520,7 +24482,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -24732,7 +24694,7 @@ Format: find_ent_index <index>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 3
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -24901,9 +24863,9 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: echoln
+| - CVar Name: sv_spewmeta
 |- 
-| - CVar Description: Echo the command arguments on the console
+| - CVar Description: Spew serializer meta
 | - 
 
 | - 
@@ -24914,6 +24876,12 @@ Format: find_ent_index <index>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: echoln
+|- 
+| - CVar Description: Echo the command arguments on the console
 | - 
 
 | - 
@@ -25141,16 +25109,6 @@ Format: find_ent_index <index>
 | - 
 
 | - 
-| - CVar Name: sv_fps_max
-|- 
-| - CVar Description: Dedicated server frame rate limiter. 0=tick rate. Only applies to the dedicated server.
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: tv_timeout
 |- 
 | - CVar Description: SourceTV connection timeout in seconds.
@@ -25158,6 +25116,16 @@ Format: find_ent_index <index>
 | - CVar Default Value: 20
 | - 
 | - CVar Current Value: 20
+| - 
+
+| - 
+| - CVar Name: sv_fps_max
+|- 
+| - CVar Description: Dedicated server frame rate limiter. 0=tick rate. Only applies to the dedicated server.
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -25669,6 +25637,16 @@ Format: find_ent <substring>
 | - 
 
 | - 
+| - CVar Name: sv_client_max_interp_ratio
+|- 
+| - CVar Description: This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected). If sv_client_min_interp_ratio is -1, then this cvar has no effect.
+| - 
+| - CVar Default Value: 5
+| - 
+| - CVar Current Value: 5
+| - 
+
+| - 
 | - CVar Name: save_spew
 |- 
 | - CVar Description: 
@@ -25686,16 +25664,6 @@ Format: find_ent <substring>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
-| - 
-
-| - 
-| - CVar Name: sv_client_max_interp_ratio
-|- 
-| - CVar Description: This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected). If sv_client_min_interp_ratio is -1, then this cvar has no effect.
-| - 
-| - CVar Default Value: 5
-| - 
-| - CVar Current Value: 5
 | - 
 
 | - 
@@ -25789,7 +25757,7 @@ Format: find_ent <substring>
 | - 
 | - CVar Default Value: 2
 | - 
-| - CVar Current Value: 2
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -26030,13 +25998,9 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: host_limitlocal
+| - CVar Name: cl_checkdeclareclasses
 |- 
-| - CVar Description: Apply cl_updaterate to loopback connection
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
+| - CVar Description: Check game code serializers
 | - 
 
 | - 
@@ -26464,6 +26428,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: tv_name
+|- 
+| - CVar Description: SourceTV host name
+| - 
+| - CVar Default Value: SourceTV
+| - 
+| - CVar Current Value: SourceTV
+| - 
+
+| - 
 | - CVar Name: vis_debug_tracelos
 |- 
 | - CVar Description: Trace rays and check vis from the current camera
@@ -26477,16 +26451,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: tv_name
-|- 
-| - CVar Description: SourceTV host name
-| - 
-| - CVar Default Value: SourceTV
-| - 
-| - CVar Current Value: SourceTV
 | - 
 
 | - 
@@ -26678,9 +26642,9 @@ Arguments: <weapon_name>
 |- 
 | - CVar Description: 
 | - 
-| - CVar Default Value: 0
+| - CVar Default Value: 1
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -26984,6 +26948,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: phys_threaded_transform_update
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: subclass_create
 |- 
 | - CVar Description: Creates an entity of the given subclass where the player is looking.
@@ -27200,16 +27174,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: @panorama_defer_backbuffer_commands
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: cl_team
 |- 
 | - CVar Description: Default team when joining a game
@@ -27322,6 +27286,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: tv_instant_replay_full_frame
+|- 
+| - CVar Description: Send embedded full frames
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: soundsystem_update_async
 |- 
 | - CVar Description: 
@@ -27335,16 +27309,6 @@ Arguments: <weapon_name>
 | - CVar Name: vis_enable
 |- 
 | - CVar Description: Toggle static visibility
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
-| - CVar Name: tv_instant_replay_full_frame
-|- 
-| - CVar Description: Send embedded full frames
 | - 
 | - CVar Default Value: 1
 | - 
@@ -27401,12 +27365,6 @@ Arguments: <weapon_name>
 | - CVar Name: projection_reload_ability_data
 |- 
 | - CVar Description: Reload ability_projection.txt
-| - 
-
-| - 
-| - CVar Name: dota_export_team_logos
-|- 
-| - CVar Description: 
 | - 
 
 | - 
@@ -27618,16 +27576,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: cq_player_times_warn_diff
-|- 
-| - CVar Description: Warn if player simulation time on client is not the same as that of server tick last received
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: dota_ability_dump_refcounts
 |- 
 | - CVar Description: Dumps the modifier refcounts of all hero abilities
@@ -27670,16 +27618,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: filesystem_unbuffered_io
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: mesh_calculate_curvature_smooth_invert
 |- 
 | - CVar Description: 
@@ -27687,6 +27625,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: filesystem_unbuffered_io
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -27814,16 +27762,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: mp_footsteps
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: tv_allow_static_shots
 |- 
 | - CVar Description: Auto director uses fixed level cameras for shots
@@ -27921,16 +27859,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: 30
 | - 
 | - CVar Current Value: 30
-| - 
-
-| - 
-| - CVar Name: snd_spew_particle_sound_names
-|- 
-| - CVar Description: Display the names of sounds events fired from PlaySoundFromParticleEffectName.
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -28070,10 +27998,6 @@ Arguments: <weapon_name>
 | - CVar Name: r_textures_evict_all
 |- 
 | - CVar Description: Evict all resident texture.
-| - 
-| - CVar Default Value: 
-| - 
-| - CVar Current Value: p7:B
 | - 
 
 | - 
@@ -28380,16 +28304,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
-| - 
-
-| - 
-| - CVar Name: mp_teamlist
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: hgrunt;scientist
-| - 
-| - CVar Current Value: hgrunt;scientist
 | - 
 
 | - 
@@ -28709,17 +28623,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: gamestats_file_output_directory
-|- 
-| - CVar Description: When -gamestatsfileoutputonly is specified, file will be emitted here instead of to modpath
-
-| - 
-| - CVar Default Value: 
-| - 
-| - CVar Current Value: 
-| - 
-
-| - 
 | - CVar Name: sv_alltalk
 |- 
 | - CVar Description: Players can hear all other players' voice communication, no team restrictions
@@ -28828,7 +28731,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -29099,7 +29002,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -29182,6 +29085,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 
 | - 
 | - CVar Current Value: 
+| - 
+
+| - 
+| - CVar Name: sv_clientrates
+|- 
+| - CVar Description: Show client rates.
 | - 
 
 | - 
@@ -29318,9 +29227,9 @@ Arguments: <weapon_name>
 |- 
 | - CVar Description: Change global friction factor
 | - 
-| - CVar Default Value: 0.7f
+| - CVar Default Value: 1.0f
 | - 
-| - CVar Current Value: 1.000000
+| - CVar Current Value: 1.0f
 | - 
 
 | - 
@@ -29450,6 +29359,16 @@ Arguments: <weapon_name>
 | - CVar Name: setang
 |- 
 | - CVar Description: Snap player eyes to specified pitch yaw <roll:optional> (must have sv_cheats).
+| - 
+
+| - 
+| - CVar Name: navspace_draw_cluster
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: -1
+| - 
+| - CVar Current Value: -1
 | - 
 
 | - 
@@ -29855,6 +29774,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: dota_disable_controller_support
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: dota_show_combatlog
 |- 
 | - CVar Description: 
@@ -30202,7 +30131,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Name: writeid
 |- 
-| - CVar Description: Writes a list of permanently-banned user IDs to banned_user.cfg.
+| - CVar Description: Writes a list of permanently-banned user IDs to file.
 | - 
 
 | - 
@@ -30342,12 +30271,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: -1
 | - 
 | - CVar Current Value: -1
-| - 
-
-| - 
-| - CVar Name: _resetgamestats
-|- 
-| - CVar Description: Erases current game stats and writes out a blank stats file
 | - 
 
 | - 
@@ -30885,6 +30808,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: cast_cylinder
+|- 
+| - CVar Description: Tests cylinder collision detection
+| - 
+
+| - 
 | - CVar Name: sv_allchat
 |- 
 | - CVar Description: Players can receive all other players' text chat, no death restrictions
@@ -30892,12 +30821,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
-| - 
-
-| - 
-| - CVar Name: cast_cylinder
-|- 
-| - CVar Description: Tests cylinder collision detection
 | - 
 
 | - 
@@ -31144,6 +31067,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0.1
 | - 
 | - CVar Current Value: 0.1
+| - 
+
+| - 
+| - CVar Name: dota_league_shared_dump
+|- 
+| - CVar Description: Dumps the shared league data to the console
 | - 
 
 | - 
@@ -31651,12 +31580,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: vis_debug_currentcluster
-|- 
-| - CVar Description: Show the current cluster number
-| - 
-
-| - 
 | - CVar Name: tv_autorecord
 |- 
 | - CVar Description: Automatically records all games as SourceTV demos.
@@ -31664,6 +31587,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: vis_debug_currentcluster
+|- 
+| - CVar Description: Show the current cluster number
 | - 
 
 | - 
@@ -31987,6 +31916,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0.0f
 | - 
 | - CVar Current Value: 0.0f
+| - 
+
+| - 
+| - CVar Name: crash_error_job
+|- 
+| - CVar Description: Cause the engine to crash by Plat_FatalError on job thread (Debug!!)
 | - 
 
 | - 
@@ -32439,12 +32374,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: CreatePredictionError
-|- 
-| - CVar Description: Create a prediction error
-| - 
-
-| - 
 | - CVar Name: nav_begin_drag_selecting
 |- 
 | - CVar Description: Start dragging a selection area.
@@ -32714,16 +32643,6 @@ Arguments: <weapon_name>
 | - CVar Name: dota_highlight_reel_matchid
 |- 
 | - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: steamworks_sessionid_server
-|- 
-| - CVar Description: The server session ID for the new steamworks gamestats.
 | - 
 | - CVar Default Value: 0
 | - 
@@ -33299,7 +33218,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -33356,6 +33275,16 @@ Arguments: <weapon_name>
 | - CVar Name: dota_ref_winner_radiant
 |- 
 | - CVar Description: Causes the radiant team to win
+| - 
+
+| - 
+| - CVar Name: nav_draw_vertex_normal
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -33708,16 +33637,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: mp_autocrosshair
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
-| - 
-
-| - 
 | - CVar Name: npcsolve_path_lookahead_const
 |- 
 | - CVar Description: 
@@ -33774,26 +33693,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: engine_rendersystem_used
-|- 
-| - CVar Description: Rendersystem option in use (changing this does not change the rendersystem).
-| - 
-| - CVar Default Value: 
-| - 
-| - CVar Current Value: -dx11
-| - 
-
-| - 
-| - CVar Name: r_show_zprepass_normals
-|- 
-| - CVar Description: Draw the normals from the depth pre-pass
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: tv_deltacache
 |- 
 | - CVar Description: Enable delta entity bit stream cache
@@ -33801,6 +33700,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: 2
 | - 
 | - CVar Current Value: 2
+| - 
+
+| - 
+| - CVar Name: engine_rendersystem_used
+|- 
+| - CVar Description: Rendersystem option in use (changing this does not change the rendersystem).
+| - 
+| - CVar Default Value: 
+| - 
+| - CVar Current Value: -dx11
 | - 
 
 | - 
@@ -34094,6 +34003,16 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: navspace_draw_cluster_neighbor
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: -1
+| - 
+| - CVar Current Value: -1
 | - 
 
 | - 
@@ -34611,12 +34530,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: vis_debug_show
-|- 
-| - CVar Description: Show/hide the vis debug visualization
-| - 
-
-| - 
 | - CVar Name: tv_instant_replay_full_frame_build_threaded
 |- 
 | - CVar Description: Build the full frames on a seperate job thread
@@ -34624,6 +34537,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: vis_debug_show
+|- 
+| - CVar Description: Show/hide the vis debug visualization
 | - 
 
 | - 
@@ -34790,16 +34709,6 @@ Arguments: <weapon_name>
 | - CVar Name: -camyawleft
 |- 
 | - CVar Description: 
-| - 
-
-| - 
-| - CVar Name: dota_experimental_controller_support
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -35601,16 +35510,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: @panorama_volume_master
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1.0f
-| - 
-| - CVar Current Value: 1.0f
-| - 
-
-| - 
 | - CVar Name: cl_imgui_set_selection_crosshair
 |- 
 | - CVar Description: Sets ImGui selection based on what's under the crosshair
@@ -35885,6 +35784,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: r_renderdoc_open_captures
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: developer
 |- 
 | - CVar Description: Set developer message level.
@@ -36055,7 +35964,17 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 
 | - 
-| - CVar Current Value: 0x1BADB002
+| - CVar Current Value: 1c3fr09
+| - 
+
+| - 
+| - CVar Name: @panorama_composition_atlas
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
 | - 
 
 | - 
@@ -36160,7 +36079,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Name: writeip
 |- 
-| - CVar Description: Save the ban list to banned_ip.cfg.
+| - CVar Description: Save the ban list to file.
 | - 
 
 | - 
@@ -36221,12 +36140,6 @@ Arguments: <weapon_name>
 | - CVar Name: dota_aa_test_reduce_playtime_remaining
 |- 
 | - CVar Description: Limit available remaining playtime.  Requires -antiaddiction_test.
-| - 
-
-| - 
-| - CVar Name: dota_set_lobby_details
-|- 
-| - CVar Description: Set game/team names
 | - 
 
 | - 
@@ -36715,16 +36628,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: dota_fantasy_popup_help_ti10
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
 | - 
 
 | - 
@@ -37244,7 +37147,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -37293,6 +37196,16 @@ Arguments: <weapon_name>
 | - CVar Name: customgamesetup_lock_team_selection
 |- 
 | - CVar Description: Lock or unlock the team selection, when locked players cannot change teams.
+| - 
+
+| - 
+| - CVar Name: dota_item_free_buyback_end_time
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 30.0f
+| - 
+| - CVar Current Value: 30.0f
 | - 
 
 | - 
@@ -37580,7 +37493,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -37899,6 +37812,12 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: tv_status
+|- 
+| - CVar Description: Show SourceTV server status.
+| - 
+
+| - 
 | - CVar Name: r_drawblankworld
 |- 
 | - CVar Description: Render blank instead of the game world
@@ -37906,12 +37825,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
-| - 
-
-| - 
-| - CVar Name: tv_status
-|- 
-| - CVar Description: Show SourceTV server status.
 | - 
 
 | - 
@@ -38325,16 +38238,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: @panorama_volume_movies
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1.0f
-| - 
-| - CVar Current Value: 1.0f
-| - 
-
-| - 
 | - CVar Name: cl_change_callback_limit
 |- 
 | - CVar Description: change callback msec warning limit
@@ -38476,16 +38379,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: sv_show_whitelist_msg
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: sv_password
 |- 
 | - CVar Description: Server password for entry into multiplayer games
@@ -38578,16 +38471,6 @@ Arguments: <weapon_name>
 | - CVar Default Value: -1
 | - 
 | - CVar Current Value: -1
-| - 
-
-| - 
-| - CVar Name: r_show_zprepass_depth
-|- 
-| - CVar Description: Draw the depth from the depth pre-pass
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
 | - 
 
 | - 
@@ -39167,7 +39050,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 
 | - 
-| - CVar Current Value: 33
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -39369,16 +39252,6 @@ Arguments: <weapon_name>
 |- 
 | - CVar Description: Displays text debugging information about the given entity(ies) [near the player] on top of the entity (See Overlay Text)
 	2 Arguments:   	<Radius> <{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}>
-| - 
-
-| - 
-| - CVar Name: tauntfrequency
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 1
-| - 
-| - CVar Current Value: 1
 | - 
 
 | - 
@@ -39602,6 +39475,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: phys_powered_ragdoll_max_frequency
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 10.0f
+| - 
+| - CVar Current Value: 10.0f
+| - 
+
+| - 
 | - CVar Name: r_force_engine_render_frame
 |- 
 | - CVar Description: Force a single render of the engine viewport.
@@ -39728,25 +39611,15 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: key_findbinding
-|- 
-| - CVar Description: Find key bound to specified command string.
-| - 
-
-| - 
 | - CVar Name: tv_stoprecord
 |- 
 | - CVar Description: Stops SourceTV demo recording.
 | - 
 
 | - 
-| - CVar Name: @panorama_dragscroll_velocitymultiplier_vr
+| - CVar Name: key_findbinding
 |- 
-| - CVar Description: Multiplier for flick velocity off of actual measured velocity
-| - 
-| - CVar Default Value: 0.5
-| - 
-| - CVar Current Value: 0.5
+| - CVar Description: Find key bound to specified command string.
 | - 
 
 | - 
@@ -40513,6 +40386,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: engine_allow_multiple_simulates_per_frame
+|- 
+| - CVar Description: When the client is catching up in low frame rate situations, should we run client simulate more than once a frame?
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: r_experimental_lag_limiter
 |- 
 | - CVar Description: 
@@ -40637,6 +40520,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: nav_show_area_verts
+|- 
+| - CVar Description: Show area vertex positions
+| - 
+| - CVar Default Value: 1
+| - 
+| - CVar Current Value: 1
+| - 
+
+| - 
 | - CVar Name: nav_path_debug
 |- 
 | - CVar Description: 
@@ -40685,6 +40578,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 1
 | - 
 | - CVar Current Value: 1
+| - 
+
+| - 
+| - CVar Name: sv_metaduplication
+|- 
+| - CVar Description: Check serializer meta for duplication, add verbose to command for full spew
 | - 
 
 | - 
@@ -40797,16 +40696,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: mp_falldamage
-|- 
-| - CVar Description: 
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: dota_allow_orders_multiple_nextbot_updates
 |- 
 | - CVar Description: 
@@ -40859,6 +40748,16 @@ Arguments: <weapon_name>
 | - 
 
 | - 
+| - CVar Name: cloth_dry_drag
+|- 
+| - CVar Description: 
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
+| - 
+
+| - 
 | - CVar Name: r_texture_stream_throttle_amount
 |- 
 | - CVar Description: 
@@ -40895,22 +40794,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: escape
-|- 
-| - CVar Description: Escape key pressed.
-| - 
-
-| - 
-| - CVar Name: r_ssr
-|- 
-| - CVar Description: Enable or disable screenspace reflections
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: tv_rate_multiplier
 |- 
 | - CVar Description: Multiply requested rate by this value to adjust Dota TV send rate
@@ -40918,6 +40801,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 2
 | - 
 | - CVar Current Value: 2
+| - 
+
+| - 
+| - CVar Name: escape
+|- 
+| - CVar Description: Escape key pressed.
 | - 
 
 | - 
@@ -41257,12 +41146,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: UpdateBinarySizes
-|- 
-| - CVar Description: Dumps the binary sizes to use for the game in loadaddress.vpc
-| - 
-
-| - 
 | - CVar Name: tv_grouprelaydataunreliable
 |- 
 | - CVar Description: When enabled, this will collect all information for relay sending into a single datagram to ensure that the data stays together through a potentially large number of relays
@@ -41270,6 +41153,12 @@ Arguments: <weapon_name>
 | - CVar Default Value: 0
 | - 
 | - CVar Current Value: 0
+| - 
+
+| - 
+| - CVar Name: UpdateBinarySizes
+|- 
+| - CVar Description: Dumps the binary sizes to use for the game in loadaddress.vpc
 | - 
 
 | - 
@@ -41571,16 +41460,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: gameevents_showevents
-|- 
-| - CVar Description: Dump game events to console. (1 = Show Signaling, 2 = Show Posting also).
-| - 
-| - CVar Default Value: 0
-| - 
-| - CVar Current Value: 0
-| - 
-
-| - 
 | - CVar Name: tv_demo_starttick
 |- 
 | - CVar Description: 
@@ -41594,6 +41473,16 @@ Arguments: <weapon_name>
 | - CVar Name: tv_clients
 |- 
 | - CVar Description: Shows list of connected SourceTV clients.
+| - 
+
+| - 
+| - CVar Name: gameevents_showevents
+|- 
+| - CVar Description: Dump game events to console. (1 = Show Signaling, 2 = Show Posting also).
+| - 
+| - CVar Default Value: 0
+| - 
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -42493,12 +42382,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: gc_finish_loading
-|- 
-| - CVar Description: tell whatever
-| - 
-
-| - 
 | - CVar Name: dota_gamemode_ability_draft_set_draft_hero_and_team
 |- 
 | - CVar Description: Manually select which heroes will be assigned during Ability Draft lobby game. Usage: dota_gamemode_ability_draft_set_draft_hero_and_team <hero> <team:radiant/dire/extra>
@@ -42655,7 +42538,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -42672,12 +42555,6 @@ Arguments: <weapon_name>
 | - CVar Name: save_clear_subdirectory
 |- 
 | - CVar Description: 
-| - 
-
-| - 
-| - CVar Name: respawn_entities
-|- 
-| - CVar Description: Respawn all the entities in the map.
 | - 
 
 | - 
@@ -42871,7 +42748,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 1
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -42881,7 +42758,7 @@ Arguments: <weapon_name>
 | - 
 | - CVar Default Value: 0
 | - 
-| - CVar Current Value: 1
+| - CVar Current Value: 0
 | - 
 
 | - 
@@ -42999,12 +42876,6 @@ Arguments: <weapon_name>
 | - CVar Name: instant_replay_skip_live
 |- 
 | - CVar Description: Number of seconds to skip back to instant replay from live
-| - 
-
-| - 
-| - CVar Name: cl_consistencycheck
-|- 
-| - CVar Description: Triggers the client to perform a consistency check
 | - 
 
 | - 
@@ -43192,12 +43063,6 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: cl_metaduplication
-|- 
-| - CVar Description: Check serializer meta for duplication, add verbose to command for full spew
-| - 
-
-| - 
 | - CVar Name: mobile_fps_limit
 |- 
 | - CVar Description: MOBILE_FPS_CONTROL: Mobile FPS limit - 15, 30, 60
@@ -43356,13 +43221,13 @@ Arguments: <weapon_name>
 | - 
 
 | - 
-| - CVar Name: sv_consistency
+| - CVar Name: tv_maxclients
 |- 
-| - CVar Description: Whether the server enforces file consistency for critical files
+| - CVar Description: Maximum client number on SourceTV server.
 | - 
-| - CVar Default Value: 0
+| - CVar Default Value: 128
 | - 
-| - CVar Current Value: 0
+| - CVar Current Value: 128
 | - 
 
 | - 
@@ -43379,15 +43244,5 @@ Arguments: <weapon_name>
 | - CVar Name: addons
 |- 
 | - CVar Description: list current addon info.
-| - 
-
-| - 
-| - CVar Name: tv_maxclients
-|- 
-| - CVar Description: Maximum client number on SourceTV server.
-| - 
-| - CVar Default Value: 128
-| - 
-| - CVar Current Value: 128
 | - 
 

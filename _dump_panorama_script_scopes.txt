@@ -333,163 +333,163 @@ Scope Name: Players; Scope Size: 45;
 | - 
 | - 
 | - Function: 
-| - boolean CanPlayerBuyback ( integer iPlayerID )
+| - boolean CanPlayerBuyback ( integer nPlayerID )
 | - Description:
 | - Can the player buy back?
 | - 
 | - 
 | - Function: 
-| - boolean HasCustomGameTicketForPlayerID ( integer iPlayerID )
+| - boolean HasCustomGameTicketForPlayerID ( integer nPlayerID )
 | - Description:
 | - Does this player have a custom game ticket?
 | - 
 | - 
 | - Function: 
-| - integer GetAssists ( integer iPlayerID )
+| - integer GetAssists ( integer nPlayerID )
 | - Description:
 | - The number of assists credited to a player.
 | - 
 | - 
 | - Function: 
-| - integer GetClaimedDenies ( integer iPlayerID )
+| - integer GetClaimedDenies ( integer nPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - integer GetClaimedMisses ( integer iPlayerID )
+| - integer GetClaimedMisses ( integer nPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - integer GetDeaths ( integer iPlayerID )
+| - integer GetDeaths ( integer nPlayerID )
 | - Description:
 | - The number of deaths a player has suffered.
 | - 
 | - 
 | - Function: 
-| - integer GetDenies ( integer iPlayerID )
+| - integer GetDenies ( integer nPlayerID )
 | - Description:
 | - The number of denies credited to a player.
 | - 
 | - 
 | - Function: 
-| - integer GetGold ( integer iPlayerID )
+| - integer GetGold ( integer nPlayerID )
 | - Description:
 | - The amount of gold a player has.
 | - 
 | - 
 | - Function: 
-| - integer GetKills ( integer iPlayerID )
+| - integer GetKills ( integer nPlayerID )
 | - Description:
 | - The number of kills credited to a player.
 | - 
 | - 
 | - Function: 
-| - integer GetLastBuybackTime ( integer iPlayerID )
+| - integer GetLastBuybackTime ( integer nPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - integer GetLastHitMultikill ( integer iPlayerID )
+| - integer GetLastHitMultikill ( integer nPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - integer GetLastHits ( integer iPlayerID )
+| - integer GetLastHits ( integer nPlayerID )
 | - Description:
 | - The number of last hits credited to a player.
 | - 
 | - 
 | - Function: 
-| - integer GetLastHitStreak ( integer iPlayerID )
+| - integer GetLastHitStreak ( integer nPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - integer GetLevel ( integer iPlayerID )
+| - integer GetLevel ( integer nPlayerID )
 | - Description:
 | - The current level of a player.
 | - 
 | - 
 | - Function: 
-| - integer GetMisses ( integer iPlayerID )
+| - integer GetMisses ( integer nPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - integer GetNearbyCreepDeaths ( integer iPlayerID )
+| - integer GetNearbyCreepDeaths ( integer nPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - integer GetReliableGold ( integer iPlayerID )
+| - integer GetReliableGold ( integer nPlayerID )
 | - Description:
 | - Total reliable gold for this player.
 | - 
 | - 
 | - Function: 
-| - integer GetRespawnSeconds ( integer iPlayerID )
+| - integer GetRespawnSeconds ( integer nPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - integer GetStreak ( integer iPlayerID )
+| - integer GetStreak ( integer nPlayerID )
 | - Description:
 | - 
 | - 
 | - 
 | - Function: 
-| - integer GetTotalEarnedGold ( integer iPlayerID )
+| - integer GetTotalEarnedGold ( integer nPlayerID )
 | - Description:
 | - Total gold earned in this game by this player.
 | - 
 | - 
 | - Function: 
-| - integer GetTotalEarnedXP ( integer iPlayerID )
+| - integer GetTotalEarnedXP ( integer nPlayerID )
 | - Description:
 | - Total xp earned in this game by this player.
 | - 
 | - 
 | - Function: 
-| - integer GetUnreliableGold ( integer iPlayerID )
+| - integer GetUnreliableGold ( integer nPlayerID )
 | - Description:
 | - Total unreliable gold for this player.
 | - 
 | - 
 | - Function: 
-| - integer GetTeam ( integer iPlayerID )
+| - integer GetTeam ( integer nPlayerID )
 | - Description:
 | - Get the team this player is on.
 | - 
 | - 
 | - Function: 
-| - integer GetSelectedHeroID ( integer iPlayerID )
+| - integer GetSelectedHeroID ( integer nPlayerID )
 | - Description:
 | - Get the player's selected hero id.
 | - 
 | - 
 | - Function: 
-| - float GetGoldPerMin ( integer iPlayerID )
+| - float GetGoldPerMin ( integer nPlayerID )
 | - Description:
 | - Average gold earned per minute for this player.
 | - 
 | - 
 | - Function: 
-| - float GetXPPerMin ( integer iPlayerID )
+| - float GetXPPerMin ( integer nPlayerID )
 | - Description:
 | - Average xp earned per minute for this player.
 | - 
 | - 
 | - Function: 
-| - cstring GetPlayerSelectedHero ( integer iPlayerID )
+| - cstring GetPlayerSelectedHero ( integer nPlayerID )
 | - Description:
 | - Return the name of the hero a player is controlling.
 | - 
@@ -3131,7 +3131,7 @@ Scope Name: $; Scope Size: 23;
 | - Function: 
 | - void AsyncWebRequest ( v8_callback_info noname_arg_0 )
 | - Description:
-| - Make a web request (deprecated)
+| - Make a web request (disabled)
 | - 
 | - 
 | - Function: 
